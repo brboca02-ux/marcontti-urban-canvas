@@ -92,7 +92,7 @@ const HOME_FAQS: { q: string; a: string }[] = [
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Scooters e Motos Elétricas em Joinville | MT Mobilidade" },
+      { title: "MT Mobilidade - Motos e Scooters elétricas Importadas em Joinville" },
       {
         name: "description",
         content:
@@ -103,7 +103,7 @@ export const Route = createFileRoute("/")({
       { name: "geo.placename", content: "Joinville" },
       { name: "geo.position", content: "-26.2836;-48.8451" },
       { name: "ICBM", content: "-26.2836, -48.8451" },
-      { property: "og:title", content: "Scooters e Motos Elétricas em Joinville | MT Mobilidade" },
+      { property: "og:title", content: "MT Mobilidade - Motos e Scooters elétricas Importadas em Joinville" },
       {
         property: "og:description",
         content:
@@ -115,7 +115,7 @@ export const Route = createFileRoute("/")({
       { property: "og:url", content: `${BASE_URL}/` },
       { property: "og:image", content: `${BASE_URL}${x12Img.url}` },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Scooters e Motos Elétricas em Joinville | MT Mobilidade" },
+      { name: "twitter:title", content: "MT Mobilidade - Motos e Scooters elétricas Importadas em Joinville" },
       { name: "twitter:description", content: "Mobilidade elétrica em Joinville/SC: Moto Chefe, SUDU, Yamaha 0km e semi novas." },
       { name: "twitter:image", content: `${BASE_URL}${x12Img.url}` },
     ],
