@@ -1877,46 +1877,48 @@ function YoutubeShowcase() {
           </div>
         </div>
 
-        <aside className="bg-black border border-border rounded-lg overflow-hidden">
-          <div className="aspect-square bg-white">
-            <img
-              src={highlight.colors[0]?.image}
-              alt={highlight.name}
-              className="w-full h-full object-contain p-4"
-              loading="lazy"
-            />
-          </div>
-          <div className="p-4 text-center">
-            <h3 className="font-display font-black uppercase text-sm text-white tracking-tight">
-              {highlight.name} | Klug
-            </h3>
-            <p
-              className="text-primary mt-2 leading-none"
-              style={{
-                fontFamily: "'Bebas Neue', 'Urbanist', sans-serif",
-                fontSize: "28px",
-              }}
-            >
-              {parcela ?? highlight.price}
-            </p>
-            <p className="text-[10px] text-white/40 uppercase font-bold tracking-widest mt-1">
-              {parcela ? parcelaNote : "consulte condições"}
-            </p>
-            {parcela && (
-              <p className="text-[10px] text-white/40 mt-0.5">
-                à vista <span className="text-white/70">{highlight.price}</span>
+        {highlight && (
+          <aside className="bg-black border border-border rounded-lg overflow-hidden">
+            <div className="aspect-square bg-white">
+              <img
+                src={highlight.colors[0]?.image}
+                alt={highlight.name}
+                className="w-full h-full object-contain p-4"
+                loading="lazy"
+              />
+            </div>
+            <div className="p-4 text-center">
+              <h3 className="font-display font-black uppercase text-sm text-white tracking-tight">
+                {highlight.name} | MT Mobilidade
+              </h3>
+              <p
+                className="text-primary mt-2 leading-none"
+                style={{
+                  fontFamily: "'Bebas Neue', 'Urbanist', sans-serif",
+                  fontSize: "28px",
+                }}
+              >
+                {parcela ?? highlight.price}
               </p>
-            )}
+              <p className="text-[10px] text-white/40 uppercase font-bold tracking-widest mt-1">
+                {parcela ? parcelaNote : "consulte condições"}
+              </p>
+              {parcela && (
+                <p className="text-[10px] text-white/40 mt-0.5">
+                  à vista <span className="text-white/70">{highlight.price}</span>
+                </p>
+              )}
 
-            <Link
-              to="/modelos/$slug"
-              params={{ slug: highlight.slug }}
-              className="mt-3 inline-flex items-center justify-center w-full gap-1 bg-primary text-primary-foreground font-display font-black uppercase tracking-widest text-[10px] min-h-11 py-2.5 rounded-md hover:brightness-110"
-            >
-              Ver produto
-            </Link>
-          </div>
-        </aside>
+              <Link
+                to="/modelos/$slug"
+                params={{ slug: highlight.slug }}
+                className="mt-3 inline-flex items-center justify-center w-full gap-1 bg-primary text-primary-foreground font-display font-black uppercase tracking-widest text-[10px] min-h-11 py-2.5 rounded-md hover:brightness-110"
+              >
+                Ver produto
+              </Link>
+            </div>
+          </aside>
+        )}
       </div>
     </section>
   );
