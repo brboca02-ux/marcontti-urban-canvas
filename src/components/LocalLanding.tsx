@@ -209,7 +209,7 @@ export function LocalLanding({
 
       <div className="flex flex-wrap gap-4 text-[11px] font-display font-black uppercase tracking-widest text-white/60">
         <Link to="/financiamento" className="hover:text-primary">Simular financiamento</Link>
-        <Link to="/oficina-especializada" className="hover:text-primary">Oficina especializada</Link>
+        <Link to="/sobre" className="hover:text-primary">Oficina especializada</Link>
         <Link to="/contato" className="hover:text-primary">Contato e localização</Link>
         <a
           href={buildWhatsAppFallbackUrl(whatsappMessage)}
