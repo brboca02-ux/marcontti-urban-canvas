@@ -299,44 +299,6 @@ function PromoStrip() {
   );
 }
 
-/* --------------------------- Category nav (barra) --------------------------- */
-
-const CATEGORY_LINKS = [
-  { label: "Scooter Elétricas Moto Chefe", search: { marca: "klug" } },
-  { label: "Scooter Elétricas Sudu", search: { marca: "sudu" } },
-  { label: "Triciclos Elétricos", search: { cat: "triciclo" } },
-  { label: "Motos Yamaha 0km", search: { marca: "yamaha" } },
-  { label: "Motos Semi Novas", search: { cat: "seminovos" } },
-] as const;
-
-
-
-function CategoryNav() {
-  return (
-    <div className="hidden md:block w-full bg-card/60 backdrop-blur-md border-b border-border">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 h-12 flex items-center justify-between gap-6">
-        <nav
-          aria-label="Categorias"
-          className="flex items-center gap-6 lg:gap-8 text-[12px] lg:text-[14px] font-display font-black uppercase tracking-[0.15em] text-white/90 overflow-x-auto scrollbar-none [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-        >
-          {CATEGORY_LINKS.map((c) => (
-            <Link
-              key={c.label}
-              to="/modelos"
-              search={c.search}
-              className="whitespace-nowrap hover:text-primary transition-colors story-link"
-            >
-              {c.label}
-            </Link>
-          ))}
-        </nav>
-
-
-      </div>
-    </div>
-  );
-}
-
 function TrustItem({
   icon: Icon,
   label,
