@@ -33,6 +33,7 @@ import {
   type Model,
   supportsInstallment,
 } from "@/lib/models";
+import { usePublicModelsLight } from "@/hooks/useDbModels";
 import { useReveal } from "@/hooks/use-reveal";
 import { usePublicInstagramPosts, type InstagramPost } from "@/hooks/useInstagramPosts";
 
@@ -1805,12 +1806,14 @@ function RefProductCard({ m }: { m: Model }) {
 }
 
 function DestaquesGrid() {
-  const items = models.slice(0, 4);
+  const { items: all } = usePublicModelsLight();
+  const items = all.slice(0, 4);
+  if (items.length === 0) return null;
   return (
     <section className="py-10 sm:py-12 bg-background border-b border-border">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <h2 className="text-center font-display font-black uppercase text-2xl sm:text-3xl tracking-widest mb-10">
-          Destaques <span className="text-primary">Klug</span>
+          Destaques <span className="text-primary">MT</span>
         </h2>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {items.map((m) => (
@@ -1823,7 +1826,8 @@ function DestaquesGrid() {
 }
 
 function MaisVendidosGrid() {
-  const items = models.slice(4, 12);
+  const { items: all } = usePublicModelsLight();
+  const items = all.slice(4, 12);
   if (items.length === 0) return null;
   return (
     <section className="py-10 sm:py-12 bg-background border-b border-border">
@@ -1842,10 +1846,11 @@ function MaisVendidosGrid() {
 }
 
 function YoutubeShowcase() {
-  const highlight = models[1] ?? models[0];
-  const highlightInst = modelInstallment(highlight);
-  const parcela = supportsInstallment(highlight) ? highlightInst.label : null;
-  const parcelaNote = highlightInst.note;
+  const { items: all } = usePublicModelsLight();
+  const highlight = all[1] ?? all[0] ?? null;
+  const highlightInst = highlight ? modelInstallment(highlight) : null;
+  const parcela = highlight && supportsInstallment(highlight) ? highlightInst?.label ?? null : null;
+  const parcelaNote = highlightInst?.note ?? "";
   return (
     <section className="py-10 sm:py-12 bg-background border-b border-border">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-[minmax(0,1fr)_320px] gap-6 items-start">
