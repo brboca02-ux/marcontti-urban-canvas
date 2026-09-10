@@ -87,11 +87,11 @@ export interface FinanciamentoTemplateData {
 
 const HEADERS: Record<PaymentType, string> = {
   Financiamento:
-    "Olá! Quero simular um *financiamento* de moto elétrica na Klug Motors.",
+    "Olá! Quero simular um *financiamento* de moto elétrica na MT Mobilidade.",
   "À vista":
-    "Olá! Quero fechar uma moto elétrica *à vista* na Klug Motors.",
+    "Olá! Quero fechar uma moto elétrica *à vista* na MT Mobilidade.",
   "Cartão de crédito":
-    "Olá! Quero comprar uma moto elétrica *no cartão* na Klug Motors.",
+    "Olá! Quero comprar uma moto elétrica *no cartão* na MT Mobilidade.",
 };
 
 // ---------- Blocos ----------

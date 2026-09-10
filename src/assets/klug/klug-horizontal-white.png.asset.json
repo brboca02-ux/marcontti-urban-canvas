@@ -1,11 +1,11 @@
 {
-  "asset_id": "26da008a-b8ba-4b24-95c4-aa198dfdbfd1",
-  "content_type": "image/png",
-  "created_at": "2026-07-09T14:45:13Z",
-  "original_filename": "klug-horizontal-white.png",
+  "version": 1,
+  "asset_id": "3872e9a6-ed22-46c9-89dc-d4a7a04cc800",
   "project_id": "65c8254b-e0fc-49ba-a7f9-cdda16d03f04",
-  "r2_key": "a/v1/65c8254b-e0fc-49ba-a7f9-cdda16d03f04/26da008a-b8ba-4b24-95c4-aa198dfdbfd1/klug-horizontal-white.png",
-  "size": 74265,
-  "url": "/__l5e/assets-v1/26da008a-b8ba-4b24-95c4-aa198dfdbfd1/klug-horizontal-white.png",
-  "version": 1
+  "url": "/__l5e/assets-v1/3872e9a6-ed22-46c9-89dc-d4a7a04cc800/mt-mobilidade-logo.jpg",
+  "r2_key": "a/v1/65c8254b-e0fc-49ba-a7f9-cdda16d03f04/3872e9a6-ed22-46c9-89dc-d4a7a04cc800/mt-mobilidade-logo.jpg",
+  "original_filename": "mt-mobilidade-logo.jpg",
+  "size": 127832,
+  "content_type": "image/jpeg",
+  "created_at": "2026-09-10T19:42:14Z"
 }

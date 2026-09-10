@@ -6,7 +6,7 @@ const LIB_SRC =
 const CONFIGURATION = {
   locations: [
     {
-      title: "Klug Motors - Concessionária de Scooters Elétricas e Motos",
+      title: "MT Mobilidade - Concessionária de Scooters Elétricas e Motos",
       address1: "Rua Albano Schimidt 1882",
       address2: "Joinville, SC, Brazil",
       coords: { lat: -26.2989132, lng: -48.8203431 },
@@ -89,7 +89,7 @@ export function StoreLocator() {
     <div
       ref={hostRef}
       className="klug-store-locator h-[460px] w-full bg-background"
-      aria-label="Localizador da loja Klug Motors"
+      aria-label="Localizador da loja MT Mobilidade"
     />
   );
 }

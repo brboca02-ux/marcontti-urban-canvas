@@ -7,9 +7,9 @@ const BASE_URL = "https://klugmotors.com.br";
 export const Route = createFileRoute("/garantia")({
   head: () => ({
     meta: [
-      { title: "Garantia de Scooter Elétrica | Klug Motors Joinville" },
-      { name: "description", content: "Condições de garantia para motos e scooters elétricas Klug Motors. Cobertura de bateria, motor e componentes, além de assistência técnica em Joinville/SC." },
-      { property: "og:title", content: "Garantia — Klug Motors" },
+      { title: "Garantia de Scooter Elétrica | MT Mobilidade Joinville" },
+      { name: "description", content: "Condições de garantia para motos e scooters elétricas MT Mobilidade. Cobertura de bateria, motor e componentes, além de assistência técnica em Joinville/SC." },
+      { property: "og:title", content: "Garantia — MT Mobilidade" },
       { property: "og:description", content: "Cobertura de garantia, prazo, o que cobre e como acionar. Assistência técnica em Joinville/SC." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: `${BASE_URL}/garantia` },
@@ -30,7 +30,7 @@ function GarantiaPage() {
       eyebrow="Pós-venda"
       title="Garantia &"
       titleAccent="assistência"
-      intro="Todo veículo comercializado pela Klug Motors conta com garantia oficial do fabricante e suporte técnico direto na nossa loja em Joinville/SC."
+      intro="Todo veículo comercializado pela MT Mobilidade conta com garantia oficial do fabricante e suporte técnico direto na nossa loja em Joinville/SC."
     >
       <SectionCard title="O que a garantia cobre">
         <ul className="grid sm:grid-cols-2 gap-4 not-prose">

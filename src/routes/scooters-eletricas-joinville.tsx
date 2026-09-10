@@ -32,13 +32,13 @@ const FAQ: Faq[] = [
 export const Route = createFileRoute("/scooters-eletricas-joinville")({
   head: () => ({
     meta: [
-      { title: "Scooter Elétrica em Joinville | Concessionária Klug Motors" },
+      { title: "Scooter Elétrica em Joinville | Concessionária MT Mobilidade" },
       {
         name: "description",
         content:
-          "Scooters elétricas em Joinville/SC na Klug Motors: modelos SUDU e Moto Chefe, muitos sem CNH, com oficina especializada e parcelas em até 71x. Loja no Boa Vista.",
+          "Scooters elétricas em Joinville/SC na MT Mobilidade: modelos SUDU e Moto Chefe, muitos sem CNH, com oficina especializada e parcelas em até 71x. Loja no Boa Vista.",
       },
-      { property: "og:title", content: "Scooter Elétrica em Joinville | Klug Motors" },
+      { property: "og:title", content: "Scooter Elétrica em Joinville | MT Mobilidade" },
       {
         property: "og:description",
         content:
@@ -60,7 +60,7 @@ function Page() {
       eyebrow="Scooters elétricas · Joinville/SC"
       title="Scooters Elétricas em Joinville:"
       titleAccent="Modelos SUDU e MotoChefe"
-      intro="A Klug Motors é concessionária de scooters elétricas em Joinville, com loja física na R. Albano Schmidt, 1882 (Boa Vista) e oficina especializada na própria loja. Vendemos as linhas SUDU e Moto Chefe, com modelos que não exigem CNH."
+      intro="A MT Mobilidade é concessionária de scooters elétricas em Joinville, com loja física na R. Albano Schmidt, 1882 (Boa Vista) e oficina especializada na própria loja. Vendemos as linhas SUDU e Moto Chefe, com modelos que não exigem CNH."
       filter={(m) =>
         !isSemiNovaModel(m) &&
         !isTricicloModel(m) &&
@@ -69,7 +69,7 @@ function Page() {
       }
       catalogSearch={{ marca: "sudu" }}
       catalogLabel="Ver todas as scooters no catálogo"
-      whatsappMessage="Olá, Klug Motors! Quero informações sobre scooters elétricas em Joinville."
+      whatsappMessage="Olá, MT Mobilidade! Quero informações sobre scooters elétricas em Joinville."
       faq={FAQ}
     >
       <SectionCard title="Scooter elétrica em Joinville: economia real no dia a dia">

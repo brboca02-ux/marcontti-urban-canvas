@@ -5,7 +5,7 @@ export const Route = createFileRoute("/auth")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Área restrita | Klug Motors" },
+      { title: "Área restrita | MT Mobilidade" },
       { name: "robots", content: "noindex,nofollow" },
     ],
   }),

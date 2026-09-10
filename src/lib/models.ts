@@ -1328,7 +1328,7 @@ export const models: Model[] = [
   },
 ];
 
-// Klug Motors - Joinville
+// MT Mobilidade - Joinville
 export const WHATSAPP_NUMBER = "554734293200";
 const WHATSAPP_FALLBACK_DELAY = 1800;
 

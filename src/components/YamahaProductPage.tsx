@@ -168,8 +168,8 @@ export function YamahaProductPage({
           >
             <ArrowLeft size={14} /> Catálogo
           </Link>
-          <Link to="/" aria-label="Klug Motors">
-            <img src={klugLogo.url} alt="Klug Motors" className="h-7 w-auto object-contain" />
+          <Link to="/" aria-label="MT Mobilidade">
+            <img src={klugLogo.url} alt="MT Mobilidade" className="h-7 w-auto object-contain" />
           </Link>
           <a
             href={whatsappUrl}
@@ -210,7 +210,7 @@ export function YamahaProductPage({
                   ? "Scooter Elétrica Sudu"
                   : m.slug.startsWith("moto-chefe-") || m.slug.startsWith("chefe-")
                     ? "Scooter Elétrica Moto Chefe"
-                    : m.tag || "Klug Motors";
+                    : m.tag || "MT Mobilidade";
             const isSeminova = m.slug.startsWith("semi-nova-");
             const isYamaha = m.slug.startsWith("yamaha-");
             const heroDescription = m.short || m.description;
@@ -793,7 +793,7 @@ export function YamahaProductPage({
           </h2>
           <p className="mt-6 text-white/75 leading-relaxed max-w-2xl mx-auto">
             Nossos consultores apresentam cada recurso e cuidam de todo o processo — da escolha à
-            entrega — com suporte da Klug Motors.
+            entrega — com suporte da MT Mobilidade.
           </p>
           <div className="mt-10 inline-flex items-center gap-3 rounded-full border border-primary/40 bg-primary/10 px-5 py-2 text-primary text-[11px] font-display font-black uppercase tracking-widest">
             <Check size={14} /> Revisada e pronta para uso
@@ -824,7 +824,7 @@ export function YamahaProductPage({
               A partir de <span className="text-primary">{fmtBRL(m.priceNumber)}</span>
             </h2>
             <p className="mt-5 text-white/70">
-              Consulte disponibilidade e condições especiais na unidade Klug Motors Joinville / SC.
+              Consulte disponibilidade e condições especiais na unidade MT Mobilidade Joinville / SC.
             </p>
           </div>
 
@@ -899,7 +899,7 @@ export function YamahaProductPage({
           },
           {
             q: "Qual é a garantia do veículo?",
-            a: "As condições de garantia variam conforme o modelo. Veículos novos contam com garantia oficial do fabricante. Modelos semi novos possuem garantia de revisão e suporte técnico da Klug Motors. Fale com nosso consultor para conhecer as condições específicas deste modelo.",
+            a: "As condições de garantia variam conforme o modelo. Veículos novos contam com garantia oficial do fabricante. Modelos semi novos possuem garantia de revisão e suporte técnico da MT Mobilidade. Fale com nosso consultor para conhecer as condições específicas deste modelo.",
           },
         ]}
       />
@@ -913,7 +913,7 @@ export function YamahaProductPage({
           </p>
           <p>
             Os veículos são comercializados exclusivamente por meio de concessionárias autorizadas e
-            do e-commerce oficial das marcas. A Klug Motors é a unidade autorizada em Joinville / SC.
+            do e-commerce oficial das marcas. A MT Mobilidade é a unidade autorizada em Joinville / SC.
             Nunca realize pagamentos em contas de terceiros e desconfie de ofertas com valores muito
             abaixo do mercado.
           </p>
@@ -1064,7 +1064,7 @@ export function YamahaProductPage({
             <div className="rounded-2xl border border-primary/30 bg-primary/10 p-5">
               <p className="text-primary text-[11px] uppercase tracking-[0.3em] font-display font-black mb-2">Em breve</p>
               <p>
-                Estamos preparando o checkout online da Klug Motors para pagamento via
+                Estamos preparando o checkout online da MT Mobilidade para pagamento via
                 <b className="text-white"> Pix, transferência e cartão de crédito</b> em até 12x,
                 com emissão de nota e entrega em todo o Brasil.
               </p>
@@ -1210,7 +1210,7 @@ function SpecSheet({ specs }: { specs: Spec[] }) {
 
         <p className="mt-6 text-[11px] text-neutral-400 leading-relaxed text-center px-4">
           As informações técnicas podem sofrer alterações sem aviso prévio. Imagens meramente
-          ilustrativas. Consulte a Klug Motors para condições e disponibilidade.
+          ilustrativas. Consulte a MT Mobilidade para condições e disponibilidade.
         </p>
       </div>
     </section>

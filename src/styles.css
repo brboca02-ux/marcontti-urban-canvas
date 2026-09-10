@@ -49,7 +49,7 @@
 
 :root {
   --radius: 0.125rem;
-  /* Klug Motors — Charcoal & Ember (brutalist premium) */
+  /* MT Mobilidade — Charcoal & Ember (brutalist premium) */
   --background: oklch(0.19 0 0);            /* #1a1a1a */
   --foreground: oklch(1 0 0);
   --card: oklch(0.27 0 0);                  /* #2d2d2d */

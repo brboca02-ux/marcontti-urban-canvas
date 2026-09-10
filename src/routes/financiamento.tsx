@@ -5,14 +5,14 @@ import { buildWhatsAppFallbackUrl, openWhatsAppWithFallback } from "@/lib/models
 
 const BASE_URL = "https://klugmotors.com.br";
 const FINANCE_MSG =
-  "Olá, Klug Motors! Quero simular um financiamento e conhecer as condições. Podem me ajudar?";
+  "Olá, MT Mobilidade! Quero simular um financiamento e conhecer as condições. Podem me ajudar?";
 
 export const Route = createFileRoute("/financiamento")({
   head: () => ({
     meta: [
-      { title: "Financiamento de Moto Elétrica em Joinville | Klug Motors" },
-      { name: "description", content: "Financie sua moto ou scooter elétrica na Klug Motors. Consulte condições, parcelas, entrada e prazos direto no WhatsApp com nossa equipe em Joinville/SC." },
-      { property: "og:title", content: "Financiamento — Klug Motors" },
+      { title: "Financiamento de Moto Elétrica em Joinville | MT Mobilidade" },
+      { name: "description", content: "Financie sua moto ou scooter elétrica na MT Mobilidade. Consulte condições, parcelas, entrada e prazos direto no WhatsApp com nossa equipe em Joinville/SC." },
+      { property: "og:title", content: "Financiamento — MT Mobilidade" },
       { property: "og:description", content: "Condições facilitadas para motos e scooters elétricas. Simulação rápida via WhatsApp." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: `${BASE_URL}/financiamento` },

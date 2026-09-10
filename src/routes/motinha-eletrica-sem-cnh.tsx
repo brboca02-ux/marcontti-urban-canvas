@@ -25,7 +25,7 @@ const FAQ: Faq[] = [
   },
   {
     q: "Onde comprar motinha elétrica sem CNH em Joinville?",
-    a: "Na Klug Motors, R. Albano Schmidt, 1882 — Boa Vista, Joinville/SC. Você pode ver e testar os modelos na loja antes de decidir.",
+    a: "Na MT Mobilidade, R. Albano Schmidt, 1882 — Boa Vista, Joinville/SC. Você pode ver e testar os modelos na loja antes de decidir.",
   },
 ];
 
@@ -38,11 +38,11 @@ export const Route = createFileRoute("/motinha-eletrica-sem-cnh")({
         content:
           "Motinhas elétricas que não precisam de CNH em Joinville/SC: modelos autopropelidos (CONTRAN 996/23), preços, autonomia e parcelas. Loja física no Boa Vista.",
       },
-      { property: "og:title", content: "Motinha Elétrica sem CNH em Joinville | Klug Motors" },
+      { property: "og:title", content: "Motinha Elétrica sem CNH em Joinville | MT Mobilidade" },
       {
         property: "og:description",
         content:
-          "Modelos sem exigência de CNH, placa ou licenciamento, com preços e autonomia. Klug Motors, Joinville/SC.",
+          "Modelos sem exigência de CNH, placa ou licenciamento, com preços e autonomia. MT Mobilidade, Joinville/SC.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: BASE_URL + PATH },
@@ -64,12 +64,12 @@ function Page() {
       eyebrow="Sem CNH · Joinville/SC"
       title="Motinhas Elétricas que Não Precisam de"
       titleAccent="CNH em Joinville"
-      intro="Na Klug Motors você encontra motinhas e scooters elétricas classificadas como autopropelidas: sem CNH, sem placa e sem licenciamento, conforme a Resolução CONTRAN 996/23. Loja física na R. Albano Schmidt, 1882 — Boa Vista, Joinville/SC."
+      intro="Na MT Mobilidade você encontra motinhas e scooters elétricas classificadas como autopropelidas: sem CNH, sem placa e sem licenciamento, conforme a Resolução CONTRAN 996/23. Loja física na R. Albano Schmidt, 1882 — Boa Vista, Joinville/SC."
       filter={(m) => !isSemiNovaModel(m) && /sem\s*cnh/i.test(m.tag)}
       emptyLabel="Estamos atualizando os modelos sem CNH."
       catalogSearch={{ marca: "klug" }}
       catalogLabel="Ver catálogo de elétricos"
-      whatsappMessage="Olá, Klug Motors! Quero saber quais modelos não precisam de CNH e os preços."
+      whatsappMessage="Olá, MT Mobilidade! Quero saber quais modelos não precisam de CNH e os preços."
       faq={FAQ}
     >
       <SectionCard title="O que a lei permite em 2026">

@@ -201,7 +201,7 @@ function ModelsByCategory({
 export const Route = createFileRoute("/_authenticated/admin")({
   head: () => ({
     meta: [
-      { title: "Admin — Klug Motors" },
+      { title: "Admin — MT Mobilidade" },
       { name: "robots", content: "noindex,nofollow" },
     ],
   }),

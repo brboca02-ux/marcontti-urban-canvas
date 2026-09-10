@@ -9,7 +9,7 @@ import { AdminShell, StatCard, EmptyState, RowSkeleton } from "@/components/admi
 export const Route = createFileRoute("/_authenticated/analytics")({
   head: () => ({
     meta: [
-      { title: "Conversões — Klug Motors" },
+      { title: "Conversões — MT Mobilidade" },
       { name: "robots", content: "noindex,nofollow" },
     ],
   }),

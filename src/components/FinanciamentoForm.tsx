@@ -820,7 +820,7 @@ export function FinanciamentoForm({
             className="mt-0.5 h-4 w-4 accent-primary shrink-0"
           />
           <span className="text-xs text-white/80 leading-relaxed">
-            Autorizo a Klug Motors a coletar, tratar e compartilhar meus dados pessoais com instituições financeiras parceiras para análise de crédito e formalização do financiamento, conforme a{" "}
+            Autorizo a MT Mobilidade a coletar, tratar e compartilhar meus dados pessoais com instituições financeiras parceiras para análise de crédito e formalização do financiamento, conforme a{" "}
             <strong className="text-white">Lei Geral de Proteção de Dados (LGPD — Lei 13.709/2018)</strong>. Confirmo que as informações fornecidas são verdadeiras.
           </span>
         </label>

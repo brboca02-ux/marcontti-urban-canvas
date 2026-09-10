@@ -30,35 +30,35 @@ function brandMeta(marca?: string) {
   switch (key) {
     case "yamaha":
       return {
-        title: "Motos Yamaha 0km em Joinville | Klug Motors",
+        title: "Motos Yamaha 0km em Joinville | MT Mobilidade",
         description:
-          "Motos Yamaha 0km na Klug Motors, em Joinville/SC: ficha técnica, fotos e condições de pagamento. Loja física na R. Albano Schmidt, 1882.",
-        ogTitle: "Motos Yamaha 0km em Joinville | Klug Motors",
-        ogDescription: "Linha Yamaha 0km disponível na Klug Motors, em Joinville/SC. Filtre e compare modelos.",
+          "Motos Yamaha 0km na MT Mobilidade, em Joinville/SC: ficha técnica, fotos e condições de pagamento. Loja física na R. Albano Schmidt, 1882.",
+        ogTitle: "Motos Yamaha 0km em Joinville | MT Mobilidade",
+        ogDescription: "Linha Yamaha 0km disponível na MT Mobilidade, em Joinville/SC. Filtre e compare modelos.",
       };
     case "sudu":
       return {
-        title: "Scooters Elétricas SUDU em Joinville | Klug Motors",
+        title: "Scooters Elétricas SUDU em Joinville | MT Mobilidade",
         description:
-          "Linha SUDU de scooters e triciclos elétricos na Klug Motors, em Joinville/SC: autonomia, tecnologia e prévia de parcelas em até 71x no boleto.",
-        ogTitle: "Scooters Elétricas SUDU em Joinville | Klug Motors",
-        ogDescription: "Veículos elétricos SUDU na Klug Motors, em Joinville/SC. Encontre o modelo ideal.",
+          "Linha SUDU de scooters e triciclos elétricos na MT Mobilidade, em Joinville/SC: autonomia, tecnologia e prévia de parcelas em até 71x no boleto.",
+        ogTitle: "Scooters Elétricas SUDU em Joinville | MT Mobilidade",
+        ogDescription: "Veículos elétricos SUDU na MT Mobilidade, em Joinville/SC. Encontre o modelo ideal.",
       };
     case "klug":
       return {
-        title: "Scooters Elétricas Moto Chefe em Joinville | Klug Motors",
+        title: "Scooters Elétricas Moto Chefe em Joinville | MT Mobilidade",
         description:
-          "Scooters elétricas Moto Chefe na Klug Motors, em Joinville/SC: modelos econômicos, muitos sem necessidade de CNH, com oficina especializada e financiamento.",
-        ogTitle: "Scooters Elétricas Moto Chefe em Joinville | Klug Motors",
-        ogDescription: "Linha Moto Chefe de scooters elétricas na Klug Motors. Filtre por tipo, preço e autonomia.",
+          "Scooters elétricas Moto Chefe na MT Mobilidade, em Joinville/SC: modelos econômicos, muitos sem necessidade de CNH, com oficina especializada e financiamento.",
+        ogTitle: "Scooters Elétricas Moto Chefe em Joinville | MT Mobilidade",
+        ogDescription: "Linha Moto Chefe de scooters elétricas na MT Mobilidade. Filtre por tipo, preço e autonomia.",
       };
     default:
       return {
-        title: "Catálogo de Scooters e Motos Elétricas | Klug Motors",
+        title: "Catálogo de Scooters e Motos Elétricas | MT Mobilidade",
         description:
-          "Catálogo completo da Klug Motors em Joinville/SC: scooters elétricas Moto Chefe e SUDU, triciclos, Yamaha 0km e motos semi novas. Filtre por tipo, marca e preço.",
-        ogTitle: "Catálogo de Scooters e Motos Elétricas | Klug Motors",
-        ogDescription: "Todos os modelos elétricos e semi novos da Klug Motors — filtre por tipo, marca e preço.",
+          "Catálogo completo da MT Mobilidade em Joinville/SC: scooters elétricas Moto Chefe e SUDU, triciclos, Yamaha 0km e motos semi novas. Filtre por tipo, marca e preço.",
+        ogTitle: "Catálogo de Scooters e Motos Elétricas | MT Mobilidade",
+        ogDescription: "Todos os modelos elétricos e semi novos da MT Mobilidade — filtre por tipo, marca e preço.",
       };
   }
 }
@@ -200,8 +200,8 @@ function CatalogPage() {
       {/* Header */}
       <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur-md">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 h-16 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 shrink-0 min-w-0" aria-label="Klug Motors — início">
-            <img src={klugLogo.url} alt="Klug Motors" className="h-8 w-auto object-contain" />
+          <Link to="/" className="flex items-center gap-2 shrink-0 min-w-0" aria-label="MT Mobilidade — início">
+            <img src={klugLogo.url} alt="MT Mobilidade" className="h-8 w-auto object-contain" />
           </Link>
           <Link
             to="/"
@@ -316,7 +316,7 @@ function CatalogPage() {
               Motos Semi Novas — em breve
             </p>
             <p className="text-white/60 text-sm max-w-md mx-auto mb-8">
-              Estamos preparando um catálogo exclusivo de motos semi novas revisadas e com garantia Klug Motors. Fale conosco no WhatsApp para consultar disponibilidade agora.
+              Estamos preparando um catálogo exclusivo de motos semi novas revisadas e com garantia MT Mobilidade. Fale conosco no WhatsApp para consultar disponibilidade agora.
             </p>
             <a
               href="https://wa.me/554734293200?text=Ol%C3%A1%2C%20Klug%20Motors!%20Tenho%20interesse%20em%20motos%20semi%20novas.%20Podem%20me%20passar%20as%20op%C3%A7%C3%B5es%20dispon%C3%ADveis%3F"
@@ -360,7 +360,7 @@ function CatalogPage() {
           <div className="flex items-center gap-2">
             <img src={klugSymbol.url} alt="" aria-hidden="true" className="w-6 h-6 object-contain opacity-70" />
             <span className="text-[10px] text-white/40 uppercase tracking-[0.2em] font-bold">
-              © {new Date().getFullYear()} Klug Motors · Joinville / SC
+              © {new Date().getFullYear()} MT Mobilidade · Joinville / SC
             </span>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 sm:gap-6">
@@ -398,7 +398,7 @@ function CatalogGrid({ items }: { items: Model[] }) {
     <>
       <div ref={ref} className="grid gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-4">
         {items.map((m, i) => {
-          const waMsg = `Olá, Klug Motors! Tenho interesse na *${m.name}*${m.price ? ` (${m.price})` : ""}. Pode me passar mais informações?`;
+          const waMsg = `Olá, MT Mobilidade! Tenho interesse na *${m.name}*${m.price ? ` (${m.price})` : ""}. Pode me passar mais informações?`;
           return (
             <div
               key={m.slug}
