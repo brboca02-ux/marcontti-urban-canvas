@@ -53,6 +53,7 @@ import { HeroVideo } from "@/components/HeroVideo";
 import heroBoltVideo from "@/assets/videos/hero-bolt.webm.asset.json";
 import klugHeroVideo from "@/assets/videos/klug-hero-telao.mp4.asset.json";
 import klugHeroPoster from "@/assets/videos/klug-hero-poster.jpg.asset.json";
+import mtHeroScooters from "@/assets/mt-hero-scooters.jpg.asset.json";
 import conhecaKlugMotorsVideo from "@/assets/videos/conheca-klug-motors.mp4.asset.json";
 
 
@@ -670,7 +671,16 @@ function Hero() {
           Scooters e Motos Elétricas em <span className="text-primary">Joinville</span>
         </h1>
         <div className="relative rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-2xl bg-black aspect-[2/1]">
-          <HeroVideo src={klugHeroVideo.url} poster={klugHeroPoster.url} />
+          <img
+            src={mtHeroScooters.url}
+            alt="Linha de scooters e motos elétricas MT Mobilidade Elétrica Brasil"
+            width={1920}
+            height={1080}
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
+            className="absolute inset-0 h-full w-full object-cover object-center"
+          />
         </div>
 
         <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-6 w-full mx-auto max-w-7xl">
