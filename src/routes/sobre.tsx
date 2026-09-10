@@ -8,10 +8,10 @@ const BASE_URL = "https://klugmotors.com.br";
 export const Route = createFileRoute("/sobre")({
   head: () => ({
     meta: [
-      { title: "Sobre a Klug Motors — Concessionária Elétrica em Joinville" },
-      { name: "description", content: "Conheça a Klug Motors: concessionária de motos, scooters e triciclos elétricos em Joinville/SC. Nossa história, missão e compromisso com mobilidade sustentável." },
-      { property: "og:title", content: "Sobre a Klug Motors" },
-      { property: "og:description", content: "História, missão e valores da Klug Motors — mobilidade elétrica em Joinville/SC." },
+      { title: "Sobre a MT Mobilidade — Concessionária Elétrica em Joinville" },
+      { name: "description", content: "Conheça a MT Mobilidade: concessionária de motos, scooters e triciclos elétricos em Joinville/SC. Nossa história, missão e compromisso com mobilidade sustentável." },
+      { property: "og:title", content: "Sobre a MT Mobilidade" },
+      { property: "og:description", content: "História, missão e valores da MT Mobilidade — mobilidade elétrica em Joinville/SC." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: `${BASE_URL}/sobre` },
       { property: "og:image", content: `${BASE_URL}/__l5e/assets-v1/78e7624d-b686-4a7e-bab4-74a99ab5fdca/og-sobre.jpg` },
@@ -30,8 +30,8 @@ function SobrePage() {
     <PageLayout
       eyebrow="Institucional"
       title="Missão, visão e valores"
-      titleAccent="Klug Motors"
-      intro="Na Klug Motors, acreditamos que cada moto e cada scooter entregam muito mais do que mobilidade: entregam liberdade, conquistas e novos começos."
+      titleAccent="MT Mobilidade"
+      intro="Na MT Mobilidade, acreditamos que cada moto e cada scooter entregam muito mais do que mobilidade: entregam liberdade, conquistas e novos começos."
     >
       <div className="grid md:grid-cols-2 gap-8 mb-16">
         <div className="flex flex-col gap-8 h-full">
@@ -57,7 +57,7 @@ function SobrePage() {
         <div className="relative overflow-hidden rounded-3xl border border-white/10 group bg-card shadow-2xl h-full min-h-[500px]">
           <img 
             src={janainaKlugAsset.url} 
-            alt="Janaina Klug - Proprietária da Klug Motors" 
+            alt="Janaina Klug - Proprietária da MT Mobilidade" 
             className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-60" />
@@ -97,7 +97,7 @@ function SobrePage() {
       </SectionCard>
 
 
-      <SectionCard title="Por que Klug Motors">
+      <SectionCard title="Por que MT Mobilidade">
         <ul className="grid sm:grid-cols-2 gap-4 not-prose">
           {[
             { icon: Award, title: "Revenda autorizada", desc: "Modelos homologados, com nota fiscal e garantia oficial." },
@@ -127,7 +127,7 @@ function SobrePage() {
           </div>
           <div className="border border-border rounded-xl overflow-hidden">
             <iframe
-              title="Localização da Klug Motors em Joinville"
+              title="Localização da MT Mobilidade em Joinville"
               src="https://www.google.com/maps?q=R.+Albano+Schmidt,+1882+-+Boa+Vista,+Joinville+-+SC,+89205-100&output=embed"
               width="100%"
               height="220"

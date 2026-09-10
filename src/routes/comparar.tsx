@@ -18,9 +18,9 @@ export const Route = createFileRoute("/comparar")({
   validateSearch: zodValidator(searchSchema),
   head: () => ({
     meta: [
-      { title: "Comparar Scooters e Motos Elétricas | Klug Motors" },
+      { title: "Comparar Scooters e Motos Elétricas | MT Mobilidade" },
       { name: "description", content: "Compare motos e scooters lado a lado: ficha técnica completa, autonomia, velocidade, potência, bateria e preço. Escolha o modelo ideal." },
-      { property: "og:title", content: "Comparar Modelos — Klug Motors" },
+      { property: "og:title", content: "Comparar Modelos — MT Mobilidade" },
       { property: "og:description", content: "Tabela comparativa com ficha técnica completa. Compare até 3 modelos ao mesmo tempo." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: `${BASE_URL}/comparar` },

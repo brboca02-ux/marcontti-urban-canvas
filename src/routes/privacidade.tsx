@@ -8,17 +8,17 @@ const BASE_URL = "https://klugmotors.com.br";
 export const Route = createFileRoute("/privacidade")({
   head: () => ({
     meta: [
-      { title: "Política de Privacidade — Klug Motors" },
+      { title: "Política de Privacidade — MT Mobilidade" },
       {
         name: "description",
         content:
-          "Política de privacidade e uso de cookies da Klug Motors. Saiba como tratamos seus dados de acordo com a LGPD.",
+          "Política de privacidade e uso de cookies da MT Mobilidade. Saiba como tratamos seus dados de acordo com a LGPD.",
       },
-      { property: "og:title", content: "Política de Privacidade — Klug Motors" },
+      { property: "og:title", content: "Política de Privacidade — MT Mobilidade" },
       {
         property: "og:description",
         content:
-          "Como a Klug Motors coleta, usa e protege seus dados pessoais e cookies.",
+          "Como a MT Mobilidade coleta, usa e protege seus dados pessoais e cookies.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: `${BASE_URL}/privacidade` },
@@ -40,8 +40,8 @@ function PrivacyPage() {
     <div className="min-h-dvh bg-background text-foreground">
       <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur-md">
         <div className="mx-auto max-w-4xl px-5 sm:px-8 h-16 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2" aria-label="Klug Motors — início">
-            <img src={klugLogo.url} alt="Klug Motors" className="h-8 w-auto object-contain" />
+          <Link to="/" className="flex items-center gap-2" aria-label="MT Mobilidade — início">
+            <img src={klugLogo.url} alt="MT Mobilidade" className="h-8 w-auto object-contain" />
           </Link>
           <Link
             to="/"
@@ -64,7 +64,7 @@ function PrivacyPage() {
         <div className="prose prose-invert mt-10 max-w-none space-y-8 text-[15px] leading-relaxed text-white/80">
           <Section title="1. Quem somos">
             <p>
-              Klug Motors, inscrita no CNPJ 51.728.597/0001-26, localizada na
+              MT Mobilidade, inscrita no CNPJ 51.728.597/0001-26, localizada na
               R. Albano Schmidt, 1882 — Boa Vista, Joinville/SC · 89205-100, é a controladora dos
               dados pessoais tratados por este site e responsável por esta
               política, nos termos da Lei Geral de Proteção de Dados
@@ -172,7 +172,7 @@ function PrivacyPage() {
           <div className="flex items-center gap-2">
             <img src={klugSymbol.url} alt="" aria-hidden="true" className="w-6 h-6 object-contain opacity-70" />
             <span className="text-[10px] text-white/40 uppercase tracking-[0.2em] font-bold">
-              © {new Date().getFullYear()} Klug Motors · Joinville / SC
+              © {new Date().getFullYear()} MT Mobilidade · Joinville / SC
             </span>
           </div>
           <Link

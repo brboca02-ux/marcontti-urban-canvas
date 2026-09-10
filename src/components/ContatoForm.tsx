@@ -23,7 +23,7 @@ type Errors = Partial<Record<"name" | "phone" | "email" | "message" | "lgpd", st
 
 function buildContatoMessage(d: { name: string; phone: string; email?: string; message: string }) {
   return [
-    "Olá, Klug Motors! Enviei uma mensagem pelo site:",
+    "Olá, MT Mobilidade! Enviei uma mensagem pelo site:",
     "",
     `*Nome:* ${d.name}`,
     `*Telefone:* ${d.phone}`,
@@ -241,7 +241,7 @@ export function ContatoForm() {
           className="mt-0.5 w-4 h-4 accent-primary shrink-0"
         />
         <span>
-          Autorizo a Klug Motors a usar meus dados para retorno do contato, conforme a{" "}
+          Autorizo a MT Mobilidade a usar meus dados para retorno do contato, conforme a{" "}
           <a href="/privacidade" className="text-primary underline underline-offset-2">Política de Privacidade</a> (LGPD).
         </span>
       </label>

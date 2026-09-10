@@ -44,7 +44,7 @@ export function QuickViewModal({ product, open, onClose }: Props) {
 
   if (!open || !product) return null;
 
-  const message = `Olá, Klug Motors! Tenho interesse na *${product.nome}${product.potencia ? " " + product.potencia : ""}*${product.preco ? ` (${product.preco})` : ""}. Pode me passar mais informações e condições?`;
+  const message = `Olá, MT Mobilidade! Tenho interesse na *${product.nome}${product.potencia ? " " + product.potencia : ""}*${product.preco ? ` (${product.preco})` : ""}. Pode me passar mais informações e condições?`;
   const waHref = buildWhatsAppFallbackUrl(message);
 
   const handleWa = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -91,7 +91,7 @@ export function QuickViewModal({ product, open, onClose }: Props) {
           <div className="p-6 md:p-8 flex flex-col gap-4">
             <div>
               <p className="text-[10px] text-primary font-black uppercase tracking-[0.3em] mb-2">
-                Klug Motors
+                MT Mobilidade
               </p>
               <h2
                 className="text-primary italic uppercase leading-[0.9] tracking-[-0.01em] text-4xl md:text-5xl"
@@ -114,7 +114,7 @@ export function QuickViewModal({ product, open, onClose }: Props) {
             )}
 
             <p className="text-sm text-white/70 leading-relaxed">
-              Fale agora com um consultor da Klug Motors pelo WhatsApp e receba condições, disponibilidade em estoque e simulação de financiamento personalizada.
+              Fale agora com um consultor da MT Mobilidade pelo WhatsApp e receba condições, disponibilidade em estoque e simulação de financiamento personalizada.
             </p>
 
             <div className="mt-auto flex flex-col gap-2 pt-2">

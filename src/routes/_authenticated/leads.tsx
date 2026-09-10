@@ -10,7 +10,7 @@ import { AdminShell, RowSkeleton, EmptyState } from "@/components/admin/AdminShe
 export const Route = createFileRoute("/_authenticated/leads")({
   head: () => ({
     meta: [
-      { title: "Leads — Klug Motors" },
+      { title: "Leads — MT Mobilidade" },
       { name: "robots", content: "noindex,nofollow" },
     ],
   }),

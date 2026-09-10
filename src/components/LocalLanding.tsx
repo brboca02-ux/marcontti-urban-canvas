@@ -130,7 +130,7 @@ export function LocalLanding({
                   >
                     <LazyImage
                       src={m.colors[0]?.image || ""}
-                      alt={`${m.name} — Klug Motors Joinville`}
+                      alt={`${m.name} — MT Mobilidade Joinville`}
                       aspectRatio="4 / 3"
                       className="w-full h-full object-contain object-center bg-white"
                     />
@@ -177,7 +177,7 @@ export function LocalLanding({
         </Link>
       </SectionCard>
 
-      <SectionCard title="Por que comprar na Klug Motors">
+      <SectionCard title="Por que comprar na MT Mobilidade">
         <ul className="grid sm:grid-cols-2 gap-4 not-prose">
           {REASONS.map(({ icon: Icon, title: t, desc }) => (
             <li key={t} className="flex gap-4 items-start border border-border rounded-xl p-4 bg-background/50">

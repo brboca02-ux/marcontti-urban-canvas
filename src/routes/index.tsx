@@ -58,12 +58,12 @@ import conhecaKlugMotorsVideo from "@/assets/videos/conheca-klug-motors.mp4.asse
 
 const BASE_URL = "https://klugmotors.com.br";
 const FINANCE_MSG =
-  "Olá, Klug Motors! Quero simular um financiamento e conhecer as condições para as motos elétricas. Podem me ajudar?";
+  "Olá, MT Mobilidade! Quero simular um financiamento e conhecer as condições para as motos elétricas. Podem me ajudar?";
 
 /** Perguntas frequentes locais exibidas na home (e usadas no FAQPage JSON-LD). */
 const HOME_FAQS: { q: string; a: string }[] = [
   {
-    q: "Onde fica a loja da Klug Motors em Joinville?",
+    q: "Onde fica a loja da MT Mobilidade em Joinville?",
     a: "Estamos na R. Albano Schmidt, 1882 — Boa Vista, Joinville/SC (CEP 89205-100). Atendemos de segunda a sexta das 8h30 às 18h30 e sábado das 8h30 às 13h.",
   },
   {
@@ -71,7 +71,7 @@ const HOME_FAQS: { q: string; a: string }[] = [
     a: "Depende do modelo. Os modelos equiparados a autopropelidos, com limite de velocidade e potência definidos pelo CONTRAN, dispensam CNH e licenciamento. Já as motos e scooters com placa exigem habilitação. Nossa equipe indica em loja qual modelo se encaixa no seu caso.",
   },
   {
-    q: "A Klug Motors financia scooters e motos elétricas?",
+    q: "A MT Mobilidade financia scooters e motos elétricas?",
     a: "Sim. Trabalhamos com financiamento e prévia de parcelas no boleto em até 71x para as scooters elétricas Moto Chefe, SUDU e triciclos. Você também pode pagar à vista no PIX, com desconto na hora, ou no cartão.",
   },
   {
@@ -83,7 +83,7 @@ const HOME_FAQS: { q: string; a: string }[] = [
     a: "Scooters elétricas Moto Chefe (Klug) e SUDU, triciclos elétricos, motos Yamaha 0km e motos semi novas revisadas.",
   },
   {
-    q: "A Klug Motors atende outras cidades da região?",
+    q: "A MT Mobilidade atende outras cidades da região?",
     a: "Sim. Além de Joinville, atendemos clientes de Araquari, São Francisco do Sul, Jaraguá do Sul, Guaramirim, Barra Velha e região norte de Santa Catarina.",
   },
 ];
@@ -92,18 +92,18 @@ const HOME_FAQS: { q: string; a: string }[] = [
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Scooters e Motos Elétricas em Joinville | Klug Motors" },
+      { title: "Scooters e Motos Elétricas em Joinville | MT Mobilidade" },
       {
         name: "description",
         content:
           "Loja de scooters, motos e triciclos elétricos em Joinville/SC: Moto Chefe, SUDU, Yamaha 0km e semi novas. Oficina especializada e financiamento em até 71x no boleto.",
       },
-      { name: "keywords", content: "scooter elétrica Joinville, moto elétrica Joinville, triciclo elétrico SC, scooter sem CNH, Yamaha Joinville, Klug Motors" },
+      { name: "keywords", content: "scooter elétrica Joinville, moto elétrica Joinville, triciclo elétrico SC, scooter sem CNH, Yamaha Joinville, MT Mobilidade" },
       { name: "geo.region", content: "BR-SC" },
       { name: "geo.placename", content: "Joinville" },
       { name: "geo.position", content: "-26.2836;-48.8451" },
       { name: "ICBM", content: "-26.2836, -48.8451" },
-      { property: "og:title", content: "Scooters e Motos Elétricas em Joinville | Klug Motors" },
+      { property: "og:title", content: "Scooters e Motos Elétricas em Joinville | MT Mobilidade" },
       {
         property: "og:description",
         content:
@@ -111,11 +111,11 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "pt_BR" },
-      { property: "og:site_name", content: "Klug Motors" },
+      { property: "og:site_name", content: "MT Mobilidade" },
       { property: "og:url", content: `${BASE_URL}/` },
       { property: "og:image", content: `${BASE_URL}${x12Img.url}` },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Scooters e Motos Elétricas em Joinville | Klug Motors" },
+      { name: "twitter:title", content: "Scooters e Motos Elétricas em Joinville | MT Mobilidade" },
       { name: "twitter:description", content: "Mobilidade elétrica em Joinville/SC: Moto Chefe, SUDU, Yamaha 0km e semi novas." },
       { name: "twitter:image", content: `${BASE_URL}${x12Img.url}` },
     ],
@@ -132,7 +132,7 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": ["AutomotiveBusiness", "LocalBusiness", "Store"],
           "@id": `${BASE_URL}/#loja-joinville`,
-          name: "Klug Motors — Unidade Joinville",
+          name: "MT Mobilidade — Unidade Joinville",
           alternateName: "Klug Motor's",
           description:
             "Concessionária de motos, scooters e triciclos elétricos em Joinville/SC. Representante Yamaha, SUDU e MotoChefe.",
@@ -219,7 +219,7 @@ function KlugWordmark({ className = "" }: { className?: string }) {
   return (
     <img
       src={klugLogo.url}
-      alt="Klug Motors"
+      alt="MT Mobilidade"
       className={`h-8 sm:h-9 w-auto object-contain ${className}`}
     />
   );
@@ -286,7 +286,7 @@ function PromoStrip() {
     <div className="w-full bg-primary text-primary-foreground text-[11px] sm:text-xs font-display font-black uppercase tracking-[0.18em]">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 h-8 flex items-center justify-center gap-3">
         <Flame size={14} className="shrink-0" />
-        <span className="truncate text-[10px] sm:text-[11px] font-bold">Klug Motors — Com vc em todas as direções 🧭</span>
+        <span className="truncate text-[10px] sm:text-[11px] font-bold">MT Mobilidade — Com vc em todas as direções 🧭</span>
         <Link
           to="/modelos"
           className="hidden sm:inline-flex items-center gap-1 border border-primary-foreground/60 px-2.5 py-0.5 rounded-full hover:bg-primary-foreground hover:text-primary transition-colors"
@@ -419,7 +419,7 @@ function Header() {
             history.replaceState(null, "", " ");
           }}
           className="flex items-center gap-2 shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-          aria-label="Klug Motors — início"
+          aria-label="MT Mobilidade — início"
         >
           <KlugWordmark />
         </a>
@@ -677,7 +677,7 @@ function Hero() {
           <div className="relative rounded-2xl overflow-hidden ring-1 ring-white/10 group aspect-[4.4/1] bg-black w-full sm:w-1/2">
             <img
               src={oficinaEspecializada.url}
-              alt="Oficina Especializada em Scooters Elétricas Klug Motors - Baterias, Motores, Eletrônica e Pneus"
+              alt="Oficina Especializada em Scooters Elétricas MT Mobilidade - Baterias, Motores, Eletrônica e Pneus"
               width={1983}
               height={450}
               fetchPriority="high"
@@ -777,7 +777,7 @@ function HeroBolt() {
           loop
           playsInline
           preload="auto"
-          aria-label="Vídeo de destaque da scooter elétrica Klug Motors X12"
+          aria-label="Vídeo de destaque da scooter elétrica MT Mobilidade X12"
           className="w-full h-full object-cover"
         />
       </div>
@@ -818,7 +818,7 @@ const PERKS: Perk[] = [
     title: "Financiamento",
     desc: "em até 36x (WhatsApp)",
     message:
-      "Olá, Klug Motors! Quero simular o financiamento em até 36x. Podem me passar as condições?",
+      "Olá, MT Mobilidade! Quero simular o financiamento em até 36x. Podem me passar as condições?",
   },
   {
     icon: Wallet,
@@ -1317,7 +1317,7 @@ function Benefits() {
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <div className="max-w-2xl mb-16">
           <p className="text-[10px] text-primary font-display font-black uppercase tracking-[0.3em] mb-4">
-            Por que Klug Motors
+            Por que MT Mobilidade
           </p>
           <h2 className="font-display font-black uppercase text-3xl sm:text-4xl md:text-5xl tracking-tight sm:tracking-tighter leading-[1.05]">
             Mais liberdade.
@@ -1415,7 +1415,7 @@ function Contact() {
           {/* Google Maps embed */}
           <div className="mt-6 border border-border bg-card rounded-2xl overflow-hidden">
             <iframe
-              title="Localização da Klug Motors em Joinville — R. Albano Schmidt, 1882"
+              title="Localização da MT Mobilidade em Joinville — R. Albano Schmidt, 1882"
               src="https://www.google.com/maps?q=R.+Albano+Schmidt,+1882+-+Boa+Vista,+Joinville+-+SC,+89205-100&output=embed"
               width="100%"
               height="320"
@@ -1432,7 +1432,7 @@ function Contact() {
                 href="https://www.google.com/maps/dir/?api=1&destination=R.+Albano+Schmidt,+1882+-+Boa+Vista,+Joinville+-+SC,+89205-100"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Abrir rota até a Klug Motors no Google Maps"
+                aria-label="Abrir rota até a MT Mobilidade no Google Maps"
                 className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-glow text-primary-foreground font-display font-black uppercase text-[11px] tracking-widest px-5 py-3 rounded-full transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-ember)] focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
                 <MapPin size={14} strokeWidth={2.4} />
@@ -1521,7 +1521,7 @@ function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 sm:gap-12 mb-12 sm:mb-14 [&>*]:min-w-0">
           {/* Brand */}
           <div className="lg:col-span-4 lg:pr-8">
-            <Link to="/" className="inline-flex items-center gap-2 mb-5" aria-label="Klug Motors">
+            <Link to="/" className="inline-flex items-center gap-2 mb-5" aria-label="MT Mobilidade">
               <KlugWordmark />
             </Link>
 
@@ -1541,12 +1541,12 @@ function Footer() {
               </a>
               <a
                 href={buildWhatsAppFallbackUrl(
-                  "Olá! Tenho interesse em conhecer os modelos da Klug Motors.",
+                  "Olá! Tenho interesse em conhecer os modelos da MT Mobilidade.",
                 )}
                 onClick={(e) => {
                   e.preventDefault();
                   openWhatsAppWithFallback(
-                    "Olá! Tenho interesse em conhecer os modelos da Klug Motors.",
+                    "Olá! Tenho interesse em conhecer os modelos da MT Mobilidade.",
                   );
                 }}
                 className="w-10 h-10 rounded-full border border-white/15 grid place-items-center text-white/80 hover:bg-primary hover:border-primary hover:text-black transition-colors"
@@ -1632,7 +1632,7 @@ function Footer() {
 
         <div className="pt-6 sm:pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[10px] text-white/40 uppercase tracking-[0.2em] text-center md:text-left">
-            © {new Date().getFullYear()} Klug Motors · CNPJ 51.728.597/0001-26 · R. Albano Schmidt, 1882 — Boa Vista, Joinville/SC · 89205-100
+            © {new Date().getFullYear()} MT Mobilidade · CNPJ 51.728.597/0001-26 · R. Albano Schmidt, 1882 — Boa Vista, Joinville/SC · 89205-100
           </p>
           <div className="flex items-center gap-3">
             <CreatedBy />
@@ -1690,7 +1690,7 @@ function WhatsAppCTA() {
 
 function WhatsAppFab() {
   const message =
-    "Olá! Tenho interesse em conhecer os modelos da Klug Motors.";
+    "Olá! Tenho interesse em conhecer os modelos da MT Mobilidade.";
   const [hidden, setHidden] = useState(false);
   useEffect(() => {
     let ticking = false;
@@ -1778,7 +1778,7 @@ function HomeFaq() {
     <section id="perguntas-frequentes" className="border-t border-border bg-background py-14 sm:py-20">
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
         <h2 className="text-center font-display font-black uppercase text-2xl sm:text-3xl tracking-tight leading-none">
-          Perguntas frequentes — Klug Motors Joinville
+          Perguntas frequentes — MT Mobilidade Joinville
         </h2>
         <p className="mt-3 text-center text-sm text-muted-foreground">
           Dúvidas sobre CNH, financiamento, oficina e atendimento na região de Joinville/SC.
@@ -1941,7 +1941,7 @@ function YoutubeShowcase() {
             </span>
             <div>
               <p className="font-display font-black uppercase text-white text-sm tracking-widest">
-                Klug Motors | Joinville
+                MT Mobilidade | Joinville
               </p>
               <p className="text-white/50 text-[11px]">
                 Referência nacional em mobilidade elétrica
@@ -2042,7 +2042,7 @@ function InstagramRow() {
           <div className="max-w-2xl mx-auto text-center border border-border rounded-2xl p-8 sm:p-10 bg-card/60">
             <Instagram size={32} className="mx-auto text-primary" />
             <p className="mt-4 text-white/80 text-sm sm:text-base">
-              Acompanhe novidades, lançamentos e bastidores da Klug Motors direto no nosso perfil.
+              Acompanhe novidades, lançamentos e bastidores da MT Mobilidade direto no nosso perfil.
             </p>
             <a
               href="https://www.instagram.com/klugmotors/"

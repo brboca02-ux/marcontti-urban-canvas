@@ -25,7 +25,7 @@ const FAQ: Faq[] = [
   },
   {
     q: "Tem assistência técnica de moto elétrica em Joinville?",
-    a: "Tem. A Klug Motors mantém oficina especializada em veículos elétricos na R. Albano Schmidt, 1882 (Boa Vista), com peças de reposição em estoque.",
+    a: "Tem. A MT Mobilidade mantém oficina especializada em veículos elétricos na R. Albano Schmidt, 1882 (Boa Vista), com peças de reposição em estoque.",
   },
 ];
 
@@ -36,9 +36,9 @@ export const Route = createFileRoute("/motos-eletricas-joinville")({
       {
         name: "description",
         content:
-          "Motos elétricas em Joinville/SC na Klug Motors: venda, oficina especializada e peças. Modelos econômicos, alta performance e financiamento em até 71x no boleto.",
+          "Motos elétricas em Joinville/SC na MT Mobilidade: venda, oficina especializada e peças. Modelos econômicos, alta performance e financiamento em até 71x no boleto.",
       },
-      { property: "og:title", content: "Motos Elétricas em Joinville | Klug Motors" },
+      { property: "og:title", content: "Motos Elétricas em Joinville | MT Mobilidade" },
       {
         property: "og:description",
         content:
@@ -64,7 +64,7 @@ function Page() {
       filter={(m) => !isSemiNovaModel(m) && !m.slug.startsWith("yamaha") && /moto|chopper/i.test(m.tag)}
       catalogSearch={{ marca: "klug" }}
       catalogLabel="Ver todos os elétricos no catálogo"
-      whatsappMessage="Olá, Klug Motors! Quero informações sobre motos elétricas em Joinville."
+      whatsappMessage="Olá, MT Mobilidade! Quero informações sobre motos elétricas em Joinville."
       faq={FAQ}
     >
       <SectionCard title="Por que trocar a gasolina pela moto elétrica">

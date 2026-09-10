@@ -8,29 +8,29 @@ import { buildWhatsAppFallbackUrl, openWhatsAppWithFallback } from "@/lib/models
 
 const BASE_URL = "https://klugmotors.com.br";
 const FINANCE_MSG =
-  "Olá, Klug Motors! Quero simular um financiamento e conhecer as condições. Podem me ajudar?";
+  "Olá, MT Mobilidade! Quero simular um financiamento e conhecer as condições. Podem me ajudar?";
 
 export const Route = createFileRoute("/contato")({
   head: () => ({
     meta: [
-      { title: "Contato — Klug Motors Joinville/SC | WhatsApp e Loja Física" },
-      { name: "description", content: "Fale com a Klug Motors em Joinville/SC: WhatsApp, telefone (47) 93429-3200, e-mail e loja física na R. Albano Schmidt, 1882 — Boa Vista. Seg–Sex 08:30–18:30, Sáb 08:30–13:00." },
-      { name: "keywords", content: "Klug Motors contato, moto elétrica Joinville contato, WhatsApp Klug, loja Albano Schmidt Joinville, concessionária Boa Vista Joinville" },
+      { title: "Contato — MT Mobilidade Joinville/SC | WhatsApp e Loja Física" },
+      { name: "description", content: "Fale com a MT Mobilidade em Joinville/SC: WhatsApp, telefone (47) 93429-3200, e-mail e loja física na R. Albano Schmidt, 1882 — Boa Vista. Seg–Sex 08:30–18:30, Sáb 08:30–13:00." },
+      { name: "keywords", content: "MT Mobilidade contato, moto elétrica Joinville contato, WhatsApp Klug, loja Albano Schmidt Joinville, concessionária Boa Vista Joinville" },
       { name: "geo.region", content: "BR-SC" },
       { name: "geo.placename", content: "Joinville" },
       { name: "geo.position", content: "-26.2836;-48.8451" },
       { name: "ICBM", content: "-26.2836, -48.8451" },
-      { property: "og:title", content: "Contato — Klug Motors Joinville/SC" },
+      { property: "og:title", content: "Contato — MT Mobilidade Joinville/SC" },
       { property: "og:description", content: "WhatsApp, telefone e loja física em Joinville/SC. Fale direto com a nossa equipe." },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "pt_BR" },
-      { property: "og:site_name", content: "Klug Motors" },
+      { property: "og:site_name", content: "MT Mobilidade" },
       { property: "og:url", content: `${BASE_URL}/contato` },
       { property: "og:image", content: `${BASE_URL}/__l5e/assets-v1/b524e71f-5038-4ce3-8ef9-5dc8e174f6ba/og-contato.jpg` },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Contato — Klug Motors Joinville" },
+      { name: "twitter:title", content: "Contato — MT Mobilidade Joinville" },
       { name: "twitter:description", content: "WhatsApp, telefone e loja física em Joinville/SC." },
       { name: "twitter:image", content: `${BASE_URL}/__l5e/assets-v1/b524e71f-5038-4ce3-8ef9-5dc8e174f6ba/og-contato.jpg` },
     ],
@@ -42,7 +42,7 @@ export const Route = createFileRoute("/contato")({
           "@context": "https://schema.org",
           "@type": ["AutomotiveBusiness", "LocalBusiness", "Store"],
           "@id": `${BASE_URL}/contato#loja-joinville`,
-          name: "Klug Motors — Unidade Joinville",
+          name: "MT Mobilidade — Unidade Joinville",
           url: `${BASE_URL}/contato`,
           logo: `${BASE_URL}/favicon.ico`,
           image: `${BASE_URL}/favicon.ico`,

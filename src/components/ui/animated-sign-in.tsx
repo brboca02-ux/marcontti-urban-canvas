@@ -66,7 +66,7 @@ export default function LoginPage() {
         {/* Left brand panel */}
         <aside className="relative hidden flex-col justify-between overflow-hidden border-r border-white/10 bg-black/40 p-12 backdrop-blur-sm lg:flex">
           <div className="animate-fade-in">
-            <img src={klugSymbol.url} alt="Klug Motors" className="h-14 w-auto" />
+            <img src={klugSymbol.url} alt="MT Mobilidade" className="h-14 w-auto" />
           </div>
 
           <div className="space-y-6 animate-fade-in" style={{ animationDelay: "150ms" }}>
@@ -79,7 +79,7 @@ export default function LoginPage() {
               <span className="text-primary">da sua frota.</span>
             </h1>
             <p className="max-w-md text-sm leading-relaxed text-white/60">
-              Gerencie modelos, imagens, preços e leads da Klug Motors em um só lugar.
+              Gerencie modelos, imagens, preços e leads da MT Mobilidade em um só lugar.
               Acesso restrito a administradores autorizados.
             </p>
           </div>
@@ -96,7 +96,7 @@ export default function LoginPage() {
           <div className="w-full max-w-md animate-scale-in">
             {/* Mobile logo */}
             <div className="mb-8 flex items-center justify-center lg:hidden">
-              <img src={klugSymbol.url} alt="Klug Motors" className="h-12 w-auto" />
+              <img src={klugSymbol.url} alt="MT Mobilidade" className="h-12 w-auto" />
             </div>
 
             <div className="rounded-3xl border border-white/10 bg-neutral-900/60 p-8 shadow-[0_30px_80px_-40px_rgba(248,96,0,0.35)] backdrop-blur-xl sm:p-10">
@@ -173,7 +173,7 @@ export default function LoginPage() {
 
 
             <p className="mt-6 text-center text-[10px] uppercase tracking-[0.25em] text-white/30">
-              © {new Date().getFullYear()} Klug Motors · Acesso restrito
+              © {new Date().getFullYear()} MT Mobilidade · Acesso restrito
             </p>
           </div>
         </main>

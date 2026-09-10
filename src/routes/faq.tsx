@@ -59,9 +59,9 @@ const FAQS = [
 export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
-      { title: "Perguntas Frequentes sobre Motos Elétricas | Klug Motors" },
-      { name: "description", content: "Dúvidas sobre motos elétricas: CNH, autonomia, garantia, carregamento, homologação, financiamento e mais. Tire suas dúvidas com a Klug Motors." },
-      { property: "og:title", content: "FAQ — Klug Motors" },
+      { title: "Perguntas Frequentes sobre Motos Elétricas | MT Mobilidade" },
+      { name: "description", content: "Dúvidas sobre motos elétricas: CNH, autonomia, garantia, carregamento, homologação, financiamento e mais. Tire suas dúvidas com a MT Mobilidade." },
+      { property: "og:title", content: "FAQ — MT Mobilidade" },
       { property: "og:description", content: "Perguntas frequentes sobre motos e scooters elétricas: CNH, autonomia, garantia, financiamento." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: `${BASE_URL}/faq` },

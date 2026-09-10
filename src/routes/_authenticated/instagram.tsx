@@ -17,7 +17,7 @@ import { AdminShell, EmptyState } from "@/components/admin/AdminShell";
 export const Route = createFileRoute("/_authenticated/instagram")({
   head: () => ({
     meta: [
-      { title: "Instagram — Admin Klug Motors" },
+      { title: "Instagram — Admin MT Mobilidade" },
       { name: "robots", content: "noindex,nofollow" },
     ],
   }),

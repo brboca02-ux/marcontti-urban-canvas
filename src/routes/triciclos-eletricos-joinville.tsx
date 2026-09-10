@@ -32,9 +32,9 @@ export const Route = createFileRoute("/triciclos-eletricos-joinville")({
       {
         name: "description",
         content:
-          "Triciclos elétricos em Joinville/SC na Klug Motors: modelos utilitários de carga e opções para a melhor idade, sem CNH, com oficina especializada e parcelamento.",
+          "Triciclos elétricos em Joinville/SC na MT Mobilidade: modelos utilitários de carga e opções para a melhor idade, sem CNH, com oficina especializada e parcelamento.",
       },
-      { property: "og:title", content: "Triciclos Elétricos em Joinville | Klug Motors" },
+      { property: "og:title", content: "Triciclos Elétricos em Joinville | MT Mobilidade" },
       {
         property: "og:description",
         content:
@@ -56,11 +56,11 @@ function Page() {
       eyebrow="Triciclos elétricos · Joinville/SC"
       title="Triciclos Elétricos Utilitários e para"
       titleAccent="Melhor Idade em Joinville"
-      intro="Triciclos elétricos para trabalho e para quem busca estabilidade sobre três rodas, na Klug Motors — R. Albano Schmidt, 1882, Boa Vista, Joinville/SC. Modelos sem exigência de CNH e oficina especializada na loja."
+      intro="Triciclos elétricos para trabalho e para quem busca estabilidade sobre três rodas, na MT Mobilidade — R. Albano Schmidt, 1882, Boa Vista, Joinville/SC. Modelos sem exigência de CNH e oficina especializada na loja."
       filter={(m) => isTricicloModel(m) && !isSemiNovaModel(m)}
       catalogSearch={{ cat: "triciclo" }}
       catalogLabel="Ver todos os triciclos no catálogo"
-      whatsappMessage="Olá, Klug Motors! Quero informações sobre triciclos elétricos em Joinville."
+      whatsappMessage="Olá, MT Mobilidade! Quero informações sobre triciclos elétricos em Joinville."
       faq={FAQ}
     >
       <SectionCard title="Carga, conforto e estabilidade">

@@ -21,14 +21,14 @@ export function PageLayout({
   maxWidth?: string;
 }) {
   const FINANCE_MSG =
-    "Olá, Klug Motors! Quero simular um financiamento e conhecer as condições. Podem me ajudar?";
+    "Olá, MT Mobilidade! Quero simular um financiamento e conhecer as condições. Podem me ajudar?";
 
   return (
     <div className="min-h-dvh bg-background text-foreground flex flex-col">
       <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur-md">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 h-16 flex items-center justify-between gap-4">
-          <Link to="/" className="flex items-center gap-2 shrink-0 min-w-0" aria-label="Klug Motors — início">
-            <img src={klugLogo.url} alt="Klug Motors" className="h-7 sm:h-8 w-auto object-contain" />
+          <Link to="/" className="flex items-center gap-2 shrink-0 min-w-0" aria-label="MT Mobilidade — início">
+            <img src={klugLogo.url} alt="MT Mobilidade" className="h-7 sm:h-8 w-auto object-contain" />
           </Link>
           <nav className="hidden lg:flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[11px] font-display font-black uppercase tracking-widest text-white/70">
             <Link to="/modelos" className="hover:text-primary whitespace-nowrap">Modelos</Link>
@@ -46,7 +46,7 @@ export function PageLayout({
               type="button"
               onClick={() =>
                 openWhatsAppWithFallback(
-                  "Olá, Klug Motors! Quero agendar um Test-Ride. Podem me passar as opções?",
+                  "Olá, MT Mobilidade! Quero agendar um Test-Ride. Podem me passar as opções?",
                   { source: "header_test_ride", event: "test_ride_click" },
                 )
               }
@@ -81,7 +81,7 @@ export function PageLayout({
       <footer className="bg-card border-t border-border mt-auto">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 py-10 grid gap-8 md:grid-cols-3 text-sm text-white/70">
           <div>
-            <img src={klugLogo.url} alt="Klug Motors" className="h-8 w-auto object-contain mb-3" />
+            <img src={klugLogo.url} alt="MT Mobilidade" className="h-8 w-auto object-contain mb-3" />
             <p className="text-xs leading-relaxed max-w-xs">
               Motos, scooters e triciclos elétricos em Joinville/SC.
             </p>
@@ -125,7 +125,7 @@ export function PageLayout({
         <div className="border-t border-white/10">
           <div className="max-w-7xl mx-auto px-5 sm:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
             <p className="text-[10px] text-white/40 uppercase tracking-[0.2em] text-center sm:text-left">
-              © {new Date().getFullYear()} Klug Motors · CNPJ 51.728.597/0001-26
+              © {new Date().getFullYear()} MT Mobilidade · CNPJ 51.728.597/0001-26
             </p>
             <div className="flex items-center gap-3">
               <CreatedBy />

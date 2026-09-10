@@ -69,8 +69,8 @@ export const Route = createFileRoute("/modelos/$slug")({
     const url = `${BASE_URL}/modelos/${params.slug}`;
     if (!loaderData || !loaderData.model) {
       const name = humanizeSlug(params.slug);
-      const title = `${name} — Klug Motors | Motos e Scooters Elétricas`;
-      const desc = `Conheça a ${name} na Klug Motors em Joinville/SC. Preço, autonomia, velocidade e financiamento facilitado.`;
+      const title = `${name} — MT Mobilidade | Motos e Scooters Elétricas`;
+      const desc = `Conheça a ${name} na MT Mobilidade em Joinville/SC. Preço, autonomia, velocidade e financiamento facilitado.`;
       return {
         meta: [
           { title },
@@ -84,7 +84,7 @@ export const Route = createFileRoute("/modelos/$slug")({
       };
     }
     const m = loaderData.model;
-    const title = `${m.name} — ${m.tag} | Klug Motors`;
+    const title = `${m.name} — ${m.tag} | MT Mobilidade`;
     const desc = `${m.short} A partir de ${m.price}. Autonomia ${m.range}, ${m.speed}. Financiamento facilitado em Joinville/SC.`;
     const rawImg = m.colors[0]?.image;
     const img = rawImg
@@ -133,9 +133,9 @@ export const Route = createFileRoute("/modelos/$slug")({
           children: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Product",
-            name: `${m.name} — Klug Motors`,
+            name: `${m.name} — MT Mobilidade`,
             description: m.description,
-            brand: { "@type": "Brand", name: "Klug Motors" },
+            brand: { "@type": "Brand", name: "MT Mobilidade" },
             category: m.tag,
             image: img,
             offers: {
@@ -144,7 +144,7 @@ export const Route = createFileRoute("/modelos/$slug")({
               priceCurrency: "BRL",
               availability: "https://schema.org/InStock",
               url,
-              seller: { "@type": "Organization", name: "Klug Motors" },
+              seller: { "@type": "Organization", name: "MT Mobilidade" },
             },
           }),
         },
