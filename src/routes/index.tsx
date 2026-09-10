@@ -645,62 +645,6 @@ function Hero() {
           />
         </div>
 
-        <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-6 w-full mx-auto max-w-7xl">
-          <div className="relative rounded-2xl overflow-hidden ring-1 ring-white/10 group aspect-[4.4/1] bg-black w-full sm:w-1/2">
-            <img
-              src={oficinaEspecializada.url}
-              alt="Oficina Especializada em Scooters Elétricas MT Mobilidade - Baterias, Motores, Eletrônica e Pneus"
-              width={1983}
-              height={450}
-              fetchPriority="high"
-              loading="eager"
-              decoding="async"
-              className="w-full h-full object-contain object-center transition-transform duration-700 group-hover:scale-[1.02]"
-            />
-          </div>
-          
-          {/* Desktop Buttons Side by Side */}
-          <div className="hidden sm:flex flex-col gap-3 shrink-0">
-            <Link
-              to="/modelos"
-              className="bg-white/5 border border-white/10 hover:bg-white/10 text-white font-display font-black uppercase tracking-widest text-[11px] px-8 py-3 rounded-full transition-all text-center min-w-[200px]"
-            >
-              Ver Modelos
-            </Link>
-            <a
-              href={buildWhatsAppFallbackUrl(FINANCE_MSG)}
-              onClick={(e) => {
-                e.preventDefault();
-                openWhatsAppWithFallback(FINANCE_MSG);
-              }}
-              className="bg-[#25D366] hover:bg-[#20ba5a] text-white font-display font-black uppercase tracking-widest text-[11px] px-8 py-3 rounded-full transition-all shadow-lg text-center min-w-[200px]"
-            >
-              Simular Financiamento
-            </a>
-          </div>
-        </div>
-
-        {/* Mobile Stacked Buttons */}
-        <div className="mt-4 flex flex-col sm:hidden justify-center items-center gap-2 px-4">
-          <Link
-            to="/modelos"
-            className="w-full inline-flex items-center justify-center bg-white/5 border border-white/10 text-white font-display font-black uppercase tracking-widest text-xs px-8 py-3.5 rounded-full transition-all active:scale-95 min-h-[44px]"
-          >
-            Ver Modelos
-          </Link>
-          <a
-            href={buildWhatsAppFallbackUrl(FINANCE_MSG)}
-            onClick={(e) => {
-              e.preventDefault();
-              openWhatsAppWithFallback(FINANCE_MSG);
-            }}
-            className="w-full inline-flex items-center justify-center gap-2 bg-[#25D366] text-white font-display font-black uppercase tracking-widest text-xs px-8 py-3.5 rounded-full transition-all active:scale-95 min-h-[44px] shadow-md"
-          >
-            <MessageCircle size={18} fill="white" strokeWidth={0} />
-            Simular Financiamento
-          </a>
-        </div>
-
       </div>
     </section>
 
