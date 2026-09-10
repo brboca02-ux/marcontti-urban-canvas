@@ -78,19 +78,19 @@
   --shadow-ember: 0 0 30px color-mix(in oklab, oklch(0.55 0.145 251) 30%, transparent);
   --shadow-card: 0 10px 40px -15px oklch(0 0 0 / 60%);
   --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
-  --chart-1: oklch(0.685 0.203 44);
+  --chart-1: oklch(0.55 0.145 251);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
   --sidebar: oklch(0.19 0 0);
   --sidebar-foreground: oklch(1 0 0);
-  --sidebar-primary: oklch(0.685 0.203 44);
+  --sidebar-primary: oklch(0.55 0.145 251);
   --sidebar-primary-foreground: oklch(1 0 0);
   --sidebar-accent: oklch(0.27 0 0);
   --sidebar-accent-foreground: oklch(1 0 0);
   --sidebar-border: oklch(0.40 0 0);
-  --sidebar-ring: oklch(0.685 0.203 44);
+  --sidebar-ring: oklch(0.55 0.145 251);
   --font-sans: 'Epilogue', system-ui, sans-serif;
   --font-display: 'Urbanist', 'Epilogue', sans-serif;
 }
@@ -491,7 +491,7 @@ button:hover > .klug-mark {
   --gmpx-color-surface: #0b0b0b;
   --gmpx-color-on-surface: #ffffff;
   --gmpx-color-on-surface-variant: rgba(255, 255, 255, 0.6);
-  --gmpx-color-primary: #ff6a00;
+  --gmpx-color-primary: #2b6fbe;
   --gmpx-color-outline: rgba(255, 255, 255, 0.12);
   --gmpx-fixed-panel-width-row-layout: 22em;
   --gmpx-fixed-panel-height-column-layout: 55%;
