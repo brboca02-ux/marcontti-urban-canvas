@@ -1,0 +1,24 @@
+# Klug Motors
+
+> Loja oficial em Joinville/SC de motos e scooters elétricas Klug, SUDU e Yamaha, com financiamento facilitado e fabricação nacional.
+
+Klug Motors comercializa motos elétricas, scooters elétricas e bicicletas elétricas em Joinville — Santa Catarina, com atendimento na R. Albano Schmidt, 1882 – Boa Vista. Trabalha com as marcas Klug, SUDU e Yamaha, oferecendo financiamento, PIX com 10% OFF, garantia de fábrica e entrega para todo o Brasil.
+
+## Pages
+
+- [Home](/): Loja Klug Motors em Joinville — destaques, marcas e catálogo.
+- [Catálogo completo](/modelos): Todos os modelos de motos e scooters elétricas disponíveis.
+- [Modelos Klug](/modelos): Linha Klug — X12, GIGA, BIG TRI, MIA, SOMA, JET, RET, BOB, JOY.
+- [Modelos SUDU](/modelos/sudu): Linha SUDU de scooters elétricas.
+- [Modelos Yamaha](/modelos/yamaha): Linha Yamaha comercializada pela Klug Motors.
+- [Sobre a Klug Motors](/sobre): História, missão e diferenciais da loja em Joinville.
+- [Financiamento](/financiamento): Simulação e condições de financiamento das motos elétricas.
+- [Garantia](/garantia): Cobertura, prazos e política de garantia dos veículos.
+- [Comparar modelos](/comparar): Comparativo lado a lado de especificações.
+- [FAQ](/faq): Perguntas frequentes sobre CNH, autonomia, carregamento e entrega.
+- [Contato](/contato): Endereço, telefone, horário e mapa da unidade Joinville.
+- [Política de Privacidade](/privacidade): Uso de dados e cookies.
+
+## Optional
+
+- [Sitemap](/sitemap.xml): Índice completo de páginas indexáveis.
