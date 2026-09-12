@@ -1547,6 +1547,12 @@ function Footer() {
             © {new Date().getFullYear()} MT Mobilidade · CNPJ 51.728.597/0001-26 · Rua das Cegonhas, 699 — Jardim Iririú, Joinville/SC · CEP 89227-645
           </p>
           <div className="flex items-center gap-3">
+            <Link
+              to="/auth"
+              className="text-[9px] text-white/20 uppercase tracking-[0.2em] hover:text-white/50 transition-colors"
+            >
+              Área restrita
+            </Link>
             <CreatedBy />
             <img
               src={klugSymbol.url}
