@@ -24,7 +24,7 @@ const REASONS = [
   {
     icon: MapPin,
     title: "Loja física no Jardim Iririú",
-    desc: "R. Albano Schmidt, 1882 — Joinville/SC. Você vê, sobe e testa o veículo antes de comprar.",
+    desc: "Rua das Cegonhas, 699 — Jardim Iririú, Joinville/SC. Você vê, sobe e testa o veículo antes de comprar.",
   },
   {
     icon: Wrench,

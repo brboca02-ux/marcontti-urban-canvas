@@ -25,7 +25,7 @@ const FAQ: Faq[] = [
   },
   {
     q: "Onde fica a loja de scooters elétricas em Joinville?",
-    a: "Na R. Albano Schmidt, 1882 — bairro Jardim Iririú, Joinville/SC. Atendemos de segunda a sexta das 8h30 às 18h30 e sábado das 8h30 às 13h.",
+    a: "Na Rua das Cegonhas, 699 — Jardim Iririú, Joinville/SC, CEP 89227-645. Atendemos de segunda a sexta das 8h30 às 18h30 e sábado das 8h30 às 13h.",
   },
 ];
 
@@ -36,13 +36,13 @@ export const Route = createFileRoute("/scooters-eletricas-joinville")({
       {
         name: "description",
         content:
-          "Scooters elétricas em Joinville/SC na MT Mobilidade: modelos SUDU e Moto Chefe, muitos sem CNH, com oficina especializada e parcelas em até 71x. Loja no Jardim Iririú.",
+          "Scooters elétricas em Joinville/SC na MT Mobilidade, com oficina especializada e financiamento. Loja no Jardim Iririú.",
       },
       { property: "og:title", content: "Scooter Elétrica em Joinville | MT Mobilidade" },
       {
         property: "og:description",
         content:
-          "Modelos SUDU e Moto Chefe em Joinville/SC, com loja física no Jardim Iririú, oficina própria e financiamento.",
+          "Scooters elétricas em Joinville/SC, com loja física no Jardim Iririú, oficina própria e financiamento.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: BASE_URL + PATH },
@@ -59,15 +59,14 @@ function Page() {
     <LocalLanding
       eyebrow="Scooters elétricas · Joinville/SC"
       title="Scooters Elétricas em Joinville:"
-      titleAccent="Modelos SUDU e MotoChefe"
-      intro="A MT Mobilidade é concessionária de scooters elétricas em Joinville, com loja física na Rua das Cegonhas, 699 (Jardim Iririú) e oficina especializada na própria loja. Vendemos as linhas SUDU e Moto Chefe, com modelos que não exigem CNH."
+      titleAccent="Modelos para sua rotina"
+      intro="A MT Mobilidade oferece scooters elétricas em Joinville, com loja física na Rua das Cegonhas, 699 (Jardim Iririú) e oficina especializada na própria loja. Consulte nossa equipe sobre as exigências de cada modelo."
       filter={(m) =>
         !isSemiNovaModel(m) &&
         !isTricicloModel(m) &&
-        !m.slug.startsWith("yamaha") &&
         /scooter/i.test(m.tag)
       }
-      catalogSearch={{ marca: "sudu" }}
+      catalogSearch={{ cat: "scooter" }}
       catalogLabel="Ver todas as scooters no catálogo"
       whatsappMessage="Olá, MT Mobilidade! Quero informações sobre scooters elétricas em Joinville."
       faq={FAQ}

@@ -23,11 +23,9 @@ export const Route = createFileRoute("/sitemap.xml")({
         const staticEntries: SitemapEntry[] = [
           { path: "/", changefreq: "weekly", priority: "1.0" },
           { path: "/modelos", changefreq: "weekly", priority: "0.9" },
-          { path: "/modelos?marca=yamaha", changefreq: "weekly", priority: "0.9" },
-          { path: "/modelos?marca=sudu", changefreq: "weekly", priority: "0.9" },
-          { path: "/modelos?marca=klug", changefreq: "weekly", priority: "0.9" },
+          { path: "/modelos?cat=scooter", changefreq: "weekly", priority: "0.9" },
+          { path: "/modelos?cat=moto", changefreq: "weekly", priority: "0.9" },
           { path: "/modelos?cat=triciclo", changefreq: "weekly", priority: "0.8" },
-          { path: "/modelos?cat=seminovos", changefreq: "weekly", priority: "0.8" },
           { path: "/comparar", changefreq: "monthly", priority: "0.7" },
           { path: "/financiamento", changefreq: "monthly", priority: "0.8" },
           { path: "/garantia", changefreq: "yearly", priority: "0.5" },

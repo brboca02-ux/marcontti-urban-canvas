@@ -1332,7 +1332,7 @@ function Contact() {
           {/* Google Maps embed */}
           <div className="mt-6 border border-border bg-card rounded-2xl overflow-hidden">
             <iframe
-              title="Localização da MT Mobilidade em Joinville — R. Albano Schmidt, 1882"
+              title="Localização da MT Mobilidade em Joinville — Rua das Cegonhas, 699"
               src="https://www.google.com/maps?q=Rua+das+Cegonhas,+699+-+Jardim+Iririu,+Joinville+-+SC,+89227-645&output=embed"
               width="100%"
               height="320"
@@ -1532,24 +1532,19 @@ function Footer() {
               Navegação
             </h4>
             <ul className="space-y-3 text-sm text-white/70">
-              <li><Link to="/modelos" className="story-link hover:text-primary">Catálogo</Link></li>
-              <li><Link to="/modelos/yamaha" className="story-link hover:text-primary">Yamaha</Link></li>
-              <li><Link to="/modelos/sudu" className="story-link hover:text-primary">SUDU</Link></li>
-              <li><Link to="/comparar" className="story-link hover:text-primary">Comparar</Link></li>
+              <li><Link to="/scooters-eletricas-joinville" className="story-link hover:text-primary">Scooters Elétricas</Link></li>
+              <li><Link to="/motos-eletricas-joinville" className="story-link hover:text-primary">Motos Importadas</Link></li>
+              <li><Link to="/triciclos-eletricos-joinville" className="story-link hover:text-primary">Triciclos de Carga &amp; Conforto</Link></li>
+              <li><Link to="/garantia" className="story-link hover:text-primary">Oficina e Peças</Link></li>
               <li><Link to="/financiamento" className="story-link hover:text-primary">Financiamento</Link></li>
-              <li><Link to="/garantia" className="story-link hover:text-primary">Garantia</Link></li>
               <li><Link to="/sobre" className="story-link hover:text-primary">Sobre</Link></li>
-              <li><Link to="/faq" className="story-link hover:text-primary">FAQ</Link></li>
-              <li><Link to="/contato" className="story-link hover:text-primary">Contato</Link></li>
-              <li><Link to="/privacidade" className="story-link hover:text-primary">Privacidade</Link></li>
-              <li><Link to="/admin" className="story-link text-white/50 hover:text-primary">Admin</Link></li>
             </ul>
           </div>
         </div>
 
         <div className="pt-6 sm:pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[10px] text-white/40 uppercase tracking-[0.2em] text-center md:text-left">
-            © {new Date().getFullYear()} MT Mobilidade · CNPJ 51.728.597/0001-26 · Rua das Cegonhas, 699 — Jardim Iririú, Joinville/SC · 89227-645
+            © {new Date().getFullYear()} MT Mobilidade · CNPJ 51.728.597/0001-26 · Rua das Cegonhas, 699 — Jardim Iririú, Joinville/SC · CEP 89227-645
           </p>
           <div className="flex items-center gap-3">
             <CreatedBy />
