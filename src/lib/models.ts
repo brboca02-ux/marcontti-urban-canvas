@@ -1,29 +1,3 @@
-import x12Img from "@/assets/motos/x12.jpg.asset.json";
-import miaImg from "@/assets/motos/mia.jpg.asset.json";
-import gigaImg from "@/assets/motos/giga.jpg.asset.json";
-import retImg from "@/assets/motos/ret.jpg.asset.json";
-import somaImg from "@/assets/motos/soma.jpg.asset.json";
-import jetImg from "@/assets/motos/jet.jpg.asset.json";
-import bigtriImg from "@/assets/motos/bigtri.jpg.asset.json";
-import sofiaImg from "@/assets/motos/sofia.jpg.asset.json";
-import miatriImg from "@/assets/motos/miatri.jpg.asset.json";
-import suduA12Img from "@/assets/motos/sudu-a12.png.asset.json";
-import suduA10Img from "@/assets/motos/sudu-a10.png.asset.json";
-import suduA3PlusImg from "@/assets/motos/sudu-a3-plus.png.asset.json";
-import suduA4Img from "@/assets/motos/sudu-a4.png.asset.json";
-import suduA5Img from "@/assets/motos/sudu-a5.png.asset.json";
-import suduA6Img from "@/assets/motos/sudu-a6.png.asset.json";
-import suduA13TImg from "@/assets/motos/sudu-a13t.png.asset.json";
-import yamahaNeosImg from "@/assets/motos/yamaha-neos-connected.png.asset.json";
-import yamahaRayZrImg from "@/assets/motos/yamaha-rayzr-hybrid.png.asset.json";
-import yamahaFluoImg from "@/assets/motos/yamaha-fluo-hybrid.png.asset.json";
-import yamahaAeroxImg from "@/assets/motos/yamaha-aerox.png.asset.json";
-import yamahaNmaxImg from "@/assets/motos/yamaha-nmax.png.asset.json";
-import yamahaXmaxImg from "@/assets/motos/yamaha-xmax.png.asset.json";
-import yamahaFactorImg from "@/assets/motos/yamaha-factor-150.png.asset.json";
-import yamahaFactorDxImg from "@/assets/motos/yamaha-factor-150-dx.png.asset.json";
-import yamahaFz25Img from "@/assets/motos/yamaha-fz25.png.asset.json";
-
 /** Slots de imagem dos blocos da página de vendas (chave ausente = automático). */
 export const SECTION_SLOTS = [
   { key: "hero", label: "Hero (imagem principal)" },
@@ -178,15 +152,11 @@ export function isTricicloModel(m: Pick<Model, "tag">): boolean {
   return (m.tag ?? "").toLowerCase().includes("triciclo");
 }
 
-/**
- * A parcela prevista só é exibida para scooters Moto Chefe (klug),
- * SUDU e triciclos elétricos. Yamaha 0km e semi novas mostram só o valor.
- */
+/** A parcela prevista não é exibida para veículos seminovos. */
 export function supportsInstallment(
   m: Pick<Model, "slug" | "tag"> & { condition?: string },
 ): boolean {
   if (isSemiNovaModel(m)) return false;
   if (isTricicloModel(m)) return true;
-  if (m.slug.startsWith("yamaha")) return false;
   return true;
 }

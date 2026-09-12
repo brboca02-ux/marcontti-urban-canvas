@@ -5,4 +5,4 @@ Disallow: /leads
 Disallow: /auth
 Disallow: /api/
 
-Sitemap: https://klugmotors.com.br/sitemap.xml
+Sitemap: https://marcontti-urban-canvas.lovable.app/sitemap.xml

@@ -31,7 +31,7 @@ import { CreatedBy } from "@/components/CreatedBy";
 import klugLogo from "@/assets/klug/klug-horizontal-white.png.asset.json";
 import tenereNobgOptimized from "@/assets/seminovas/tenere-250-seminova-nobg.png?w=320;480;640;800;1024;1280&format=webp&quality=90&as=img";
 
-const BASE_URL = "https://klugmotors.com.br";
+const BASE_URL = "https://marcontti-urban-canvas.lovable.app";
 
 function humanizeSlug(slug: string) {
   return slug

@@ -3,7 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import klugLogo from "@/assets/klug/klug-horizontal-white.png.asset.json";
 import klugSymbol from "@/assets/klug/klug-symbol.png.asset.json";
 
-const BASE_URL = "https://klugmotors.com.br";
+const BASE_URL = "https://marcontti-urban-canvas.lovable.app";
 
 export const Route = createFileRoute("/privacidade")({
   head: () => ({
@@ -65,7 +65,7 @@ function PrivacyPage() {
           <Section title="1. Quem somos">
             <p>
               MT Mobilidade, inscrita no CNPJ 51.728.597/0001-26, localizada na
-              R. Albano Schmidt, 1882 — Boa Vista, Joinville/SC · 89205-100, é a controladora dos
+              Rua das Cegonhas, 699 — Jardim Iririú, Joinville/SC · 89227-645, é a controladora dos
               dados pessoais tratados por este site e responsável por esta
               política, nos termos da Lei Geral de Proteção de Dados
               (Lei nº 13.709/2018 — LGPD).
@@ -150,11 +150,11 @@ function PrivacyPage() {
 
           <Section title="8. Contato">
             <p>
-              E-mail: <a href="mailto:klugmotors@gmail.com" className="text-primary underline underline-offset-2">klugmotors@gmail.com</a>
+              E-mail: <a href="mailto:contato@mtmobilidade.com.br" className="text-primary underline underline-offset-2">contato@mtmobilidade.com.br</a>
               <br />
               Telefone: <a href="tel:+554734293200" className="text-primary underline underline-offset-2">(47) 3429-3200</a>
               <br />
-              Endereço: R. Albano Schmidt, 1882 — Boa Vista, Joinville/SC · 89205-100.
+              Endereço: Rua das Cegonhas, 699 — Jardim Iririú, Joinville/SC · 89227-645.
             </p>
           </Section>
 

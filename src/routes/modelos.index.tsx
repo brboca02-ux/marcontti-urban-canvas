@@ -14,9 +14,9 @@ import klugSymbol from "@/assets/klug/klug-symbol.png.asset.json";
 import { CreatedBy } from "@/components/CreatedBy";
 import klugLogo from "@/assets/klug/klug-horizontal-white.png.asset.json";
 
-const BASE_URL = "https://klugmotors.com.br";
+const BASE_URL = "https://marcontti-urban-canvas.lovable.app";
 
-const VALID_BRANDS = ["klug", "sudu", "yamaha"] as const;
+const VALID_BRANDS = ["mt"] as const;
 type ValidBrand = (typeof VALID_BRANDS)[number];
 
 type CatSearch = { cat?: string; marca?: string };
@@ -28,35 +28,19 @@ function isValidBrand(marca?: string): marca is ValidBrand {
 function brandMeta(marca?: string) {
   const key = marca?.toLowerCase();
   switch (key) {
-    case "yamaha":
+    case "mt":
       return {
-        title: "Motos Yamaha 0km em Joinville | MT Mobilidade",
+        title: "Scooters Elétricas em Joinville | MT Mobilidade",
         description:
-          "Motos Yamaha 0km na MT Mobilidade, em Joinville/SC: ficha técnica, fotos e condições de pagamento. Loja física na R. Albano Schmidt, 1882.",
-        ogTitle: "Motos Yamaha 0km em Joinville | MT Mobilidade",
-        ogDescription: "Linha Yamaha 0km disponível na MT Mobilidade, em Joinville/SC. Filtre e compare modelos.",
-      };
-    case "sudu":
-      return {
-        title: "Scooters Elétricas SUDU em Joinville | MT Mobilidade",
-        description:
-          "Linha SUDU de scooters e triciclos elétricos na MT Mobilidade, em Joinville/SC: autonomia, tecnologia e prévia de parcelas em até 71x no boleto.",
-        ogTitle: "Scooters Elétricas SUDU em Joinville | MT Mobilidade",
-        ogDescription: "Veículos elétricos SUDU na MT Mobilidade, em Joinville/SC. Encontre o modelo ideal.",
-      };
-    case "klug":
-      return {
-        title: "Scooters Elétricas Moto Chefe em Joinville | MT Mobilidade",
-        description:
-          "Scooters elétricas Moto Chefe na MT Mobilidade, em Joinville/SC: modelos econômicos, muitos sem necessidade de CNH, com oficina especializada e financiamento.",
-        ogTitle: "Scooters Elétricas Moto Chefe em Joinville | MT Mobilidade",
-        ogDescription: "Linha Moto Chefe de scooters elétricas na MT Mobilidade. Filtre por tipo, preço e autonomia.",
+          "Scooters elétricas da MT Mobilidade em Joinville/SC: veja fotos, preços e condições de pagamento.",
+        ogTitle: "Scooters Elétricas em Joinville | MT Mobilidade",
+        ogDescription: "Modelos disponíveis na MT Mobilidade. Filtre por tipo e preço.",
       };
     default:
       return {
         title: "Catálogo de Scooters e Motos Elétricas | MT Mobilidade",
         description:
-          "Catálogo completo da MT Mobilidade em Joinville/SC: scooters elétricas Moto Chefe e SUDU, triciclos, Yamaha 0km e motos semi novas. Filtre por tipo, marca e preço.",
+          "Catálogo completo da MT Mobilidade em Joinville/SC: scooters elétricas, motos importadas e triciclos. Filtre por tipo e preço.",
         ogTitle: "Catálogo de Scooters e Motos Elétricas | MT Mobilidade",
         ogDescription: "Todos os modelos elétricos e semi novos da MT Mobilidade — filtre por tipo, marca e preço.",
       };
@@ -107,14 +91,13 @@ export const Route = createFileRoute("/modelos/")({
 });
 
 const CATEGORY_TABS = [
-  { key: "klug", label: "Scooter Elétricas Moto Chefe", search: { marca: "klug" } as CatSearch },
-  { key: "sudu", label: "Scooter Elétricas Sudu", search: { marca: "sudu" } as CatSearch },
-  { key: "triciclo", label: "Triciclos Elétricos", search: { cat: "triciclo" } as CatSearch },
-  { key: "yamaha", label: "Motos Yamaha 0km", search: { marca: "yamaha" } as CatSearch },
-  { key: "seminovos", label: "Motos Semi Novas", search: { cat: "seminovos" } as CatSearch },
+  { key: "todos", label: "Todos", search: {} as CatSearch },
+  { key: "scooter", label: "Scooters Elétricas", search: { cat: "scooter" } as CatSearch },
+  { key: "moto", label: "Motos Importadas", search: { cat: "moto" } as CatSearch },
+  { key: "triciclo", label: "Triciclos", search: { cat: "triciclo" } as CatSearch },
 ] as const;
 
-const VALID_MARCAS = ["klug", "sudu", "yamaha"] as const;
+const VALID_MARCAS = ["mt"] as const;
 
 function isSemiNova(m: Model): boolean {
   const condition = (m as unknown as { condition?: string }).condition;
@@ -124,20 +107,6 @@ function isSemiNova(m: Model): boolean {
     /semi\s*nova/i.test(m.tag ?? "")
   );
 }
-
-function brandOf(m: Model): "Klug" | "SUDU" | "Yamaha" | "Semi Novas" {
-  if (isSemiNova(m)) return "Semi Novas";
-  if (m.slug.startsWith("sudu")) return "SUDU";
-  if (m.slug.startsWith("yamaha")) return "Yamaha";
-  return "Klug";
-}
-
-
-const MARCA_LABEL: Record<string, "Klug" | "SUDU" | "Yamaha"> = {
-  klug: "Klug",
-  sudu: "SUDU",
-  yamaha: "Yamaha",
-};
 
 const PRICE_RANGES = [
   { id: "all", label: "Todos os preços", min: 0, max: Infinity },
@@ -153,10 +122,11 @@ function isTriciclo(m: Model): boolean {
 
 function activeCategoryKey(search: CatSearch): string {
   if (search.cat === "triciclo") return "triciclo";
-  if (search.cat === "seminovos") return "seminovos";
+  if (search.cat === "scooter") return "scooter";
+  if (search.cat === "moto") return "moto";
   const marca = search.marca?.toLowerCase();
   if (marca && (VALID_MARCAS as readonly string[]).includes(marca)) return marca;
-  return "klug";
+  return "todos";
 }
 
 function CatalogPage() {
@@ -177,11 +147,10 @@ function CatalogPage() {
     let list = models.filter((m) => {
       let catOk = true;
       if (activeKey === "triciclo") catOk = isTriciclo(m) && !isSemiNova(m);
-      else if (activeKey === "seminovos") catOk = isSemiNova(m);
-      else if (activeKey === "klug" || activeKey === "sudu") {
-        catOk = brandOf(m) === MARCA_LABEL[activeKey] && !isTriciclo(m);
-      } else if (activeKey === "yamaha") {
-        catOk = brandOf(m) === "Yamaha" && !isSemiNova(m);
+      else if (activeKey === "scooter") catOk = /scooter/i.test(m.tag) && !isTriciclo(m);
+      else if (activeKey === "moto") catOk = /moto/i.test(m.tag) && !isTriciclo(m);
+      else if (activeKey === "mt") {
+        catOk = !isSemiNova(m);
       } else if (activeKey === "todos" || !activeKey) {
         catOk = !isSemiNova(m);
       }

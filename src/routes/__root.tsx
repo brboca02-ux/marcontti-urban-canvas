@@ -17,7 +17,7 @@ import { CookieConsent } from "../components/CookieConsent";
 import { captureAttribution } from "../lib/attribution";
 import { useModelsRealtime } from "../hooks/useModelsRealtime";
 
-const PUBLIC_ORIGIN = "https://klugmotors.com.br";
+const PUBLIC_ORIGIN = "https://marcontti-urban-canvas.lovable.app";
 
 /** Slim top progress bar that reflects vertical scroll position. */
 function ScrollProgress() {
@@ -115,7 +115,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "MT Mobilidade - Motos e Scooters elétricas Importadas em Joinville" },
-      { name: "description", content: "MT Mobilidade: motos, scooters e triciclos elétricos em Joinville/SC. Sem CNH, econômicas e sustentáveis. R. Albano Schmidt, 1882." },
+      { name: "description", content: "MT Mobilidade: motos importadas, scooters e triciclos elétricos em Joinville/SC. Rua das Cegonhas, 699, Jardim Iririú." },
       { name: "author", content: "MT Mobilidade" },
       { property: "og:site_name", content: "MT Mobilidade" },
       { property: "og:locale", content: "pt_BR" },
@@ -143,7 +143,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               "@type": "Organization",
               "@id": `${PUBLIC_ORIGIN}/#organizacao`,
               name: "MT Mobilidade",
-              alternateName: ["Klug Motor's", "MT Mobilidade Joinville"],
+              alternateName: ["MT Mobilidade Elétrica", "MT Mobilidade Joinville"],
               url: `${PUBLIC_ORIGIN}/`,
               logo: {
                 "@type": "ImageObject",
@@ -152,17 +152,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               image: `${PUBLIC_ORIGIN}${klugSymbol.url}`,
               description:
                 "Concessionária de motos, scooters e triciclos elétricos em Joinville/SC, com oficina especializada e financiamento facilitado.",
-              email: "klugmotors@gmail.com",
+              email: "contato@mtmobilidade.com.br",
               telephone: "+5547934293200",
               taxID: "51.728.597/0001-26",
               vatID: "51.728.597/0001-26",
               foundingLocation: { "@type": "Place", name: "Joinville, SC" },
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "R. Albano Schmidt, 1882 - Boa Vista",
+                streetAddress: "Rua das Cegonhas, 699 - Jardim Iririú",
                 addressLocality: "Joinville",
                 addressRegion: "SC",
-                postalCode: "89205-100",
+                postalCode: "89227-645",
                 addressCountry: "BR",
               },
               contactPoint: [
@@ -174,7 +174,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
                   availableLanguage: ["Portuguese"],
                 },
               ],
-              sameAs: ["https://www.instagram.com/klugmotors/"],
+              sameAs: ["https://www.instagram.com/mt_mobilidade_eletrica/"],
             },
             {
               "@type": "WebSite",

@@ -58,7 +58,7 @@ import mtHeroScooters from "@/assets/mt-hero-scooters.jpg.asset.json";
 import conhecaKlugMotorsVideo from "@/assets/videos/conheca-klug-motors.mp4.asset.json";
 
 
-const BASE_URL = "https://klugmotors.com.br";
+const BASE_URL = "https://marcontti-urban-canvas.lovable.app";
 const FINANCE_MSG =
   "Olá, MT Mobilidade! Quero simular um financiamento e conhecer as condições para as motos elétricas. Podem me ajudar?";
 
@@ -66,7 +66,7 @@ const FINANCE_MSG =
 const HOME_FAQS: { q: string; a: string }[] = [
   {
     q: "Onde fica a loja da MT Mobilidade em Joinville?",
-    a: "Estamos na R. Albano Schmidt, 1882 — Boa Vista, Joinville/SC (CEP 89205-100). Atendemos de segunda a sexta das 8h30 às 18h30 e sábado das 8h30 às 13h.",
+    a: "Estamos na Rua das Cegonhas, 699 — Jardim Iririú, Joinville/SC (CEP 89227-645). Atendemos de segunda a sexta das 8h30 às 18h30 e sábado das 8h30 às 13h.",
   },
   {
     q: "Preciso de CNH para andar de scooter elétrica?",
@@ -74,7 +74,7 @@ const HOME_FAQS: { q: string; a: string }[] = [
   },
   {
     q: "A MT Mobilidade financia scooters e motos elétricas?",
-    a: "Sim. Trabalhamos com financiamento e prévia de parcelas no boleto em até 71x para as scooters elétricas Moto Chefe, SUDU e triciclos. Você também pode pagar à vista no PIX, com desconto na hora, ou no cartão.",
+    a: "Sim. Trabalhamos com financiamento para scooters elétricas, motos importadas e triciclos. Você também pode pagar à vista no PIX, com desconto na hora, ou no cartão.",
   },
   {
     q: "Vocês têm oficina para scooter elétrica?",
@@ -82,7 +82,7 @@ const HOME_FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Quais marcas e modelos vocês vendem?",
-    a: "Scooters elétricas Moto Chefe (Klug) e SUDU, triciclos elétricos, motos Yamaha 0km e motos semi novas revisadas.",
+    a: "Scooters elétricas, motos importadas e triciclos de carga e conforto. Consulte o estoque atualizado no catálogo.",
   },
   {
     q: "A MT Mobilidade atende outras cidades da região?",
@@ -98,9 +98,9 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Loja de scooters, motos e triciclos elétricos em Joinville/SC: Moto Chefe, SUDU, Yamaha 0km e semi novas. Oficina especializada e financiamento em até 71x no boleto.",
+          "Loja de scooters elétricas, motos importadas e triciclos em Joinville/SC, com oficina, peças e financiamento.",
       },
-      { name: "keywords", content: "scooter elétrica Joinville, moto elétrica Joinville, triciclo elétrico SC, scooter sem CNH, Yamaha Joinville, MT Mobilidade" },
+      { name: "keywords", content: "scooter elétrica Joinville, moto importada Joinville, triciclo elétrico SC, oficina de scooters, MT Mobilidade" },
       { name: "geo.region", content: "BR-SC" },
       { name: "geo.placename", content: "Joinville" },
       { name: "geo.position", content: "-26.2836;-48.8451" },
@@ -109,7 +109,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Scooters, motos e triciclos elétricos em Joinville/SC. Loja física na R. Albano Schmidt, 1882 — Boa Vista, com oficina especializada e financiamento facilitado.",
+          "Scooters, motos e triciclos elétricos em Joinville/SC. Loja física na Rua das Cegonhas, 699 — Jardim Iririú, com oficina especializada e financiamento facilitado.",
       },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "pt_BR" },
@@ -118,7 +118,7 @@ export const Route = createFileRoute("/")({
       { property: "og:image", content: `${BASE_URL}${x12Img.url}` },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "MT Mobilidade - Motos e Scooters elétricas Importadas em Joinville" },
-      { name: "twitter:description", content: "Mobilidade elétrica em Joinville/SC: Moto Chefe, SUDU, Yamaha 0km e semi novas." },
+      { name: "twitter:description", content: "Scooters elétricas, motos importadas e triciclos em Joinville/SC." },
       { name: "twitter:image", content: `${BASE_URL}${x12Img.url}` },
     ],
 
@@ -135,14 +135,14 @@ export const Route = createFileRoute("/")({
           "@type": ["AutomotiveBusiness", "LocalBusiness", "Store"],
           "@id": `${BASE_URL}/#loja-joinville`,
           name: "MT Mobilidade — Unidade Joinville",
-          alternateName: "Klug Motor's",
+          alternateName: "MT Mobilidade Elétrica Brasil",
           description:
-            "Concessionária de motos, scooters e triciclos elétricos em Joinville/SC. Representante Yamaha, SUDU e MotoChefe.",
+            "Loja de scooters elétricas, motos importadas e triciclos em Joinville/SC, com oficina e peças.",
           url: BASE_URL,
           logo: `${BASE_URL}${x12Img.url}`,
           image: `${BASE_URL}${x12Img.url}`,
           telephone: "+5547934293200",
-          email: "klugmotors@gmail.com",
+          email: "contato@mtmobilidade.com.br",
           taxID: "51.728.597/0001-26",
           vatID: "51.728.597/0001-26",
           priceRange: "$$",
@@ -150,10 +150,10 @@ export const Route = createFileRoute("/")({
           paymentAccepted: "Cash, Credit Card, Debit Card, PIX, Financiamento",
           address: {
             "@type": "PostalAddress",
-            streetAddress: "R. Albano Schmidt, 1882 - Boa Vista",
+            streetAddress: "Rua das Cegonhas, 699 - Jardim Iririú",
             addressLocality: "Joinville",
             addressRegion: "SC",
-            postalCode: "89205-100",
+            postalCode: "89227-645",
             addressCountry: "BR",
           },
           geo: {
@@ -161,7 +161,7 @@ export const Route = createFileRoute("/")({
             latitude: -26.2836,
             longitude: -48.8451,
           },
-          hasMap: "https://www.google.com/maps?q=R.+Albano+Schmidt,+1882+-+Boa+Vista,+Joinville+-+SC,+89205-100",
+          hasMap: "https://www.google.com/maps?q=Rua+das+Cegonhas,+699+-+Jardim+Iririu,+Joinville+-+SC,+89227-645",
           areaServed: [
             { "@type": "City", name: "Joinville" },
             { "@type": "AdministrativeArea", name: "Santa Catarina" },
@@ -191,7 +191,7 @@ export const Route = createFileRoute("/")({
             },
           ],
           sameAs: [
-            "https://www.instagram.com/klugmotors/",
+            "https://www.instagram.com/mt_mobilidade_eletrica/",
           ],
           parentOrganization: { "@id": `${BASE_URL}/#organizacao` },
         }),
@@ -758,7 +758,7 @@ const PERKS: Perk[] = [
     count: 5000,
     countPrefix: "+",
     message:
-      "Olá! Vi que a Klug já vendeu mais de 5 mil unidades — quero conhecer os modelos.",
+      "Olá! Vi que a MT Mobilidade já vendeu mais de 5 mil unidades — quero conhecer os modelos.",
   },
   {
     icon: ShieldCheck,
@@ -1299,8 +1299,8 @@ function Contact() {
             <ContactRow
               icon={MapPin}
               label="Endereço"
-              value="R. Albano Schmidt, 1882 — Boa Vista, Joinville/SC · 89205-100"
-              href="https://maps.google.com/?q=R.+Albano+Schmidt,+1882+-+Boa+Vista,+Joinville+-+SC,+89205-100"
+              value="Rua das Cegonhas, 699 — Jardim Iririú, Joinville/SC · 89227-645"
+              href="https://maps.google.com/?q=Rua+das+Cegonhas,+699+-+Jardim+Iririu,+Joinville+-+SC,+89227-645"
             />
             <ContactRow
               icon={Phone}
@@ -1317,14 +1317,14 @@ function Contact() {
             <ContactRow
               icon={Mail}
               label="E-mail"
-              value="klugmotors@gmail.com"
-              href="mailto:klugmotors@gmail.com"
+              value="contato@mtmobilidade.com.br"
+              href="mailto:contato@mtmobilidade.com.br"
             />
             <ContactRow
               icon={Instagram}
               label="Instagram"
-              value="@klugmotors"
-              href="https://www.instagram.com/klugmotors/"
+              value="@mt_mobilidade_eletrica"
+              href="https://www.instagram.com/mt_mobilidade_eletrica/"
               external
             />
           </div>
@@ -1332,8 +1332,8 @@ function Contact() {
           {/* Google Maps embed */}
           <div className="mt-6 border border-border bg-card rounded-2xl overflow-hidden">
             <iframe
-              title="Localização da MT Mobilidade em Joinville — R. Albano Schmidt, 1882"
-              src="https://www.google.com/maps?q=R.+Albano+Schmidt,+1882+-+Boa+Vista,+Joinville+-+SC,+89205-100&output=embed"
+              title="Localização da MT Mobilidade em Joinville — Rua das Cegonhas, 699"
+              src="https://www.google.com/maps?q=Rua+das+Cegonhas,+699+-+Jardim+Iririu,+Joinville+-+SC,+89227-645&output=embed"
               width="100%"
               height="320"
               style={{ border: 0 }}
@@ -1343,10 +1343,10 @@ function Contact() {
             />
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-4 border-t border-border bg-background/50">
               <p className="text-xs text-white/60 leading-relaxed">
-                R. Albano Schmidt, 1882 — Boa Vista, Joinville/SC · 89205-100
+                Rua das Cegonhas, 699 — Jardim Iririú, Joinville/SC · 89227-645
               </p>
               <a
-                href="https://www.google.com/maps/dir/?api=1&destination=R.+Albano+Schmidt,+1882+-+Boa+Vista,+Joinville+-+SC,+89205-100"
+                href="https://www.google.com/maps/dir/?api=1&destination=Rua+das+Cegonhas,+699+-+Jardim+Iririu,+Joinville+-+SC,+89227-645"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Abrir rota até a MT Mobilidade no Google Maps"
@@ -1448,11 +1448,11 @@ function Footer() {
             </p>
             <div className="flex gap-2">
               <a
-                href="https://www.instagram.com/klugmotors/"
+                href="https://www.instagram.com/mt_mobilidade_eletrica/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full border border-white/15 grid place-items-center text-white/80 hover:bg-primary hover:border-primary hover:text-black transition-colors"
-                aria-label="Instagram @klugmotors"
+                aria-label="Instagram @mt_mobilidade_eletrica"
               >
                 <Instagram size={15} strokeWidth={1.5} />
               </a>
@@ -1483,9 +1483,9 @@ function Footer() {
             <address className="not-italic text-white/70 text-sm leading-relaxed flex items-start gap-2">
               <MapPin {...iconProps} className="mt-1 shrink-0 text-white/40" />
               <span>
-                R. Albano Schmidt, 1882 — Boa Vista
+                Rua das Cegonhas, 699 — Jardim Iririú
                 <br />
-                Joinville/SC · 89205-100
+                Joinville/SC · CEP 89227-645
               </span>
             </address>
           </div>
@@ -1506,10 +1506,10 @@ function Footer() {
               <li className="flex items-center gap-2">
                 <Mail {...iconProps} className="shrink-0 text-white/40" />
                 <a
-                  href="mailto:klugmotors@gmail.com"
+                  href="mailto:contato@mtmobilidade.com.br"
                   className="hover:text-primary story-link"
                 >
-                  klugmotors@gmail.com
+                  contato@mtmobilidade.com.br
                 </a>
               </li>
               <li className="flex items-start gap-2 pt-1">
@@ -1532,24 +1532,19 @@ function Footer() {
               Navegação
             </h4>
             <ul className="space-y-3 text-sm text-white/70">
-              <li><Link to="/modelos" className="story-link hover:text-primary">Catálogo</Link></li>
-              <li><Link to="/modelos/yamaha" className="story-link hover:text-primary">Yamaha</Link></li>
-              <li><Link to="/modelos/sudu" className="story-link hover:text-primary">SUDU</Link></li>
-              <li><Link to="/comparar" className="story-link hover:text-primary">Comparar</Link></li>
+              <li><Link to="/scooters-eletricas-joinville" className="story-link hover:text-primary">Scooters Elétricas</Link></li>
+              <li><Link to="/motos-eletricas-joinville" className="story-link hover:text-primary">Motos Importadas</Link></li>
+              <li><Link to="/triciclos-eletricos-joinville" className="story-link hover:text-primary">Triciclos de Carga &amp; Conforto</Link></li>
+              <li><Link to="/garantia" className="story-link hover:text-primary">Oficina e Peças</Link></li>
               <li><Link to="/financiamento" className="story-link hover:text-primary">Financiamento</Link></li>
-              <li><Link to="/garantia" className="story-link hover:text-primary">Garantia</Link></li>
               <li><Link to="/sobre" className="story-link hover:text-primary">Sobre</Link></li>
-              <li><Link to="/faq" className="story-link hover:text-primary">FAQ</Link></li>
-              <li><Link to="/contato" className="story-link hover:text-primary">Contato</Link></li>
-              <li><Link to="/privacidade" className="story-link hover:text-primary">Privacidade</Link></li>
-              <li><Link to="/admin" className="story-link text-white/50 hover:text-primary">Admin</Link></li>
             </ul>
           </div>
         </div>
 
         <div className="pt-6 sm:pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[10px] text-white/40 uppercase tracking-[0.2em] text-center md:text-left">
-            © {new Date().getFullYear()} MT Mobilidade · CNPJ 51.728.597/0001-26 · R. Albano Schmidt, 1882 — Boa Vista, Joinville/SC · 89205-100
+            © {new Date().getFullYear()} MT Mobilidade · CNPJ 51.728.597/0001-26 · Rua das Cegonhas, 699 — Jardim Iririú, Joinville/SC · CEP 89227-645
           </p>
           <div className="flex items-center gap-3">
             <CreatedBy />
@@ -1935,12 +1930,12 @@ function InstagramRow() {
         <h2 className="text-center font-display font-black uppercase text-white text-lg sm:text-xl tracking-widest mb-8">
           Siga nosso Instagram{" "}
           <a
-            href="https://www.instagram.com/klugmotors/"
+            href="https://www.instagram.com/mt_mobilidade_eletrica/"
             target="_blank"
             rel="noreferrer"
             className="text-primary hover:underline"
           >
-            @klugmotors
+            @mt_mobilidade_eletrica
           </a>
         </h2>
 
@@ -1967,12 +1962,12 @@ function InstagramRow() {
               Acompanhe novidades, lançamentos e bastidores da MT Mobilidade direto no nosso perfil.
             </p>
             <a
-              href="https://www.instagram.com/klugmotors/"
+              href="https://www.instagram.com/mt_mobilidade_eletrica/"
               target="_blank"
               rel="noreferrer"
               className="mt-6 inline-flex items-center gap-2 bg-primary text-primary-foreground font-display font-black uppercase tracking-widest text-xs px-6 py-3 rounded-md hover:brightness-110"
             >
-              <Instagram size={16} /> Seguir @klugmotors
+              <Instagram size={16} /> Seguir @mt_mobilidade_eletrica
             </a>
           </div>
         )}
@@ -1993,7 +1988,7 @@ function InstagramMediaTile({ post }: { post: InstagramPost }) {
   const postLinkForHref = post.post_url?.trim() || mediaUrl;
   const shortcode =
     extractInstagramShortcode(postLinkForHref) || extractInstagramShortcode(mediaUrl);
-  const href = postLinkForHref || (shortcode ? `https://www.instagram.com/p/${shortcode}/` : "https://www.instagram.com/klugmotors/");
+  const href = postLinkForHref || (shortcode ? `https://www.instagram.com/p/${shortcode}/` : "https://www.instagram.com/mt_mobilidade_eletrica/");
   const embedUrl = shortcode ? `https://www.instagram.com/p/${shortcode}/embed/captioned/` : null;
   // Capa oficial do post no IG (funciona também para vídeos/reels — retorna o
   // primeiro frame). Usada quando o admin não subiu thumbnail manualmente.

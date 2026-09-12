@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ShieldCheck, Battery, Wrench, AlertTriangle } from "lucide-react";
 import { PageLayout, SectionCard } from "@/components/PageLayout";
 
-const BASE_URL = "https://klugmotors.com.br";
+const BASE_URL = "https://marcontti-urban-canvas.lovable.app";
 
 export const Route = createFileRoute("/garantia")({
   head: () => ({

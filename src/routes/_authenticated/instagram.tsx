@@ -31,7 +31,7 @@ const emptyDraft: Draft = {
   media_type: "image",
   thumbnail_url: null,
   caption: "",
-  post_url: "https://www.instagram.com/klugmotors/",
+  post_url: "https://www.instagram.com/mt_mobilidade_eletrica/",
   sort_order: 0,
   is_active: true,
 };
@@ -371,7 +371,7 @@ function EditDialog({ draft, onClose, onSaved }: { draft: Draft; onClose: () => 
       media_type: d.media_type ?? "image",
       thumbnail_url: d.thumbnail_url ?? null,
       caption: d.caption ?? "",
-      post_url: d.post_url || "https://www.instagram.com/klugmotors/",
+      post_url: d.post_url || "https://www.instagram.com/mt_mobilidade_eletrica/",
       sort_order: d.sort_order ?? 0,
       is_active: d.is_active ?? true,
     };
@@ -531,7 +531,7 @@ function EditDialog({ draft, onClose, onSaved }: { draft: Draft; onClose: () => 
               placeholder="https://www.instagram.com/p/..."
             />
             <p className="text-[10px] text-neutral-500 mt-1">
-              Cole a URL do post. Se deixar em branco, o clique abre o perfil @klugmotors.
+              Cole a URL do post. Se deixar em branco, o clique abre o perfil @mt_mobilidade_eletrica.
             </p>
           </div>
 

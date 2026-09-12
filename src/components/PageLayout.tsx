@@ -31,15 +31,12 @@ export function PageLayout({
             <img src={klugLogo.url} alt="MT Mobilidade" className="h-7 sm:h-8 w-auto object-contain" />
           </Link>
           <nav className="hidden lg:flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[11px] font-display font-black uppercase tracking-widest text-white/70">
-            <Link to="/modelos" className="hover:text-primary whitespace-nowrap">Modelos</Link>
-            <Link to="/modelos" search={{ marca: "yamaha" }} className="hover:text-primary whitespace-nowrap">Yamaha</Link>
-            <Link to="/modelos" search={{ marca: "sudu" }} className="hover:text-primary whitespace-nowrap">SUDU</Link>
-            <Link to="/comparar" className="hover:text-primary whitespace-nowrap">Comparar</Link>
+            <Link to="/scooters-eletricas-joinville" className="hover:text-primary whitespace-nowrap">Scooters Elétricas</Link>
+            <Link to="/motos-eletricas-joinville" className="hover:text-primary whitespace-nowrap">Motos Importadas</Link>
+            <Link to="/triciclos-eletricos-joinville" className="hover:text-primary whitespace-nowrap">Triciclos</Link>
+            <Link to="/garantia" className="hover:text-primary whitespace-nowrap">Oficina e Peças</Link>
             <Link to="/financiamento" className="hover:text-primary whitespace-nowrap">Financiamento</Link>
-            <Link to="/garantia" className="hover:text-primary whitespace-nowrap">Garantia</Link>
             <Link to="/sobre" className="hover:text-primary whitespace-nowrap">Sobre</Link>
-            <Link to="/faq" className="hover:text-primary whitespace-nowrap">FAQ</Link>
-            <Link to="/contato" className="hover:text-primary whitespace-nowrap">Contato</Link>
           </nav>
           <div className="flex items-center gap-3 shrink-0">
             <button
@@ -87,18 +84,18 @@ export function PageLayout({
             </p>
           </div>
           <div className="space-y-2 text-xs">
-            <p className="inline-flex items-center gap-2"><MapPin size={13} className="text-white/40" /> R. Albano Schmidt, 1882 — Boa Vista, Joinville/SC · 89205-100</p>
+            <p className="inline-flex items-start gap-2"><MapPin size={13} className="mt-0.5 shrink-0 text-white/40" /> Rua das Cegonhas, 699 — Jardim Iririú, Joinville/SC · CEP 89227-645</p>
             <p className="inline-flex items-center gap-2"><Phone size={13} className="text-white/40" /> <a href="tel:+554734293200" className="hover:text-primary">(47) 3429-3200</a></p>
-            <p className="inline-flex items-center gap-2"><Mail size={13} className="text-white/40" /> <a href="mailto:klugmotors@gmail.com" className="hover:text-primary">klugmotors@gmail.com</a></p>
+            <p className="inline-flex items-center gap-2"><Mail size={13} className="text-white/40" /> <a href="mailto:contato@mtmobilidade.com.br" className="hover:text-primary">contato@mtmobilidade.com.br</a></p>
             <p className="inline-flex items-center gap-2"><Clock size={13} className="text-white/40" /> Seg a Sex 08:30–18:30 · Sáb 08:30–13:00 · Dom fechado</p>
           </div>
           <div className="flex flex-col gap-3 items-start md:items-end">
             <div className="flex gap-2">
               <a
-                href="https://www.instagram.com/klugmotors/"
+                href="https://www.instagram.com/mt_mobilidade_eletrica/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Instagram @klugmotors"
+                aria-label="Instagram @mt_mobilidade_eletrica"
                 className="w-9 h-9 rounded-full border border-white/15 grid place-items-center text-white/80 hover:bg-primary hover:border-primary hover:text-black transition-colors"
               >
                 <Instagram size={14} />

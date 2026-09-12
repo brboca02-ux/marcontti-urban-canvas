@@ -81,10 +81,9 @@ export function dbToModel(m: DbModel): Model {
 }
 
 
-// Colunas mínimas para renderizar cards de catálogo — evita trafegar
-// description/specs/features/gallery (payload muito maior) na listagem.
+// Colunas mínimas para renderizar cards de catálogo, incluindo a foto principal.
 const LIST_COLUMNS =
-  "id,slug,brand,name,tag,price,price_number,range_km,speed,power,short_description,colors,is_active,sort_order,condition,installment_months,installment_value,installment_note";
+  "id,slug,brand,name,tag,price,price_number,range_km,speed,power,short_description,colors,gallery,is_active,sort_order,condition,installment_months,installment_value,installment_note";
 
 
 async function fetchModels(includeInactive = false, light = false) {

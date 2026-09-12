@@ -94,7 +94,7 @@ export function ConsorcioForm({
     const waWindow = typeof window !== "undefined" ? window.open("about:blank", "_blank", "noopener,noreferrer") : null;
 
     const text = [
-      `Olá! Tenho interesse em Consórcio Klug.`,
+      `Olá! Tenho interesse em Consórcio MT Mobilidade.`,
       ``,
       `*Nome:* ${d.name}`,
       `*Telefone:* ${d.phone}`,
@@ -226,7 +226,7 @@ export function ConsorcioForm({
             Obrigado! Entraremos em contato
           </h3>
           <p className="text-white/70 text-sm max-w-sm mb-2">
-            Um consultor Klug retornará com as opções de grupos, prazos e taxa de administração disponíveis.
+            Um consultor da MT Mobilidade retornará com as opções de grupos, prazos e taxa de administração disponíveis.
           </p>
           {protocol && (
             <p className="text-[11px] text-white/50 font-mono mb-5">
@@ -370,7 +370,7 @@ export function ConsorcioForm({
             aria-describedby={errors.lgpd ? "con-lgpd-err" : undefined}
           />
           <span className="text-[11px] leading-relaxed text-white/70">
-            Li e autorizo o tratamento dos meus dados pela Klug para contato sobre esta solicitação,
+            Li e autorizo o tratamento dos meus dados pela MT Mobilidade para contato sobre esta solicitação,
             conforme a <Link to="/privacidade" target="_blank" rel="noreferrer" className="text-primary underline underline-offset-2">Política de Privacidade</Link> e a LGPD (Lei nº 13.709/2018). <span className="text-destructive">*</span>
           </span>
         </label>

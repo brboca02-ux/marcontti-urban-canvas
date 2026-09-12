@@ -4,7 +4,7 @@ import { createClient } from "@supabase/supabase-js";
 import type { Database } from "@/integrations/supabase/types";
 import { models as staticModels } from "@/lib/models";
 
-const BASE_URL = "https://klugmotors.com.br";
+const BASE_URL = "https://marcontti-urban-canvas.lovable.app";
 
 interface SitemapEntry {
   path: string;
@@ -23,11 +23,9 @@ export const Route = createFileRoute("/sitemap.xml")({
         const staticEntries: SitemapEntry[] = [
           { path: "/", changefreq: "weekly", priority: "1.0" },
           { path: "/modelos", changefreq: "weekly", priority: "0.9" },
-          { path: "/modelos?marca=yamaha", changefreq: "weekly", priority: "0.9" },
-          { path: "/modelos?marca=sudu", changefreq: "weekly", priority: "0.9" },
-          { path: "/modelos?marca=klug", changefreq: "weekly", priority: "0.9" },
+          { path: "/modelos?cat=scooter", changefreq: "weekly", priority: "0.9" },
+          { path: "/modelos?cat=moto", changefreq: "weekly", priority: "0.9" },
           { path: "/modelos?cat=triciclo", changefreq: "weekly", priority: "0.8" },
-          { path: "/modelos?cat=seminovos", changefreq: "weekly", priority: "0.8" },
           { path: "/comparar", changefreq: "monthly", priority: "0.7" },
           { path: "/financiamento", changefreq: "monthly", priority: "0.8" },
           { path: "/garantia", changefreq: "yearly", priority: "0.5" },

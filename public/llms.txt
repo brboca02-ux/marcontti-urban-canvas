@@ -1,16 +1,16 @@
 # MT Mobilidade
 
-> Loja oficial em Joinville/SC de motos e scooters elétricas Klug, SUDU e Yamaha, com financiamento facilitado e fabricação nacional.
+> Loja em Joinville/SC de scooters elétricas, motos importadas e triciclos, com oficina, peças e financiamento.
 
-MT Mobilidade comercializa motos elétricas, scooters elétricas e bicicletas elétricas em Joinville — Santa Catarina, com atendimento na R. Albano Schmidt, 1882 – Boa Vista. Trabalha com as marcas Klug, SUDU e Yamaha, oferecendo financiamento, PIX com 10% OFF, garantia de fábrica e entrega para todo o Brasil.
+MT Mobilidade comercializa scooters elétricas, motos importadas e triciclos em Joinville — Santa Catarina, com atendimento na Rua das Cegonhas, 699 – Jardim Iririú, CEP 89227-645.
 
 ## Pages
 
 - [Home](/): Loja MT Mobilidade em Joinville — destaques, marcas e catálogo.
 - [Catálogo completo](/modelos): Todos os modelos de motos e scooters elétricas disponíveis.
-- [Modelos Klug](/modelos): Linha Klug — X12, GIGA, BIG TRI, MIA, SOMA, JET, RET, BOB, JOY.
-- [Modelos SUDU](/modelos/sudu): Linha SUDU de scooters elétricas.
-- [Modelos Yamaha](/modelos/yamaha): Linha Yamaha comercializada pela MT Mobilidade.
+- [Scooters Elétricas](/scooters-eletricas-joinville): Modelos elétricos disponíveis.
+- [Motos Importadas](/motos-eletricas-joinville): Motos disponíveis na loja.
+- [Triciclos de Carga e Conforto](/triciclos-eletricos-joinville): Triciclos disponíveis.
 - [Sobre a MT Mobilidade](/sobre): História, missão e diferenciais da loja em Joinville.
 - [Financiamento](/financiamento): Simulação e condições de financiamento das motos elétricas.
 - [Garantia](/garantia): Cobertura, prazos e política de garantia dos veículos.
