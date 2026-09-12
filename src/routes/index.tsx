@@ -1741,10 +1741,11 @@ function fmtBRL(n: number) {
   return n.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 }
 
-function RefProductCard({ m }: { m: Model }) {
+function RefProductCard({ m, priority = false }: { m: Model; priority?: boolean }) {
   const inst = modelInstallment(m);
   const parcela = supportsInstallment(m) ? inst.label : null;
   const parcelaNote = inst.note;
+  const imgSrc = m.colors[0]?.image || m.gallery?.[0] || "";
   return (
     <Link
       to="/modelos/$slug"
@@ -1752,14 +1753,21 @@ function RefProductCard({ m }: { m: Model }) {
       className="group flex flex-col h-full bg-black border border-border rounded-lg overflow-hidden hover:border-primary/60 transition-all hover:-translate-y-1"
     >
       <div className="relative aspect-square bg-white overflow-hidden">
-        <img
-          src={m.colors[0]?.image}
-          alt={m.name}
-          loading="lazy"
-          decoding="async"
-          sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-          className="absolute inset-0 w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500"
-        />
+        {imgSrc ? (
+          <img
+            src={imgSrc}
+            alt={m.name}
+            loading={priority ? "eager" : "lazy"}
+            fetchPriority={priority ? "high" : "auto"}
+            decoding={priority ? "sync" : "async"}
+            sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+            className="absolute inset-0 w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+          />
+        ) : (
+          <span className="absolute inset-0 flex items-center justify-center text-[10px] uppercase tracking-widest text-neutral-400">
+            Sem imagem
+          </span>
+        )}
         <span className="absolute top-2 left-2 bg-primary text-primary-foreground text-[9px] font-display font-black uppercase tracking-widest px-2 py-1 rounded-sm">
           <Zap size={10} className="inline -mt-0.5" /> {m.power}
         </span>
@@ -1811,8 +1819,8 @@ function DestaquesGrid() {
           Destaques <span className="text-primary">MT</span>
         </h2>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-          {items.map((m) => (
-            <RefProductCard key={m.slug} m={m} />
+          {items.map((m, i) => (
+            <RefProductCard key={m.slug} m={m} priority={i < 2} />
           ))}
         </div>
       </div>
@@ -1876,7 +1884,7 @@ function YoutubeShowcase() {
           <aside className="bg-black border border-border rounded-lg overflow-hidden">
             <div className="aspect-square bg-white">
               <img
-                src={highlight.colors[0]?.image}
+                src={highlight.colors[0]?.image || highlight.gallery?.[0] || ""}
                 alt={highlight.name}
                 className="w-full h-full object-contain p-4"
                 loading="lazy"

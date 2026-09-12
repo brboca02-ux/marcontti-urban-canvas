@@ -119,7 +119,7 @@ export function LocalLanding({
           </p>
         ) : (
           <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 not-prose">
-            {list.map((m) => {
+            {list.map((m, i) => {
               const parcela = supportsInstallment(m) ? modelInstallment(m) : null;
               return (
                 <li key={m.slug}>
@@ -129,9 +129,10 @@ export function LocalLanding({
                     className="group block rounded-2xl border border-border bg-black overflow-hidden hover:border-primary/60 transition-colors h-full"
                   >
                     <LazyImage
-                      src={m.colors[0]?.image || ""}
+                      src={m.colors[0]?.image || m.gallery?.[0] || ""}
                       alt={`${m.name} — MT Mobilidade Joinville`}
                       aspectRatio="4 / 3"
+                      priority={i < 3}
                       className="w-full h-full object-contain object-center bg-white"
                     />
                     <div className="p-4">

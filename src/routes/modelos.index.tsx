@@ -482,7 +482,7 @@ function CatalogGrid({ items }: { items: Model[] }) {
                 id: quickView.slug,
                 nome: quickView.name,
                 potencia: quickView.power,
-                imagem: quickView.colors[0]?.image ?? "",
+                imagem: quickView.colors[0]?.image || quickView.gallery?.[0] || "",
                 preco: quickView.price,
                 slug: quickView.slug,
               }

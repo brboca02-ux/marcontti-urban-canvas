@@ -158,14 +158,21 @@ function CompararPage() {
                 </button>
               )}
             </div>
-            {m.colors[0]?.image && (
-              <img
-                src={m.colors[0].image}
-                alt={m.name}
-                loading="lazy"
-                className="w-full aspect-square object-contain bg-background rounded-lg border border-border"
-              />
-            )}
+            {(() => {
+              const imgSrc = m.colors[0]?.image || m.gallery?.[0] || "";
+              return imgSrc ? (
+                <img
+                  src={imgSrc}
+                  alt={m.name}
+                  loading="lazy"
+                  className="w-full aspect-square object-contain bg-background rounded-lg border border-border"
+                />
+              ) : (
+                <div className="w-full aspect-square flex items-center justify-center bg-background rounded-lg border border-border text-[10px] uppercase tracking-widest text-white/30">
+                  Sem imagem
+                </div>
+              );
+            })()}
             <div className="mt-3 flex items-center justify-between gap-2">
               <span className="text-primary font-display font-black text-base sm:text-lg truncate">{m.price}</span>
               <Link
