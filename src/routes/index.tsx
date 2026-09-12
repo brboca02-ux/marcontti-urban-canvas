@@ -1749,7 +1749,7 @@ function RefProductCard({ m, priority = false }: { m: Model; priority?: boolean 
       className="group flex flex-col h-full bg-neutral-950 border border-white/10 rounded-2xl overflow-hidden hover:border-primary/70 hover:shadow-[0_0_28px_-8px_rgba(248,96,0,0.45)] transition-all duration-300 hover:-translate-y-1"
     >
       {/* Imagem */}
-      <div className="relative bg-neutral-900 overflow-hidden" style={{ aspectRatio: "4/3" }}>
+      <div className="relative bg-white overflow-hidden" style={{ aspectRatio: "4/3" }}>
         {imgSrc ? (
           <img
             src={imgSrc}
@@ -1758,7 +1758,7 @@ function RefProductCard({ m, priority = false }: { m: Model; priority?: boolean 
             fetchPriority={priority ? "high" : "auto"}
             decoding={priority ? "sync" : "async"}
             sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-            className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            className="absolute inset-0 w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 scale-[1.15]"
           />
         ) : (
           <span className="absolute inset-0 flex items-center justify-center text-[10px] uppercase tracking-widest text-neutral-400">
