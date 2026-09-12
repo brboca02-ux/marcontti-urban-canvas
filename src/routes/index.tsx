@@ -40,7 +40,6 @@ import { usePublicInstagramPosts, type InstagramPost } from "@/hooks/useInstagra
 
 import { FinanciamentoForm } from "@/components/FinanciamentoForm";
 import { BenefitsBar } from "@/components/BenefitsBar";
-import { LazyVideo } from "@/components/LazyVideo";
 import { ProductCarousel } from "@/components/ProductCarousel";
 import type { Product } from "@/components/ProductCard";
 import { modelInstallment } from "@/lib/installment";
@@ -55,7 +54,6 @@ import heroBoltVideo from "@/assets/videos/hero-bolt.webm.asset.json";
 import klugHeroVideo from "@/assets/videos/klug-hero-telao.mp4.asset.json";
 import klugHeroPoster from "@/assets/videos/klug-hero-poster.jpg.asset.json";
 import mtHeroScooters from "@/assets/mt-hero-scooters.jpg.asset.json";
-import conhecaKlugMotorsVideo from "@/assets/videos/conheca-klug-motors.mp4.asset.json";
 
 
 const BASE_URL = "https://marcontti-urban-canvas.lovable.app";
@@ -1860,27 +1858,14 @@ function YoutubeShowcase() {
   return (
     <section className="py-10 sm:py-12 bg-background border-b border-border">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-[minmax(0,1fr)_320px] gap-6 items-start">
-        <div className="rounded-lg overflow-hidden border border-border bg-card">
-          <div className="flex items-center gap-3 p-4 bg-black border-b border-border">
-            <span className="grid place-items-center w-10 h-10 rounded-full bg-primary text-primary-foreground">
-              <Zap size={20} strokeWidth={2.5} />
-            </span>
-            <div>
-              <p className="font-display font-black uppercase text-white text-sm tracking-widest">
-                MT Mobilidade | Joinville
-              </p>
-              <p className="text-white/50 text-[11px]">
-                Referência nacional em mobilidade elétrica
-              </p>
-            </div>
-          </div>
-          <div className="relative aspect-video bg-black">
-            <LazyVideo
-              src={conhecaKlugMotorsVideo.url}
-              loop
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          </div>
+        <div className="rounded-2xl overflow-hidden border border-white/10 bg-black flex items-center justify-center">
+          <img
+            src="/mt-logo-showcase.jpg"
+            alt="MT Mobilidade Elétrica Brasil — Energia para o seu caminho"
+            loading="eager"
+            fetchPriority="high"
+            className="w-full h-full object-contain"
+          />
         </div>
 
         {highlight && (
