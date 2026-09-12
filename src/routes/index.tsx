@@ -66,7 +66,7 @@ const FINANCE_MSG =
 const HOME_FAQS: { q: string; a: string }[] = [
   {
     q: "Onde fica a loja da MT Mobilidade em Joinville?",
-    a: "Estamos na Rua das Cegonhas, 699 — Jardim Iririú, Joinville/SC (CEP 89205-100). Atendemos de segunda a sexta das 8h30 às 18h30 e sábado das 8h30 às 13h.",
+    a: "Estamos na Rua das Cegonhas, 699 — Jardim Iririú, Joinville/SC (CEP 89227-645). Atendemos de segunda a sexta das 8h30 às 18h30 e sábado das 8h30 às 13h.",
   },
   {
     q: "Preciso de CNH para andar de scooter elétrica?",
@@ -74,7 +74,7 @@ const HOME_FAQS: { q: string; a: string }[] = [
   },
   {
     q: "A MT Mobilidade financia scooters e motos elétricas?",
-    a: "Sim. Trabalhamos com financiamento e prévia de parcelas no boleto em até 71x para as scooters elétricas Moto Chefe, SUDU e triciclos. Você também pode pagar à vista no PIX, com desconto na hora, ou no cartão.",
+    a: "Sim. Trabalhamos com financiamento para scooters elétricas, motos importadas e triciclos. Você também pode pagar à vista no PIX, com desconto na hora, ou no cartão.",
   },
   {
     q: "Vocês têm oficina para scooter elétrica?",
@@ -82,7 +82,7 @@ const HOME_FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Quais marcas e modelos vocês vendem?",
-    a: "Scooters elétricas Moto Chefe (Klug) e SUDU, triciclos elétricos, motos Yamaha 0km e motos semi novas revisadas.",
+    a: "Scooters elétricas, motos importadas e triciclos de carga e conforto. Consulte o estoque atualizado no catálogo.",
   },
   {
     q: "A MT Mobilidade atende outras cidades da região?",
@@ -98,9 +98,9 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Loja de scooters, motos e triciclos elétricos em Joinville/SC: Moto Chefe, SUDU, Yamaha 0km e semi novas. Oficina especializada e financiamento em até 71x no boleto.",
+          "Loja de scooters elétricas, motos importadas e triciclos em Joinville/SC, com oficina, peças e financiamento.",
       },
-      { name: "keywords", content: "scooter elétrica Joinville, moto elétrica Joinville, triciclo elétrico SC, scooter sem CNH, Yamaha Joinville, MT Mobilidade" },
+      { name: "keywords", content: "scooter elétrica Joinville, moto importada Joinville, triciclo elétrico SC, oficina de scooters, MT Mobilidade" },
       { name: "geo.region", content: "BR-SC" },
       { name: "geo.placename", content: "Joinville" },
       { name: "geo.position", content: "-26.2836;-48.8451" },
@@ -118,7 +118,7 @@ export const Route = createFileRoute("/")({
       { property: "og:image", content: `${BASE_URL}${x12Img.url}` },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "MT Mobilidade - Motos e Scooters elétricas Importadas em Joinville" },
-      { name: "twitter:description", content: "Mobilidade elétrica em Joinville/SC: Moto Chefe, SUDU, Yamaha 0km e semi novas." },
+      { name: "twitter:description", content: "Scooters elétricas, motos importadas e triciclos em Joinville/SC." },
       { name: "twitter:image", content: `${BASE_URL}${x12Img.url}` },
     ],
 
@@ -135,9 +135,9 @@ export const Route = createFileRoute("/")({
           "@type": ["AutomotiveBusiness", "LocalBusiness", "Store"],
           "@id": `${BASE_URL}/#loja-joinville`,
           name: "MT Mobilidade — Unidade Joinville",
-          alternateName: "Klug Motor's",
+          alternateName: "MT Mobilidade Elétrica Brasil",
           description:
-            "Concessionária de motos, scooters e triciclos elétricos em Joinville/SC. Representante Yamaha, SUDU e MotoChefe.",
+            "Loja de scooters elétricas, motos importadas e triciclos em Joinville/SC, com oficina e peças.",
           url: BASE_URL,
           logo: `${BASE_URL}${x12Img.url}`,
           image: `${BASE_URL}${x12Img.url}`,
@@ -758,7 +758,7 @@ const PERKS: Perk[] = [
     count: 5000,
     countPrefix: "+",
     message:
-      "Olá! Vi que a Klug já vendeu mais de 5 mil unidades — quero conhecer os modelos.",
+      "Olá! Vi que a MT Mobilidade já vendeu mais de 5 mil unidades — quero conhecer os modelos.",
   },
   {
     icon: ShieldCheck,

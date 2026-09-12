@@ -115,7 +115,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "MT Mobilidade - Motos e Scooters elétricas Importadas em Joinville" },
-      { name: "description", content: "MT Mobilidade: motos, scooters e triciclos elétricos em Joinville/SC. Sem CNH, econômicas e sustentáveis. R. Albano Schmidt, 1882." },
+      { name: "description", content: "MT Mobilidade: motos importadas, scooters e triciclos elétricos em Joinville/SC. Rua das Cegonhas, 699, Jardim Iririú." },
       { name: "author", content: "MT Mobilidade" },
       { property: "og:site_name", content: "MT Mobilidade" },
       { property: "og:locale", content: "pt_BR" },
@@ -143,7 +143,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               "@type": "Organization",
               "@id": `${PUBLIC_ORIGIN}/#organizacao`,
               name: "MT Mobilidade",
-              alternateName: ["Klug Motor's", "MT Mobilidade Joinville"],
+              alternateName: ["MT Mobilidade Elétrica", "MT Mobilidade Joinville"],
               url: `${PUBLIC_ORIGIN}/`,
               logo: {
                 "@type": "ImageObject",
