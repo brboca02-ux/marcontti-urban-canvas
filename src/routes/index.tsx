@@ -1923,10 +1923,10 @@ function YoutubeShowcase() {
   const { items: all } = usePublicModelsLight();
   const highlight = all[1] ?? all[0] ?? null;
   return (
-    <section className="py-10 sm:py-12 bg-background border-b border-border">
+    <section className="py-5 sm:py-6 bg-background border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 grid lg:grid-cols-[1fr_300px] gap-5 items-stretch">
         {/* Logo / imagem institucional */}
-        <div className="rounded-2xl overflow-hidden border border-white/10 bg-black flex items-center justify-center min-h-[220px]">
+        <div className="rounded-2xl overflow-hidden border border-white/10 bg-black flex items-center justify-center min-h-[110px]">
           <img
             src="/mt-logo-showcase.jpg"
             alt="MT Mobilidade Elétrica Brasil — Energia para o seu caminho"
