@@ -121,7 +121,7 @@ function SobrePage() {
       <SectionCard title="Visite a loja">
         <div className="grid sm:grid-cols-2 gap-6 not-prose">
           <div className="space-y-3 text-sm">
-            <p className="inline-flex items-start gap-2"><MapPin size={16} className="text-primary mt-0.5 shrink-0" /> <span>Rua das Cegonhas, 699 — Jardim Iririú<br />Joinville/SC · 89205-100</span></p>
+            <p className="inline-flex items-start gap-2"><MapPin size={16} className="text-primary mt-0.5 shrink-0" /> <span>Rua das Cegonhas, 699 — Jardim Iririú<br />Joinville/SC · CEP 89227-645</span></p>
             <p className="inline-flex items-start gap-2"><Clock size={16} className="text-primary mt-0.5 shrink-0" /> <span>Seg a Sex: 08:30 às 18:30 (sem fechar para almoço)<br />Sábado: 08:30 às 13:00<br />Domingo: fechado</span></p>
             <p className="text-xs text-white/50 pt-2">CNPJ 51.728.597/0001-26</p>
           </div>

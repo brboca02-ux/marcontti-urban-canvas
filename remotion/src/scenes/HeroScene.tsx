@@ -113,7 +113,7 @@ export function HeroScene() {
           >
             <Img
               src={staticFile("images/x12-hero-transparent.png")}
-              alt="Klug X12 1000W"
+              alt="Scooter elétrica MT Mobilidade"
               style={{
                 width: "110%",
                 height: "auto",

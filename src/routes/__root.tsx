@@ -162,7 +162,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
                 streetAddress: "Rua das Cegonhas, 699 - Jardim Iririú",
                 addressLocality: "Joinville",
                 addressRegion: "SC",
-                postalCode: "89205-100",
+                postalCode: "89227-645",
                 addressCountry: "BR",
               },
               contactPoint: [

@@ -28,7 +28,7 @@ const FAQ: Faq[] = [
 export const Route = createFileRoute("/triciclos-eletricos-joinville")({
   head: () => ({
     meta: [
-      { title: "Triciclos Elétricos em Joinville (Carga e Conforto) | Klug" },
+      { title: "Triciclos Elétricos em Joinville | MT Mobilidade" },
       {
         name: "description",
         content:

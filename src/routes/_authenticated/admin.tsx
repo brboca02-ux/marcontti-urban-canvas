@@ -120,10 +120,9 @@ const isSemiNova = (m: DbModel) =>
   m.condition === "semi_nova" || m.slug.startsWith("semi-nova-") || /semi\s*nova/i.test(m.tag ?? "");
 
 const BRAND_GROUPS: { key: string; label: string; match: (m: DbModel) => boolean }[] = [
-  { key: "klug-scooter", label: "Scooter Elétricas Moto Chefe", match: (m) => m.brand === "klug" && !/tricicl/i.test(m.tag ?? "") && !isSemiNova(m) },
-  { key: "sudu-scooter", label: "Scooter Elétricas Sudu", match: (m) => m.brand === "sudu" && !/tricicl/i.test(m.tag ?? "") && !isSemiNova(m) },
+  { key: "mt-scooter", label: "Scooters Elétricas", match: (m) => m.brand === "mt" && /scooter/i.test(m.tag ?? "") && !isSemiNova(m) },
   { key: "triciclo", label: "Triciclos Elétricos", match: (m) => /tricicl/i.test(m.tag ?? "") && !isSemiNova(m) },
-  { key: "yamaha", label: "Motos Yamaha 0km", match: (m) => m.brand === "yamaha" && !isSemiNova(m) },
+  { key: "mt-moto", label: "Motos Importadas", match: (m) => m.brand === "mt" && /moto/i.test(m.tag ?? "") && !isSemiNova(m) },
   { key: "semi-novas", label: "Motos Semi Novas", match: isSemiNova },
 ];
 
@@ -212,7 +211,7 @@ type Draft = Partial<DbModel> & { slug: string; name: string; brand: string };
 
 const emptyDraft: Draft = {
   slug: "",
-  brand: "klug",
+  brand: "mt",
   name: "",
   tag: "",
   price: "Consultar disponibilidade",
@@ -777,9 +776,7 @@ function EditDialog({ draft, onClose, onSaved }: { draft: Draft; onClose: () => 
           <Field label="Marca">
             <select value={d.brand} onChange={(e) => set("brand", e.target.value)}
               className="w-full h-10 rounded-md border border-neutral-800 bg-neutral-900 px-3 text-sm">
-              <option value="klug">Klug</option>
-              <option value="sudu">SUDU</option>
-              <option value="yamaha">Yamaha</option>
+              <option value="mt">MT Mobilidade</option>
             </select>
           </Field>
           <Field label="Status">
@@ -870,8 +867,7 @@ function EditDialog({ draft, onClose, onSaved }: { draft: Draft; onClose: () => 
             </>
           ) : (
             <div className="md:col-span-2 text-[11px] text-neutral-500">
-              Parcela prevista só aparece nos cards de scooters Moto Chefe, SUDU e triciclos.
-              Motos Yamaha 0km e Semi Novas exibem apenas o valor ("A partir de").
+              A parcela prevista aparece nos cards quando houver condições cadastradas.
             </div>
           )}
         </div>

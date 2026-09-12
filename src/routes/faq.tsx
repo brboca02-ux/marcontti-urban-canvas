@@ -7,7 +7,7 @@ const BASE_URL = "https://marcontti-urban-canvas.lovable.app";
 
 const FAQS = [
   {
-    q: "Preciso de CNH para conduzir uma moto elétrica da Klug?",
+    q: "Preciso de CNH para conduzir uma moto elétrica?",
     a: "Depende do modelo. Motos e scooters de até 1000W são classificadas pelo CONTRAN 996/23 como equipamentos autopropelidos — não exigem CNH nem emplacamento. Modelos acima de 1000W são motocicletas e precisam de CNH categoria A.",
   },
   {
