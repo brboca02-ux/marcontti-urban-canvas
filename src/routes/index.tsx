@@ -1747,9 +1747,10 @@ function RefProductCard({ m, priority = false }: { m: Model; priority?: boolean 
     <Link
       to="/modelos/$slug"
       params={{ slug: m.slug }}
-      className="group flex flex-col h-full bg-black border border-border rounded-lg overflow-hidden hover:border-primary/60 transition-all hover:-translate-y-1"
+      className="group flex flex-col h-full bg-neutral-950 border border-white/10 rounded-2xl overflow-hidden hover:border-primary/70 hover:shadow-[0_0_28px_-8px_rgba(248,96,0,0.45)] transition-all duration-300 hover:-translate-y-1"
     >
-      <div className="relative aspect-square bg-white overflow-hidden">
+      {/* Imagem */}
+      <div className="relative bg-white overflow-hidden" style={{ aspectRatio: "4/3" }}>
         {imgSrc ? (
           <img
             src={imgSrc}
@@ -1758,38 +1759,56 @@ function RefProductCard({ m, priority = false }: { m: Model; priority?: boolean 
             fetchPriority={priority ? "high" : "auto"}
             decoding={priority ? "sync" : "async"}
             sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-            className="absolute inset-0 w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+            className="absolute inset-0 w-full h-full object-contain p-3 group-hover:scale-105 transition-transform duration-500"
           />
         ) : (
           <span className="absolute inset-0 flex items-center justify-center text-[10px] uppercase tracking-widest text-neutral-400">
             Sem imagem
           </span>
         )}
-        <span className="absolute top-2 left-2 bg-primary text-primary-foreground text-[9px] font-display font-black uppercase tracking-widest px-2 py-1 rounded-sm">
-          <Zap size={10} className="inline -mt-0.5" /> {m.power}
+        {/* Badge potência */}
+        <span className="absolute top-2 left-2 inline-flex items-center gap-1 bg-primary text-primary-foreground text-[9px] font-display font-black uppercase tracking-widest px-2 py-1 rounded-full shadow-md">
+          <Zap size={9} className="inline" /> {m.power}
+        </span>
+        {/* Tag categoria */}
+        <span className="absolute bottom-2 right-2 bg-black/70 backdrop-blur text-white/60 text-[8px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full">
+          {m.tag}
         </span>
       </div>
-      <div className="p-4 text-center flex-1 flex flex-col min-w-0">
-        <h3 className="font-display font-black uppercase text-xs sm:text-sm tracking-tight text-white/90 break-words min-h-[2.4em]">
+
+      {/* Info */}
+      <div className="flex flex-col flex-1 px-4 pt-3 pb-4 gap-2 min-w-0">
+        {/* Nome — grande e legível */}
+        <h3
+          className="font-display font-black uppercase leading-[0.95] tracking-tight text-white break-words"
+          style={{ fontSize: "clamp(1.1rem, 3vw, 1.45rem)" }}
+        >
           {m.name}
         </h3>
 
-        <p className="text-[9px] text-white/40 uppercase font-bold tracking-widest mt-3">
-          A partir de
-        </p>
-        <p
-          className="text-primary leading-none mt-1"
-          style={{
-            fontFamily: "'Bebas Neue', 'Urbanist', sans-serif",
-            fontSize: "26px",
-          }}
-        >
-          {m.priceNumber > 0 ? m.price : "Sob consulta"}
-        </p>
+        {/* Separador */}
+        <div className="h-px bg-white/10 w-full" />
 
-        <span className="mt-auto pt-3 inline-flex items-center justify-center w-full gap-1 bg-primary text-primary-foreground font-display font-black uppercase tracking-widest text-[10px] min-h-11 py-2.5 rounded-md group-hover:brightness-110">
-          Ver produto
-        </span>
+        {/* Preço */}
+        <div className="flex items-end justify-between gap-2 mt-auto">
+          <div>
+            <p className="text-[9px] text-white/40 uppercase font-bold tracking-widest leading-none mb-1">
+              A partir de
+            </p>
+            <p
+              className="text-primary leading-none font-black"
+              style={{
+                fontFamily: "'Bebas Neue', 'Urbanist', sans-serif",
+                fontSize: "clamp(1.3rem, 3.5vw, 1.7rem)",
+              }}
+            >
+              {m.priceNumber > 0 ? m.price : "Consultar"}
+            </p>
+          </div>
+          <span className="shrink-0 inline-flex items-center gap-1 text-[9px] font-display font-black uppercase tracking-widest text-primary border border-primary/40 px-2.5 py-1.5 rounded-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+            Ver <ChevronRight size={11} />
+          </span>
+        </div>
       </div>
     </Link>
   );
