@@ -67,7 +67,7 @@ function Page() {
       intro="Na MT Mobilidade você encontra motinhas e scooters elétricas classificadas como autopropelidas: sem CNH, sem placa e sem licenciamento, conforme a Resolução CONTRAN 996/23. Loja física na Rua das Cegonhas, 699 — Jardim Iririú, Joinville/SC."
       filter={(m) => !isSemiNovaModel(m) && /sem\s*cnh/i.test(m.tag)}
       emptyLabel="Estamos atualizando os modelos sem CNH."
-      catalogSearch={{ marca: "klug" }}
+      catalogSearch={{ cat: "scooter" }}
       catalogLabel="Ver catálogo de elétricos"
       whatsappMessage="Olá, MT Mobilidade! Quero saber quais modelos não precisam de CNH e os preços."
       faq={FAQ}

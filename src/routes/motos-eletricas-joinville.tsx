@@ -32,7 +32,7 @@ const FAQ: Faq[] = [
 export const Route = createFileRoute("/motos-eletricas-joinville")({
   head: () => ({
     meta: [
-      { title: "Motos Elétricas em Joinville | Venda e Assistência Klug" },
+      { title: "Motos Importadas em Joinville | MT Mobilidade" },
       {
         name: "description",
         content:
@@ -61,8 +61,8 @@ function Page() {
       title="Motos Elétricas em Joinville:"
       titleAccent="Economia e Alta Performance"
       intro="Venda e assistência de motos elétricas em Joinville, na Rua das Cegonhas, 699 (Jardim Iririú). Modelos de 1.000W a 3.000W, bateria de lítio removível e oficina especializada na própria loja."
-      filter={(m) => !isSemiNovaModel(m) && !m.slug.startsWith("yamaha") && /moto|chopper/i.test(m.tag)}
-      catalogSearch={{ marca: "klug" }}
+      filter={(m) => !isSemiNovaModel(m) && /moto|chopper/i.test(m.tag)}
+      catalogSearch={{ cat: "moto" }}
       catalogLabel="Ver todos os elétricos no catálogo"
       whatsappMessage="Olá, MT Mobilidade! Quero informações sobre motos elétricas em Joinville."
       faq={FAQ}

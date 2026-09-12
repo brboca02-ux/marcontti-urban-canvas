@@ -153,7 +153,7 @@ export const Route = createFileRoute("/")({
             streetAddress: "Rua das Cegonhas, 699 - Jardim Iririú",
             addressLocality: "Joinville",
             addressRegion: "SC",
-            postalCode: "89205-100",
+            postalCode: "89227-645",
             addressCountry: "BR",
           },
           geo: {
@@ -1485,7 +1485,7 @@ function Footer() {
               <span>
                 Rua das Cegonhas, 699 — Jardim Iririú
                 <br />
-                Joinville/SC · 89205-100
+                Joinville/SC · CEP 89227-645
               </span>
             </address>
           </div>
