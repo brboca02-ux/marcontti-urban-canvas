@@ -117,7 +117,7 @@ export function usePublicModels() {
 export const publicModelsLightOptions = queryOptions({
   queryKey: ["models", "public", "light"],
   queryFn: () => fetchModels(false, true),
-  staleTime: 30_000, // Realtime invalida o cache quando o admin edita
+  staleTime: 5 * 60_000,   // 5 min — Realtime invalida o cache quando o admin edita
   gcTime: 30 * 60_000,
 });
 

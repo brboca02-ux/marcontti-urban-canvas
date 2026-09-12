@@ -33,7 +33,7 @@ import {
   type Model,
   supportsInstallment,
 } from "@/lib/models";
-import { usePublicModelsLight } from "@/hooks/useDbModels";
+import { usePublicModelsLight, publicModelsLightOptions } from "@/hooks/useDbModels";
 import { useReveal } from "@/hooks/use-reveal";
 import { usePublicInstagramPosts, type InstagramPost } from "@/hooks/useInstagramPosts";
 
@@ -210,6 +210,8 @@ export const Route = createFileRoute("/")({
     ],
 
   }),
+  loader: ({ context: { queryClient } }) =>
+    queryClient.ensureQueryData(publicModelsLightOptions),
   component: Index,
 });
 
@@ -1813,40 +1815,105 @@ function RefProductCard({ m, priority = false }: { m: Model; priority?: boolean 
 }
 
 function DestaquesGrid() {
-  const { items: all } = usePublicModelsLight();
+  const { items: all, isLoading } = usePublicModelsLight();
   const items = all.slice(0, 4);
-  if (items.length === 0) return null;
+  if (!isLoading && items.length === 0) return null;
   return (
-    <section className="py-10 sm:py-12 bg-background border-b border-border">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8">
-        <h2 className="text-center font-display font-black uppercase text-2xl sm:text-3xl tracking-widest mb-10">
-          Destaques <span className="text-primary">MT</span>
-        </h2>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-          {items.map((m, i) => (
-            <RefProductCard key={m.slug} m={m} priority={i < 2} />
-          ))}
+    <section className="py-12 sm:py-16 bg-background border-b border-border">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8">
+        <div className="flex items-end justify-between mb-8 sm:mb-10">
+          <div>
+            <p className="text-[10px] text-primary font-display font-black uppercase tracking-[0.3em] mb-1">
+              Em estoque
+            </p>
+            <h2 className="font-display font-black uppercase text-2xl sm:text-4xl tracking-tight leading-none">
+              Destaques <span className="text-primary">MT</span>
+            </h2>
+          </div>
+          <Link
+            to="/modelos"
+            className="hidden sm:inline-flex items-center gap-1 text-[10px] font-display font-black uppercase tracking-widest text-primary hover:gap-2 transition-all"
+          >
+            Ver todos <ChevronRight size={13} />
+          </Link>
         </div>
+
+        {isLoading && items.length === 0 ? (
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
+            {[0,1,2,3].map(i => (
+              <div key={i} className="rounded-2xl border border-white/8 bg-neutral-950 overflow-hidden animate-pulse">
+                <div className="aspect-[4/3] bg-neutral-800/60" />
+                <div className="p-4 space-y-3">
+                  <div className="h-5 rounded bg-neutral-800/60 w-3/4" />
+                  <div className="h-3 rounded bg-neutral-800/40 w-1/2" />
+                  <div className="h-6 rounded bg-neutral-800/60 w-2/3" />
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
+            {items.map((m, i) => (
+              <RefProductCard key={m.slug} m={m} priority={i < 2} />
+            ))}
+          </div>
+        )}
+
+        <Link
+          to="/modelos"
+          className="mt-6 sm:hidden inline-flex items-center gap-1 text-[10px] font-display font-black uppercase tracking-widest text-primary"
+        >
+          Ver catálogo completo <ChevronRight size={13} />
+        </Link>
       </div>
     </section>
   );
 }
 
 function MaisVendidosGrid() {
-  const { items: all } = usePublicModelsLight();
+  const { items: all, isLoading } = usePublicModelsLight();
   const items = all.slice(4, 12);
-  if (items.length === 0) return null;
+  if (!isLoading && items.length === 0) return null;
   return (
-    <section className="py-10 sm:py-12 bg-background border-b border-border">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8">
-        <h2 className="text-center font-display font-black uppercase text-2xl sm:text-3xl tracking-widest mb-10">
-          Mais <span className="text-primary">Vendidos</span>
-        </h2>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-          {items.map((m) => (
-            <RefProductCard key={m.slug} m={m} />
-          ))}
+    <section className="py-12 sm:py-16 bg-card border-b border-border">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8">
+        <div className="flex items-end justify-between mb-8 sm:mb-10">
+          <div>
+            <p className="text-[10px] text-primary font-display font-black uppercase tracking-[0.3em] mb-1">
+              Mais pedidos
+            </p>
+            <h2 className="font-display font-black uppercase text-2xl sm:text-4xl tracking-tight leading-none">
+              Mais <span className="text-primary">Vendidos</span>
+            </h2>
+          </div>
+          <Link
+            to="/modelos"
+            className="hidden sm:inline-flex items-center gap-1 text-[10px] font-display font-black uppercase tracking-widest text-primary hover:gap-2 transition-all"
+          >
+            Ver todos <ChevronRight size={13} />
+          </Link>
         </div>
+
+        {isLoading && items.length === 0 ? (
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5">
+            {[0,1,2,3,4,5,6,7].map(i => (
+              <div key={i} className="rounded-2xl border border-white/8 bg-neutral-950 overflow-hidden animate-pulse">
+                <div className="aspect-[4/3] bg-neutral-800/60" />
+                <div className="p-4 space-y-3">
+                  <div className="h-5 rounded bg-neutral-800/60 w-3/4" />
+                  <div className="h-3 rounded bg-neutral-800/40 w-1/2" />
+                  <div className="h-6 rounded bg-neutral-800/60 w-2/3" />
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5">
+            {items.map((m) => (
+              <RefProductCard key={m.slug} m={m} />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
@@ -1857,8 +1924,9 @@ function YoutubeShowcase() {
   const highlight = all[1] ?? all[0] ?? null;
   return (
     <section className="py-10 sm:py-12 bg-background border-b border-border">
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-[minmax(0,1fr)_320px] gap-6 items-start">
-        <div className="rounded-2xl overflow-hidden border border-white/10 bg-black flex items-center justify-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 grid lg:grid-cols-[1fr_300px] gap-5 items-stretch">
+        {/* Logo / imagem institucional */}
+        <div className="rounded-2xl overflow-hidden border border-white/10 bg-black flex items-center justify-center min-h-[220px]">
           <img
             src="/mt-logo-showcase.jpg"
             alt="MT Mobilidade Elétrica Brasil — Energia para o seu caminho"
@@ -1868,42 +1936,45 @@ function YoutubeShowcase() {
           />
         </div>
 
+        {/* Card do produto destaque */}
         {highlight && (
-          <aside className="bg-black border border-border rounded-lg overflow-hidden">
-            <div className="aspect-square bg-white">
+          <Link
+            to="/modelos/$slug"
+            params={{ slug: highlight.slug }}
+            className="group flex flex-col bg-neutral-950 border border-white/10 rounded-2xl overflow-hidden hover:border-primary/60 hover:shadow-[0_0_28px_-8px_rgba(248,96,0,0.4)] transition-all"
+          >
+            <div className="bg-white flex-1 flex items-center justify-center p-4">
               <img
                 src={highlight.colors[0]?.image || highlight.gallery?.[0] || ""}
                 alt={highlight.name}
-                className="w-full h-full object-contain p-4"
+                className="w-full max-h-[220px] object-contain group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
               />
             </div>
-            <div className="p-4 text-center">
-              <h3 className="font-display font-black uppercase text-sm text-white tracking-tight">
-                {highlight.name} | MT Mobilidade
+            <div className="p-4 text-center border-t border-white/10">
+              <p className="text-[9px] text-primary font-display font-black uppercase tracking-[0.25em] mb-1">
+                {highlight.tag}
+              </p>
+              <h3
+                className="font-display font-black uppercase text-white leading-tight"
+                style={{ fontSize: "clamp(1.1rem, 3vw, 1.4rem)" }}
+              >
+                {highlight.name}
               </h3>
-              <p className="text-[9px] text-white/40 uppercase font-bold tracking-widest mt-3">
+              <p className="text-[9px] text-white/40 uppercase font-bold tracking-widest mt-3 mb-1">
                 A partir de
               </p>
               <p
-                className="text-primary mt-1 leading-none"
-                style={{
-                  fontFamily: "'Bebas Neue', 'Urbanist', sans-serif",
-                  fontSize: "28px",
-                }}
+                className="text-primary leading-none font-black"
+                style={{ fontFamily: "'Bebas Neue', 'Urbanist', sans-serif", fontSize: "1.8rem" }}
               >
                 {highlight.priceNumber > 0 ? highlight.price : "Sob consulta"}
               </p>
-
-              <Link
-                to="/modelos/$slug"
-                params={{ slug: highlight.slug }}
-                className="mt-3 inline-flex items-center justify-center w-full gap-1 bg-primary text-primary-foreground font-display font-black uppercase tracking-widest text-[10px] min-h-11 py-2.5 rounded-md hover:brightness-110"
-              >
-                Ver produto
-              </Link>
+              <span className="mt-3 inline-flex items-center justify-center w-full gap-1 bg-primary text-primary-foreground font-display font-black uppercase tracking-widest text-[10px] min-h-10 py-2.5 rounded-xl group-hover:brightness-110 transition">
+                Ver produto <ChevronRight size={12} />
+              </span>
             </div>
-          </aside>
+          </Link>
         )}
       </div>
     </section>
