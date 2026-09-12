@@ -1764,7 +1764,7 @@ function RefProductCard({ m, priority = false }: { m: Model; priority?: boolean 
             fetchPriority={priority ? "high" : "auto"}
             decoding={priority ? "sync" : "async"}
             sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-            className="absolute inset-0 w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+            className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           />
         ) : (
           <span className="absolute inset-0 flex items-center justify-center text-[10px] uppercase tracking-widest text-neutral-400">
