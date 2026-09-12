@@ -1669,7 +1669,6 @@ function Index() {
         <BenefitsBar />
         <DestaquesGrid />
         <MaisVendidosGrid />
-        <YoutubeShowcase />
         <InstagramRow />
         <HomeFaq />
 
@@ -1913,59 +1912,6 @@ function MaisVendidosGrid() {
               <RefProductCard key={m.slug} m={m} />
             ))}
           </div>
-        )}
-      </div>
-    </section>
-  );
-}
-
-function YoutubeShowcase() {
-  const { items: all } = usePublicModelsLight();
-  const highlight = all[1] ?? all[0] ?? null;
-  return (
-    <section className="py-2 sm:py-3 bg-background border-b border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 grid lg:grid-cols-[1fr_220px] gap-3 items-center">
-        {/* Logo — altura fixa, imagem contida */}
-        <div className="rounded-xl overflow-hidden border border-white/10 bg-black flex items-center justify-center h-[140px] sm:h-[160px]">
-          <img
-            src="/mt-logo-showcase.jpg"
-            alt="MT Mobilidade Elétrica Brasil — Energia para o seu caminho"
-            loading="eager"
-            fetchPriority="high"
-            className="h-full w-full object-contain"
-          />
-        </div>
-
-        {/* Card do produto destaque */}
-        {highlight && (
-          <Link
-            to="/modelos/$slug"
-            params={{ slug: highlight.slug }}
-            className="group flex flex-col bg-neutral-950 border border-white/10 rounded-xl overflow-hidden hover:border-primary/60 hover:shadow-[0_0_20px_-8px_rgba(248,96,0,0.4)] transition-all h-[140px] sm:h-[160px]"
-          >
-            <div className="bg-white flex-1 flex items-center justify-center overflow-hidden">
-              <img
-                src={highlight.colors[0]?.image || highlight.gallery?.[0] || ""}
-                alt={highlight.name}
-                className="h-full w-full object-contain p-2 group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
-              />
-            </div>
-            <div className="px-3 py-2 text-center border-t border-white/10 bg-neutral-950">
-              <p className="text-[8px] text-primary font-display font-black uppercase tracking-widest truncate">
-                {highlight.tag}
-              </p>
-              <h3 className="font-display font-black uppercase text-white text-[11px] leading-tight truncate">
-                {highlight.name}
-              </h3>
-              <p
-                className="text-primary font-black leading-none mt-1"
-                style={{ fontFamily: "'Bebas Neue', 'Urbanist', sans-serif", fontSize: "1.1rem" }}
-              >
-                {highlight.priceNumber > 0 ? highlight.price : "Sob consulta"}
-              </p>
-            </div>
-          </Link>
         )}
       </div>
     </section>
