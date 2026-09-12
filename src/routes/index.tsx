@@ -1742,9 +1742,6 @@ function fmtBRL(n: number) {
 }
 
 function RefProductCard({ m, priority = false }: { m: Model; priority?: boolean }) {
-  const inst = modelInstallment(m);
-  const parcela = supportsInstallment(m) ? inst.label : null;
-  const parcelaNote = inst.note;
   const imgSrc = m.colors[0]?.image || m.gallery?.[0] || "";
   return (
     <Link
@@ -1777,28 +1774,18 @@ function RefProductCard({ m, priority = false }: { m: Model; priority?: boolean 
           {m.name}
         </h3>
 
-        <div className="flex items-center justify-center gap-0.5 text-primary mt-1.5">
-          {Array.from({ length: 5 }).map((_, i) => (
-            <span key={i} className="text-[10px]">★</span>
-          ))}
-        </div>
+        <p className="text-[9px] text-white/40 uppercase font-bold tracking-widest mt-3">
+          A partir de
+        </p>
         <p
-          className="text-primary leading-none mt-3"
+          className="text-primary leading-none mt-1"
           style={{
             fontFamily: "'Bebas Neue', 'Urbanist', sans-serif",
             fontSize: "26px",
           }}
         >
-          {parcela ?? "Sob consulta"}
+          {m.priceNumber > 0 ? m.price : "Sob consulta"}
         </p>
-        <p className="text-[9px] text-white/50 uppercase font-bold tracking-widest mt-1">
-          {parcela ? parcelaNote : "Fale com um consultor"}
-        </p>
-        {parcela && (
-          <p className="text-[10px] text-white/40 mt-0.5">
-            à vista <span className="text-white/70">{m.price}</span>
-          </p>
-        )}
 
         <span className="mt-auto pt-3 inline-flex items-center justify-center w-full gap-1 bg-primary text-primary-foreground font-display font-black uppercase tracking-widest text-[10px] min-h-11 py-2.5 rounded-md group-hover:brightness-110">
           Ver produto
@@ -1851,9 +1838,6 @@ function MaisVendidosGrid() {
 function YoutubeShowcase() {
   const { items: all } = usePublicModelsLight();
   const highlight = all[1] ?? all[0] ?? null;
-  const highlightInst = highlight ? modelInstallment(highlight) : null;
-  const parcela = highlight && supportsInstallment(highlight) ? highlightInst?.label ?? null : null;
-  const parcelaNote = highlightInst?.note ?? "";
   return (
     <section className="py-10 sm:py-12 bg-background border-b border-border">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-[minmax(0,1fr)_320px] gap-6 items-start">
@@ -1894,23 +1878,18 @@ function YoutubeShowcase() {
               <h3 className="font-display font-black uppercase text-sm text-white tracking-tight">
                 {highlight.name} | MT Mobilidade
               </h3>
+              <p className="text-[9px] text-white/40 uppercase font-bold tracking-widest mt-3">
+                A partir de
+              </p>
               <p
-                className="text-primary mt-2 leading-none"
+                className="text-primary mt-1 leading-none"
                 style={{
                   fontFamily: "'Bebas Neue', 'Urbanist', sans-serif",
                   fontSize: "28px",
                 }}
               >
-                {parcela ?? highlight.price}
+                {highlight.priceNumber > 0 ? highlight.price : "Sob consulta"}
               </p>
-              <p className="text-[10px] text-white/40 uppercase font-bold tracking-widest mt-1">
-                {parcela ? parcelaNote : "consulte condições"}
-              </p>
-              {parcela && (
-                <p className="text-[10px] text-white/40 mt-0.5">
-                  à vista <span className="text-white/70">{highlight.price}</span>
-                </p>
-              )}
 
               <Link
                 to="/modelos/$slug"
