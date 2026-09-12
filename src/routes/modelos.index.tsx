@@ -14,7 +14,7 @@ import klugSymbol from "@/assets/klug/klug-symbol.png.asset.json";
 import { CreatedBy } from "@/components/CreatedBy";
 import klugLogo from "@/assets/klug/klug-horizontal-white.png.asset.json";
 
-const BASE_URL = "https://klugmotors.com.br";
+const BASE_URL = "https://marcontti-urban-canvas.lovable.app";
 
 const VALID_BRANDS = ["klug", "sudu", "yamaha"] as const;
 type ValidBrand = (typeof VALID_BRANDS)[number];

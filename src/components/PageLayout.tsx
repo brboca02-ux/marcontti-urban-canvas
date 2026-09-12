@@ -87,18 +87,18 @@ export function PageLayout({
             </p>
           </div>
           <div className="space-y-2 text-xs">
-            <p className="inline-flex items-center gap-2"><MapPin size={13} className="text-white/40" /> R. Albano Schmidt, 1882 — Boa Vista, Joinville/SC · 89205-100</p>
+            <p className="inline-flex items-center gap-2"><MapPin size={13} className="text-white/40" /> Rua das Cegonhas, 699 — Jardim Iririú, Joinville/SC · 89227-645</p>
             <p className="inline-flex items-center gap-2"><Phone size={13} className="text-white/40" /> <a href="tel:+554734293200" className="hover:text-primary">(47) 3429-3200</a></p>
-            <p className="inline-flex items-center gap-2"><Mail size={13} className="text-white/40" /> <a href="mailto:klugmotors@gmail.com" className="hover:text-primary">klugmotors@gmail.com</a></p>
+            <p className="inline-flex items-center gap-2"><Mail size={13} className="text-white/40" /> <a href="mailto:contato@mtmobilidade.com.br" className="hover:text-primary">contato@mtmobilidade.com.br</a></p>
             <p className="inline-flex items-center gap-2"><Clock size={13} className="text-white/40" /> Seg a Sex 08:30–18:30 · Sáb 08:30–13:00 · Dom fechado</p>
           </div>
           <div className="flex flex-col gap-3 items-start md:items-end">
             <div className="flex gap-2">
               <a
-                href="https://www.instagram.com/klugmotors/"
+                href="https://www.instagram.com/mt_mobilidade_eletrica/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Instagram @klugmotors"
+                aria-label="Instagram @mt_mobilidade_eletrica"
                 className="w-9 h-9 rounded-full border border-white/15 grid place-items-center text-white/80 hover:bg-primary hover:border-primary hover:text-black transition-colors"
               >
                 <Instagram size={14} />

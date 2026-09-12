@@ -3,7 +3,7 @@ import { MapPin, Clock, Award, Leaf, Users, Zap } from "lucide-react";
 import { PageLayout, SectionCard } from "@/components/PageLayout";
 import janainaKlugAsset from "@/assets/janaina-klug.jpg.asset.json";
 
-const BASE_URL = "https://klugmotors.com.br";
+const BASE_URL = "https://marcontti-urban-canvas.lovable.app";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
@@ -121,14 +121,14 @@ function SobrePage() {
       <SectionCard title="Visite a loja">
         <div className="grid sm:grid-cols-2 gap-6 not-prose">
           <div className="space-y-3 text-sm">
-            <p className="inline-flex items-start gap-2"><MapPin size={16} className="text-primary mt-0.5 shrink-0" /> <span>R. Albano Schmidt, 1882 — Boa Vista<br />Joinville/SC · 89205-100</span></p>
+            <p className="inline-flex items-start gap-2"><MapPin size={16} className="text-primary mt-0.5 shrink-0" /> <span>Rua das Cegonhas, 699 — Jardim Iririú<br />Joinville/SC · 89205-100</span></p>
             <p className="inline-flex items-start gap-2"><Clock size={16} className="text-primary mt-0.5 shrink-0" /> <span>Seg a Sex: 08:30 às 18:30 (sem fechar para almoço)<br />Sábado: 08:30 às 13:00<br />Domingo: fechado</span></p>
             <p className="text-xs text-white/50 pt-2">CNPJ 51.728.597/0001-26</p>
           </div>
           <div className="border border-border rounded-xl overflow-hidden">
             <iframe
               title="Localização da MT Mobilidade em Joinville"
-              src="https://www.google.com/maps?q=R.+Albano+Schmidt,+1882+-+Boa+Vista,+Joinville+-+SC,+89205-100&output=embed"
+              src="https://www.google.com/maps?q=Rua+das+Cegonhas,+699+-+Jardim+Iririu,+Joinville+-+SC,+89227-645&output=embed"
               width="100%"
               height="220"
               style={{ border: 0 }}

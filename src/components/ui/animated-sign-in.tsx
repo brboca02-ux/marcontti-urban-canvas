@@ -123,7 +123,7 @@ export default function LoginPage() {
                         autoComplete="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        placeholder="voce@klugmotors.com"
+                        placeholder="voce@mt_mobilidade_eletrica.com"
                         className="w-full rounded-xl border border-white/10 bg-black/50 py-3 pl-11 pr-4 text-sm text-white placeholder:text-white/30 outline-none transition focus:border-primary focus:bg-black/70 focus:ring-2 focus:ring-primary/30"
                       />
                     </div>

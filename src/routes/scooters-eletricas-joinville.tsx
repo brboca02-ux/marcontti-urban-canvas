@@ -3,7 +3,7 @@ import { LocalLanding, localLandingScripts, type Faq } from "@/components/LocalL
 import { SectionCard } from "@/components/PageLayout";
 import { isSemiNovaModel, isTricicloModel } from "@/lib/models";
 
-const BASE_URL = "https://klugmotors.com.br";
+const BASE_URL = "https://marcontti-urban-canvas.lovable.app";
 const PATH = "/scooters-eletricas-joinville";
 
 const FAQ: Faq[] = [
@@ -25,7 +25,7 @@ const FAQ: Faq[] = [
   },
   {
     q: "Onde fica a loja de scooters elétricas em Joinville?",
-    a: "Na R. Albano Schmidt, 1882 — bairro Boa Vista, Joinville/SC. Atendemos de segunda a sexta das 8h30 às 18h30 e sábado das 8h30 às 13h.",
+    a: "Na R. Albano Schmidt, 1882 — bairro Jardim Iririú, Joinville/SC. Atendemos de segunda a sexta das 8h30 às 18h30 e sábado das 8h30 às 13h.",
   },
 ];
 
@@ -36,13 +36,13 @@ export const Route = createFileRoute("/scooters-eletricas-joinville")({
       {
         name: "description",
         content:
-          "Scooters elétricas em Joinville/SC na MT Mobilidade: modelos SUDU e Moto Chefe, muitos sem CNH, com oficina especializada e parcelas em até 71x. Loja no Boa Vista.",
+          "Scooters elétricas em Joinville/SC na MT Mobilidade: modelos SUDU e Moto Chefe, muitos sem CNH, com oficina especializada e parcelas em até 71x. Loja no Jardim Iririú.",
       },
       { property: "og:title", content: "Scooter Elétrica em Joinville | MT Mobilidade" },
       {
         property: "og:description",
         content:
-          "Modelos SUDU e Moto Chefe em Joinville/SC, com loja física no Boa Vista, oficina própria e financiamento.",
+          "Modelos SUDU e Moto Chefe em Joinville/SC, com loja física no Jardim Iririú, oficina própria e financiamento.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: BASE_URL + PATH },
@@ -60,7 +60,7 @@ function Page() {
       eyebrow="Scooters elétricas · Joinville/SC"
       title="Scooters Elétricas em Joinville:"
       titleAccent="Modelos SUDU e MotoChefe"
-      intro="A MT Mobilidade é concessionária de scooters elétricas em Joinville, com loja física na R. Albano Schmidt, 1882 (Boa Vista) e oficina especializada na própria loja. Vendemos as linhas SUDU e Moto Chefe, com modelos que não exigem CNH."
+      intro="A MT Mobilidade é concessionária de scooters elétricas em Joinville, com loja física na Rua das Cegonhas, 699 (Jardim Iririú) e oficina especializada na própria loja. Vendemos as linhas SUDU e Moto Chefe, com modelos que não exigem CNH."
       filter={(m) =>
         !isSemiNovaModel(m) &&
         !isTricicloModel(m) &&

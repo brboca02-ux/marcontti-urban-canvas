@@ -6,7 +6,7 @@ import { ContatoForm } from "@/components/ContatoForm";
 import { StoreLocator } from "@/components/StoreLocator";
 import { buildWhatsAppFallbackUrl, openWhatsAppWithFallback } from "@/lib/models";
 
-const BASE_URL = "https://klugmotors.com.br";
+const BASE_URL = "https://marcontti-urban-canvas.lovable.app";
 const FINANCE_MSG =
   "Olá, MT Mobilidade! Quero simular um financiamento e conhecer as condições. Podem me ajudar?";
 
@@ -14,7 +14,7 @@ export const Route = createFileRoute("/contato")({
   head: () => ({
     meta: [
       { title: "Contato — MT Mobilidade Joinville/SC | WhatsApp e Loja Física" },
-      { name: "description", content: "Fale com a MT Mobilidade em Joinville/SC: WhatsApp, telefone (47) 93429-3200, e-mail e loja física na R. Albano Schmidt, 1882 — Boa Vista. Seg–Sex 08:30–18:30, Sáb 08:30–13:00." },
+      { name: "description", content: "Fale com a MT Mobilidade em Joinville/SC: WhatsApp, telefone (47) 93429-3200, e-mail e loja física na Rua das Cegonhas, 699 — Jardim Iririú. Seg–Sex 08:30–18:30, Sáb 08:30–13:00." },
       { name: "keywords", content: "MT Mobilidade contato, moto elétrica Joinville contato, WhatsApp Klug, loja Albano Schmidt Joinville, concessionária Boa Vista Joinville" },
       { name: "geo.region", content: "BR-SC" },
       { name: "geo.placename", content: "Joinville" },
@@ -47,7 +47,7 @@ export const Route = createFileRoute("/contato")({
           logo: `${BASE_URL}/favicon.ico`,
           image: `${BASE_URL}/favicon.ico`,
           telephone: "+5547934293200",
-          email: "klugmotors@gmail.com",
+          email: "contato@mtmobilidade.com.br",
           taxID: "51.728.597/0001-26",
           vatID: "51.728.597/0001-26",
           priceRange: "$$",
@@ -55,7 +55,7 @@ export const Route = createFileRoute("/contato")({
           paymentAccepted: "Cash, Credit Card, Debit Card, PIX, Financiamento",
           address: {
             "@type": "PostalAddress",
-            streetAddress: "R. Albano Schmidt, 1882 - Boa Vista",
+            streetAddress: "Rua das Cegonhas, 699 - Jardim Iririú",
             addressLocality: "Joinville",
             addressRegion: "SC",
             postalCode: "89205-100",
@@ -66,7 +66,7 @@ export const Route = createFileRoute("/contato")({
             latitude: -26.2836,
             longitude: -48.8451,
           },
-          hasMap: "https://www.google.com/maps?q=R.+Albano+Schmidt,+1882+-+Boa+Vista,+Joinville+-+SC,+89205-100",
+          hasMap: "https://www.google.com/maps?q=Rua+das+Cegonhas,+699+-+Jardim+Iririu,+Joinville+-+SC,+89227-645",
           areaServed: [
             { "@type": "City", name: "Joinville" },
             { "@type": "AdministrativeArea", name: "Santa Catarina" },
@@ -85,7 +85,7 @@ export const Route = createFileRoute("/contato")({
               availableLanguage: ["Portuguese"],
             },
           ],
-          sameAs: ["https://www.instagram.com/klugmotors/"],
+          sameAs: ["https://www.instagram.com/mt_mobilidade_eletrica/"],
         }),
       },
     ],
@@ -127,18 +127,18 @@ function ContatoPage() {
                   <p className="text-sm font-display font-black text-white">(47) 93429-3200</p>
                 </div>
               </a>
-              <a href="mailto:klugmotors@gmail.com" className="flex items-center gap-3 p-4 border border-border rounded-xl bg-background/50 hover:border-primary transition-colors">
+              <a href="mailto:contato@mtmobilidade.com.br" className="flex items-center gap-3 p-4 border border-border rounded-xl bg-background/50 hover:border-primary transition-colors">
                 <span className="w-10 h-10 rounded-lg bg-primary/10 text-primary grid place-items-center"><Mail size={18} /></span>
                 <div>
                   <p className="text-[10px] uppercase tracking-widest text-white/40 font-display font-black mb-0.5">E-mail</p>
-                  <p className="text-sm text-white">klugmotors@gmail.com</p>
+                  <p className="text-sm text-white">contato@mtmobilidade.com.br</p>
                 </div>
               </a>
-              <a href="https://www.instagram.com/klugmotors/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 border border-border rounded-xl bg-background/50 hover:border-primary transition-colors">
+              <a href="https://www.instagram.com/mt_mobilidade_eletrica/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 border border-border rounded-xl bg-background/50 hover:border-primary transition-colors">
                 <span className="w-10 h-10 rounded-lg bg-primary/10 text-primary grid place-items-center"><Instagram size={18} /></span>
                 <div>
                   <p className="text-[10px] uppercase tracking-widest text-white/40 font-display font-black mb-0.5">Instagram</p>
-                  <p className="text-sm text-white">@klugmotors</p>
+                  <p className="text-sm text-white">@mt_mobilidade_eletrica</p>
                 </div>
               </a>
             </div>
@@ -146,15 +146,15 @@ function ContatoPage() {
 
           <SectionCard title="Loja física">
             <div className="not-prose space-y-3 text-sm">
-              <p className="inline-flex items-start gap-2"><MapPin size={16} className="text-primary mt-0.5 shrink-0" /> <span>R. Albano Schmidt, 1882 — Boa Vista, Joinville/SC · 89205-100</span></p>
+              <p className="inline-flex items-start gap-2"><MapPin size={16} className="text-primary mt-0.5 shrink-0" /> <span>Rua das Cegonhas, 699 — Jardim Iririú, Joinville/SC · 89227-645</span></p>
               <p className="inline-flex items-start gap-2"><Clock size={16} className="text-primary mt-0.5 shrink-0" /> <span>Seg a Sex: 08:30 às 18:30 (sem fechar para almoço)<br />Sábado: 08:30 às 13:00<br />Domingo: fechado</span></p>
             </div>
             <div className="not-prose mt-5 border border-border rounded-xl overflow-hidden">
               <StoreLocator />
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-4 border-t border-border bg-background/50">
-                <p className="text-xs text-white/60">R. Albano Schmidt, 1882 — Boa Vista, Joinville/SC · 89205-100</p>
+                <p className="text-xs text-white/60">Rua das Cegonhas, 699 — Jardim Iririú, Joinville/SC · 89227-645</p>
                 <a
-                  href="https://www.google.com/maps/dir/?api=1&destination=R.+Albano+Schmidt,+1882+-+Boa+Vista,+Joinville+-+SC,+89205-100"
+                  href="https://www.google.com/maps/dir/?api=1&destination=Rua+das+Cegonhas,+699+-+Jardim+Iririu,+Joinville+-+SC,+89227-645"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-display font-black uppercase text-[11px] tracking-widest px-4 py-2.5 rounded-full transition-all hover:-translate-y-0.5"

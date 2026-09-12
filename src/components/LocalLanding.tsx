@@ -23,7 +23,7 @@ export const BAIRROS =
 const REASONS = [
   {
     icon: MapPin,
-    title: "Loja física no Boa Vista",
+    title: "Loja física no Jardim Iririú",
     desc: "R. Albano Schmidt, 1882 — Joinville/SC. Você vê, sobe e testa o veículo antes de comprar.",
   },
   {
@@ -95,7 +95,7 @@ export function LocalLanding({
           <MessageCircle size={15} /> Falar no WhatsApp
         </button>
         <a
-          href="https://www.google.com/maps/dir/?api=1&destination=Rua+Albano+Schimidt+1882,+Joinville+-+SC&destination_place_id=ChIJnXaWyi6x3pQRtRqlFs8vhlw"
+          href="https://www.google.com/maps/dir/?api=1&destination=Rua+das+Cegonhas,+699+-+Jardim+Iririu,+Joinville+-+SC,+89227-645&destination_place_id=ChIJnXaWyi6x3pQRtRqlFs8vhlw"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-white/20 px-6 py-3 text-[11px] font-display font-black uppercase tracking-widest text-white hover:border-primary hover:text-primary"
@@ -231,7 +231,7 @@ export function localLandingScripts({
   path,
   name,
   faq,
-  baseUrl = "https://klugmotors.com.br",
+  baseUrl = "https://marcontti-urban-canvas.lovable.app",
 }: {
   path: string;
   name: string;

@@ -3,7 +3,7 @@ import { LocalLanding, localLandingScripts, type Faq } from "@/components/LocalL
 import { SectionCard } from "@/components/PageLayout";
 import { isTricicloModel, isSemiNovaModel } from "@/lib/models";
 
-const BASE_URL = "https://klugmotors.com.br";
+const BASE_URL = "https://marcontti-urban-canvas.lovable.app";
 const PATH = "/triciclos-eletricos-joinville";
 
 const FAQ: Faq[] = [
@@ -21,7 +21,7 @@ const FAQ: Faq[] = [
   },
   {
     q: "Tem manutenção de triciclo elétrico em Joinville?",
-    a: "Tem. Fazemos revisão, conserto e troca de bateria de triciclo elétrico na nossa oficina, na R. Albano Schmidt, 1882 (Boa Vista).",
+    a: "Tem. Fazemos revisão, conserto e troca de bateria de triciclo elétrico na nossa oficina, na Rua das Cegonhas, 699 (Jardim Iririú).",
   },
 ];
 
@@ -38,7 +38,7 @@ export const Route = createFileRoute("/triciclos-eletricos-joinville")({
       {
         property: "og:description",
         content:
-          "Triciclos elétricos de carga e para a melhor idade em Joinville/SC, com loja física no Boa Vista.",
+          "Triciclos elétricos de carga e para a melhor idade em Joinville/SC, com loja física no Jardim Iririú.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: BASE_URL + PATH },
@@ -56,7 +56,7 @@ function Page() {
       eyebrow="Triciclos elétricos · Joinville/SC"
       title="Triciclos Elétricos Utilitários e para"
       titleAccent="Melhor Idade em Joinville"
-      intro="Triciclos elétricos para trabalho e para quem busca estabilidade sobre três rodas, na MT Mobilidade — R. Albano Schmidt, 1882, Boa Vista, Joinville/SC. Modelos sem exigência de CNH e oficina especializada na loja."
+      intro="Triciclos elétricos para trabalho e para quem busca estabilidade sobre três rodas, na MT Mobilidade — Rua das Cegonhas, 699, Jardim Iririú, Joinville/SC. Modelos sem exigência de CNH e oficina especializada na loja."
       filter={(m) => isTricicloModel(m) && !isSemiNovaModel(m)}
       catalogSearch={{ cat: "triciclo" }}
       catalogLabel="Ver todos os triciclos no catálogo"

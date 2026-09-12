@@ -3,7 +3,7 @@ import { LocalLanding, localLandingScripts, type Faq } from "@/components/LocalL
 import { SectionCard } from "@/components/PageLayout";
 import { isSemiNovaModel } from "@/lib/models";
 
-const BASE_URL = "https://klugmotors.com.br";
+const BASE_URL = "https://marcontti-urban-canvas.lovable.app";
 const PATH = "/motinha-eletrica-sem-cnh";
 
 const FAQ: Faq[] = [
@@ -25,7 +25,7 @@ const FAQ: Faq[] = [
   },
   {
     q: "Onde comprar motinha elétrica sem CNH em Joinville?",
-    a: "Na MT Mobilidade, R. Albano Schmidt, 1882 — Boa Vista, Joinville/SC. Você pode ver e testar os modelos na loja antes de decidir.",
+    a: "Na MT Mobilidade, Rua das Cegonhas, 699 — Jardim Iririú, Joinville/SC. Você pode ver e testar os modelos na loja antes de decidir.",
   },
 ];
 
@@ -36,7 +36,7 @@ export const Route = createFileRoute("/motinha-eletrica-sem-cnh")({
       {
         name: "description",
         content:
-          "Motinhas elétricas que não precisam de CNH em Joinville/SC: modelos autopropelidos (CONTRAN 996/23), preços, autonomia e parcelas. Loja física no Boa Vista.",
+          "Motinhas elétricas que não precisam de CNH em Joinville/SC: modelos autopropelidos (CONTRAN 996/23), preços, autonomia e parcelas. Loja física no Jardim Iririú.",
       },
       { property: "og:title", content: "Motinha Elétrica sem CNH em Joinville | MT Mobilidade" },
       {
@@ -64,7 +64,7 @@ function Page() {
       eyebrow="Sem CNH · Joinville/SC"
       title="Motinhas Elétricas que Não Precisam de"
       titleAccent="CNH em Joinville"
-      intro="Na MT Mobilidade você encontra motinhas e scooters elétricas classificadas como autopropelidas: sem CNH, sem placa e sem licenciamento, conforme a Resolução CONTRAN 996/23. Loja física na R. Albano Schmidt, 1882 — Boa Vista, Joinville/SC."
+      intro="Na MT Mobilidade você encontra motinhas e scooters elétricas classificadas como autopropelidas: sem CNH, sem placa e sem licenciamento, conforme a Resolução CONTRAN 996/23. Loja física na Rua das Cegonhas, 699 — Jardim Iririú, Joinville/SC."
       filter={(m) => !isSemiNovaModel(m) && /sem\s*cnh/i.test(m.tag)}
       emptyLabel="Estamos atualizando os modelos sem CNH."
       catalogSearch={{ marca: "klug" }}

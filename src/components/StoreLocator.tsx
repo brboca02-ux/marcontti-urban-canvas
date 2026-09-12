@@ -15,7 +15,7 @@ const CONFIGURATION = {
         {
           label: "Como chegar",
           defaultUrl:
-            "https://www.google.com/maps/dir/?api=1&destination=Rua+Albano+Schimidt+1882,+Joinville+-+SC&destination_place_id=ChIJnXaWyi6x3pQRtRqlFs8vhlw",
+            "https://www.google.com/maps/dir/?api=1&destination=Rua+das+Cegonhas,+699+-+Jardim+Iririu,+Joinville+-+SC,+89227-645&destination_place_id=ChIJnXaWyi6x3pQRtRqlFs8vhlw",
         },
       ],
     },

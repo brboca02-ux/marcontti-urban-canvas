@@ -17,7 +17,7 @@ import { CookieConsent } from "../components/CookieConsent";
 import { captureAttribution } from "../lib/attribution";
 import { useModelsRealtime } from "../hooks/useModelsRealtime";
 
-const PUBLIC_ORIGIN = "https://klugmotors.com.br";
+const PUBLIC_ORIGIN = "https://marcontti-urban-canvas.lovable.app";
 
 /** Slim top progress bar that reflects vertical scroll position. */
 function ScrollProgress() {
@@ -152,14 +152,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               image: `${PUBLIC_ORIGIN}${klugSymbol.url}`,
               description:
                 "Concessionária de motos, scooters e triciclos elétricos em Joinville/SC, com oficina especializada e financiamento facilitado.",
-              email: "klugmotors@gmail.com",
+              email: "contato@mtmobilidade.com.br",
               telephone: "+5547934293200",
               taxID: "51.728.597/0001-26",
               vatID: "51.728.597/0001-26",
               foundingLocation: { "@type": "Place", name: "Joinville, SC" },
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "R. Albano Schmidt, 1882 - Boa Vista",
+                streetAddress: "Rua das Cegonhas, 699 - Jardim Iririú",
                 addressLocality: "Joinville",
                 addressRegion: "SC",
                 postalCode: "89205-100",
@@ -174,7 +174,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
                   availableLanguage: ["Portuguese"],
                 },
               ],
-              sameAs: ["https://www.instagram.com/klugmotors/"],
+              sameAs: ["https://www.instagram.com/mt_mobilidade_eletrica/"],
             },
             {
               "@type": "WebSite",
