@@ -13,7 +13,7 @@
 
 ## Detalhes técnicos
 - Hospedar as sete imagens no armazenamento de mídia do projeto e salvar seus endereços nos produtos.
-- Usar `@mt_mobilidade_eletrica` e `contato@mtmobilidade.com.br` em links visíveis e dados de busca.
+- Usar `@mt_mobilidade_eletrica` e `mtmobilidade@gmail.com` em links visíveis e dados de busca.
 - Usar o endereço completo como destino do mapa para que o pino acompanhe a nova loja.
 - Revisar referências residuais de identidade “Klug Motors”; nomes de arquivos internos e marcas legítimas de produtos não serão alterados quando não aparecerem ao público.
 - Validar página inicial, catálogo, produto, contato e mapa em telas grandes e pequenas.

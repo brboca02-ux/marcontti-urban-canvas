@@ -152,7 +152,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               image: `${PUBLIC_ORIGIN}${klugSymbol.url}`,
               description:
                 "Concessionária de motos, scooters e triciclos elétricos em Joinville/SC, com oficina especializada e financiamento facilitado.",
-              email: "contato@mtmobilidade.com.br",
+              email: "mtmobilidade@gmail.com",
               telephone: "+5547934293200",
               taxID: "51.728.597/0001-26",
               vatID: "51.728.597/0001-26",

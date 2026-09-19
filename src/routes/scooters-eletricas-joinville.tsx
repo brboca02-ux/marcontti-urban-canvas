@@ -25,7 +25,7 @@ const FAQ: Faq[] = [
   },
   {
     q: "Onde fica a loja de scooters elétricas em Joinville?",
-    a: "Na Rua das Cegonhas, 699 — Jardim Iririú, Joinville/SC, CEP 89227-645. Atendemos de segunda a sexta das 8h30 às 18h30 e sábado das 8h30 às 13h.",
+    a: "Na Rua das Cegonhas, 699 — Jardim Iririú, Joinville/SC, CEP 89227-645. Atendemos de Segunda a sexta: 09h às 12h e 13h30 às 18h | Sábado: 09h às 16h, sem fechar para o almoço | Domingo: 09h às 12h",
   },
 ];
 

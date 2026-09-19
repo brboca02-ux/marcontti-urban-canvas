@@ -150,9 +150,9 @@ function PrivacyPage() {
 
           <Section title="8. Contato">
             <p>
-              E-mail: <a href="mailto:contato@mtmobilidade.com.br" className="text-primary underline underline-offset-2">contato@mtmobilidade.com.br</a>
+              E-mail: <a href="mailto:mtmobilidade@gmail.com" className="text-primary underline underline-offset-2">mtmobilidade@gmail.com</a>
               <br />
-              Telefone: <a href="tel:+554734293200" className="text-primary underline underline-offset-2">(47) 3429-3200</a>
+              Telefone: <a href="tel:+5547997631686" className="text-primary underline underline-offset-2">(47) 99763-1686</a>
               <br />
               Endereço: Rua das Cegonhas, 699 — Jardim Iririú, Joinville/SC · 89227-645.
             </p>

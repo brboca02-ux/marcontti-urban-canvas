@@ -58,7 +58,7 @@ export function getGallery(m: Model): string[] {
 export const models: Model[] = [];
 
 // MT Mobilidade - Joinville
-export const WHATSAPP_NUMBER = "554734293200";
+export const WHATSAPP_NUMBER = "5547997631686";
 const WHATSAPP_FALLBACK_DELAY = 1800;
 
 export function getModel(slug: string): Model | undefined {

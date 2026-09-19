@@ -47,7 +47,7 @@ export const Route = createFileRoute("/contato")({
           logo: `${BASE_URL}/favicon.ico`,
           image: `${BASE_URL}/favicon.ico`,
           telephone: "+5547934293200",
-          email: "contato@mtmobilidade.com.br",
+          email: "mtmobilidade@gmail.com",
           taxID: "51.728.597/0001-26",
           vatID: "51.728.597/0001-26",
           priceRange: "$$",
@@ -127,11 +127,11 @@ function ContatoPage() {
                   <p className="text-sm font-display font-black text-white">(47) 93429-3200</p>
                 </div>
               </a>
-              <a href="mailto:contato@mtmobilidade.com.br" className="flex items-center gap-3 p-4 border border-border rounded-xl bg-background/50 hover:border-primary transition-colors">
+              <a href="mailto:mtmobilidade@gmail.com" className="flex items-center gap-3 p-4 border border-border rounded-xl bg-background/50 hover:border-primary transition-colors">
                 <span className="w-10 h-10 rounded-lg bg-primary/10 text-primary grid place-items-center"><Mail size={18} /></span>
                 <div>
                   <p className="text-[10px] uppercase tracking-widest text-white/40 font-display font-black mb-0.5">E-mail</p>
-                  <p className="text-sm text-white">contato@mtmobilidade.com.br</p>
+                  <p className="text-sm text-white">mtmobilidade@gmail.com</p>
                 </div>
               </a>
               <a href="https://www.instagram.com/mt_mobilidade_eletrica/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 border border-border rounded-xl bg-background/50 hover:border-primary transition-colors">

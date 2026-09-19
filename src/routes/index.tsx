@@ -64,7 +64,7 @@ const FINANCE_MSG =
 const HOME_FAQS: { q: string; a: string }[] = [
   {
     q: "Onde fica a loja da MT Mobilidade em Joinville?",
-    a: "Estamos na Rua das Cegonhas, 699 — Jardim Iririú, Joinville/SC (CEP 89227-645). Atendemos de segunda a sexta das 8h30 às 18h30 e sábado das 8h30 às 13h.",
+    a: "Estamos na Rua das Cegonhas, 699 — Jardim Iririú, Joinville/SC (CEP 89227-645). Atendemos de Segunda a sexta: 09h às 12h e 13h30 às 18h | Sábado: 09h às 16h, sem fechar para o almoço | Domingo: 09h às 12h .",
   },
   {
     q: "Preciso de CNH para andar de scooter elétrica?",
@@ -140,7 +140,7 @@ export const Route = createFileRoute("/")({
           logo: `${BASE_URL}${x12Img.url}`,
           image: `${BASE_URL}${x12Img.url}`,
           telephone: "+5547934293200",
-          email: "contato@mtmobilidade.com.br",
+          email: "mtmobilidade@gmail.com",
           taxID: "51.728.597/0001-26",
           vatID: "51.728.597/0001-26",
           priceRange: "$$",
@@ -1305,20 +1305,32 @@ function Contact() {
             <ContactRow
               icon={Phone}
               label="Central de vendas"
-              value="(47) 3429-3200"
-              href="tel:+5547934293200"
+              value="(47) 99763-1686"
+              href="tel:+5547997631686"
               highlight
             />
             <ContactRow
-              icon={Clock}
-              label="Horários"
-              value="Seg a Sex 08:30–18:30 (sem fechar p/ almoço) · Sáb 08:30–13:00 · Dom fechado"
-            />
+                icon={Clock}
+                label="Horários"
+                value={
+                  <div className="space-y-1">
+                    <div>
+                      <strong>Segunda a sexta:</strong> 09h às 12h • 13h30 às 18h
+                    </div>
+                    <div>
+                      <strong>Sábado:</strong> 09h às 16h (sem fechar para o almoço )
+                    </div>
+                    <div>
+                      <strong>Domingo:</strong> 09h às 12h
+                    </div>
+                  </div>
+                }
+              />
             <ContactRow
               icon={Mail}
               label="E-mail"
-              value="contato@mtmobilidade.com.br"
-              href="mailto:contato@mtmobilidade.com.br"
+              value="mtmobilidade@gmail.com"
+              href="mailto:mtmobilidade@gmail.com"
             />
             <ContactRow
               icon={Instagram}
@@ -1500,16 +1512,16 @@ function Footer() {
               <li className="flex items-center gap-2">
                 <Phone {...iconProps} className="shrink-0 text-white/40" />
                 <a href="tel:+5547934293200" className="font-display font-black text-base text-white hover:text-primary transition-colors">
-                  (47) 3429-3200
+                  (47) 99763-1686
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail {...iconProps} className="shrink-0 text-white/40" />
                 <a
-                  href="mailto:contato@mtmobilidade.com.br"
+                  href="mailto:mtmobilidade@gmail.com"
                   className="hover:text-primary story-link"
                 >
-                  contato@mtmobilidade.com.br
+                  mtmobilidade@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-2 pt-1">
